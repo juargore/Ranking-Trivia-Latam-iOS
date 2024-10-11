@@ -13,7 +13,7 @@ struct Ranking: FirebaseModel, Codable, Hashable {
     let country_id: String
     let user_name: String
     let score: Int
-    let flag: TriviaFlag?
+    var flag: TriviaFlag?
     
     
     init(id: String? = nil, position: Int?, country_id: String = "", user_name: String = "", score: Int = 0, flag: TriviaFlag? = nil) {

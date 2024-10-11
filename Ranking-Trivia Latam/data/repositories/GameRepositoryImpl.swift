@@ -43,7 +43,7 @@ struct GameRepositoryImpl: IGameRepository {
         return allQuestions.first { $0.id == id }!
     }
     
-    func getQuestionByLevelAndExcludeTheOnesAlreadyPlayed(level: QuestionLevel, idsAlreadyPlayedByLevel: [Int]) -> Question? {
+    func getQuestionByLevelAndExcludeTheOnesAlreadyPlayed(_ level: QuestionLevel, _ idsAlreadyPlayedByLevel: [Int]) -> Question? {
         let questionsToEvaluate: [Question]
 
         switch level {

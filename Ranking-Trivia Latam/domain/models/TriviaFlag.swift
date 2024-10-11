@@ -21,8 +21,8 @@ struct TriviaFlag: Codable, Hashable {
         self.alreadyPlayed = alreadyPlayed
     }
     
-    // Método para cargar la imagen desde los recursos locales
+    // method to load image from local resources
     func loadImage() -> UIImage? {
-        return UIImage(named: image) // Cargar la imagen utilizando el nombre del archivo
+        return UIImage(named: image)
     }
 }

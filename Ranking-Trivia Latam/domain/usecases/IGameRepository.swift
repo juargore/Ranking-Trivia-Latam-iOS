@@ -13,7 +13,7 @@ protocol IGameRepository {
     
     func getQuestionById(id: Int) -> Question
     
-    func getQuestionByLevelAndExcludeTheOnesAlreadyPlayed(level: QuestionLevel, idsAlreadyPlayedByLevel: [Int]) -> Question?
+    func getQuestionByLevelAndExcludeTheOnesAlreadyPlayed(_ level: QuestionLevel, _ idsAlreadyPlayedByLevel: [Int]) -> Question?
     
     func getTriviaFlagById(flagId: FlagId) -> TriviaFlag
 
