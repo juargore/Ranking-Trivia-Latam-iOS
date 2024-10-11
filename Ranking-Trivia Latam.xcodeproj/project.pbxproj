@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		709842DA2CB72DFF00C7A28F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 709842D92CB72DFF00C7A28F /* FirebaseDatabase */; };
+		709842DC2CB72DFF00C7A28F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 709842DB2CB72DFF00C7A28F /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		709842AD2CB72AD300C7A28F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -30,19 +35,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		7098429E2CB72AD200C7A28F /* Ranking-Trivia Latam */ = {
+		709842DE2CB72E6400C7A28F /* Preview Content */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		709842EE2CB7305C00C7A28F /* Ranking-Trivia Latam */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Ranking-Trivia Latam";
-			sourceTree = "<group>";
-		};
-		709842AF2CB72AD300C7A28F /* Ranking-Trivia LatamTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Ranking-Trivia LatamTests";
-			sourceTree = "<group>";
-		};
-		709842B92CB72AD300C7A28F /* Ranking-Trivia LatamUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Ranking-Trivia LatamUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709842DA2CB72DFF00C7A28F /* FirebaseDatabase in Frameworks */,
+				709842DC2CB72DFF00C7A28F /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +77,8 @@
 		709842932CB72AD200C7A28F = {
 			isa = PBXGroup;
 			children = (
-				7098429E2CB72AD200C7A28F /* Ranking-Trivia Latam */,
-				709842AF2CB72AD300C7A28F /* Ranking-Trivia LatamTests */,
-				709842B92CB72AD300C7A28F /* Ranking-Trivia LatamUITests */,
+				709842EE2CB7305C00C7A28F /* Ranking-Trivia Latam */,
+				709842DE2CB72E6400C7A28F /* Preview Content */,
 				7098429D2CB72AD200C7A28F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,10 +109,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				7098429E2CB72AD200C7A28F /* Ranking-Trivia Latam */,
+				709842DE2CB72E6400C7A28F /* Preview Content */,
+				709842EE2CB7305C00C7A28F /* Ranking-Trivia Latam */,
 			);
 			name = "Ranking-Trivia Latam";
 			packageProductDependencies = (
+				709842D92CB72DFF00C7A28F /* FirebaseDatabase */,
+				709842DB2CB72DFF00C7A28F /* FirebaseFirestore */,
 			);
 			productName = "Ranking-Trivia Latam";
 			productReference = 7098429C2CB72AD200C7A28F /* Ranking-Trivia Latam.app */;
@@ -129,9 +133,6 @@
 			);
 			dependencies = (
 				709842AE2CB72AD300C7A28F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				709842AF2CB72AD300C7A28F /* Ranking-Trivia LatamTests */,
 			);
 			name = "Ranking-Trivia LatamTests";
 			packageProductDependencies = (
@@ -152,9 +153,6 @@
 			);
 			dependencies = (
 				709842B82CB72AD300C7A28F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				709842B92CB72AD300C7A28F /* Ranking-Trivia LatamUITests */,
 			);
 			name = "Ranking-Trivia LatamUITests";
 			packageProductDependencies = (
@@ -195,6 +193,9 @@
 			);
 			mainGroup = 709842932CB72AD200C7A28F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				709842D82CB72DFF00C7A28F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7098429D2CB72AD200C7A28F /* Products */;
 			projectDirPath = "";
@@ -399,11 +400,14 @@
 				DEVELOPMENT_TEAM = 4X96DB8457;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ranking-Trivia Latam";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,6 +415,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ranking-Trivia-Latam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -428,11 +436,14 @@
 				DEVELOPMENT_TEAM = 4X96DB8457;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ranking-Trivia Latam";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,6 +451,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ranking-Trivia-Latam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -558,6 +573,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		709842D82CB72DFF00C7A28F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		709842D92CB72DFF00C7A28F /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 709842D82CB72DFF00C7A28F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		709842DB2CB72DFF00C7A28F /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 709842D82CB72DFF00C7A28F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 709842942CB72AD200C7A28F /* Project object */;
 }

@@ -1,0 +1,75 @@
+/* 
+  Localizable.strings
+  Ranking-Trivia Latam
+
+  Created by Arturo Gomez on 10/10/24.
+  
+*/
+
+"app_name" = "Ranking-Trivia Latam";
+
+"home_start" = "Iniciar";
+"home_how_to_play" = "¿Cómo jugar?";
+"home_about" = "Acerca de";
+"home_hall_of_fame" = "Salón de la Fama ✧✧";
+"home_new_version" = "¡Nueva\nversión!";
+"home_version_number" = "v%s";
+
+"error_loading_ad" = "Error al cargar anuncio. Conéctese a internet para continuar.";
+
+"game_level" = "Nivel %s";
+"game_done" = "Listo!!";
+
+"hof_title" = "Salón de la Fama";
+"hof_description" = "Top 20 jugadores con mejor puntuación";
+
+"country_name_belize" = "Belize";
+"country_name_costa_rica" = "Costa Rica";
+"country_name_el_salvador" = "El Salvador";
+"country_name_guatemala" = "Guatemala";
+"country_name_honduras" = "Honduras";
+"country_name_mexico" = "México";
+"country_name_nicaragua" = "Nicaragua";
+"country_name_panama" = "Panamá";
+"country_name_argentina" = "Argentina";
+"country_name_bolivia" = "Bolivia";
+"country_name_brasil" = "Brasil";
+"country_name_chile" = "Chile";
+"country_name_colombia" = "Colombia";
+"country_name_ecuador" = "Ecuador";
+"country_name_jamaica" = "Jamaica";
+"country_name_guayana_francesa" = "Guayana Francesa";
+"country_name_guyana" = "Guyana";
+"country_name_paraguay" = "Paraguay";
+"country_name_peru" = "Perú";
+"country_name_surinam" = "Surinam";
+"country_name_uruguay" = "Uruguay";
+"country_name_venezuela" = "Venezuela";
+"country_name_cuba" = "Cuba";
+"country_name_republica_dominicana" = "República Dominicana";
+"country_name_haiti" = "Haití";
+"country_name_guadalupe" = "Guadalupe";
+"country_name_martinica" = "Martinica";
+"country_name_puerto_rico" = "Puerto Rico";
+"country_name_isla_san_martin" = "Isla San Martín";
+
+"about_disclaimer" = "Sobre la veracidad de la información.\n\nLa información presentada en este juego sobre rankings y datos de países de América Latina ha sido recopilada de fuentes que consideramos confiables. Sin embargo, no garantizamos la exactitud, exhaustividad o actualidad de dicha información. Los datos proporcionados son solo para fines informativos y de entretenimiento, y no deben ser utilizados como referencia oficial o para la toma de decisiones importantes.\nTe recomendamos consultar fuentes oficiales o actualizadas si necesitas información precisa o verificable.";
+
+"about_ads" = "Sobre el uso de anuncios.\n\nLos anuncios que se presentan a lo largo de esta aplicación son gestionados por terceros y, por lo tanto, no tenemos control directo sobre el tipo de contenido que se muestra. La finalidad de estos anuncios es ayudarnos a cubrir los costos asociados con el desarrollo de la app, incluyendo el trabajo del equipo de diseño, desarrollo, alojamiento y mantenimiento.\nAgradecemos tu comprensión y apoyo, ya que estos anuncios nos permiten seguir mejorando la aplicación y ofrecerte una mejor experiencia.";
+
+"about_ui_and_sounds" = "Sobre diseños y contenido multimedia.\n\nLa mayoría del diseño, arte gráfico, sonidos y demás elementos visuales y auditivos de esta aplicación han sido generados mediante herramientas de inteligencia artificial y retocados o editados por el equipo de desarrollo. Si en algún caso alguno de estos elementos coincide o es similar a otros ya existentes, esto es una mera coincidencia y no nos hacemos responsables por dichas similitudes.\nAgradecemos tu comprensión y te aseguramos que nuestra intención es ofrecer una experiencia única e innovadora en la creación de esta app.";
+
+"new_record_title" = "¡¡Nuevo Récord!!";
+
+"new_record_description_top" = "Wow! Has terminado con todas las preguntas que Ranking-Trivia Latinoamérica tiene por ahora. Pero no te preocupes, estamos trabajando día a día para ofrecer más y mejores rankings de Latam, así que, espera una actualización de la App para que puedas continuar con esta excelente aventura!\n\nPor ahora, graba tu récord (necesitas conexión a internet) y si estás en el Top 20, éste aparecerá en la sección = Salón de la Fama = en el menú inicial.";
+
+"new_record_description_bottom" = "Todo el equipo que participó en la realización de este juego te agradecemos inmensamente por jugarlo. Espera cosas nuevas!";
+
+"new_record_save" = "Guardar mi récord";
+
+"how_to_play_top" = "Muy sencillo! Arrastra las banderas de la izquierda con tu dedo y colócalas donde creas que van en el ranking de la derecha. Si te equivocas o quieres cambiar, presiona el botón naranja y la bandera volverá a su lugar de origen.";
+"how_to_play_bottom" = "Si aciertas en el ranking, se desplegará un diálogo y se sumarán puntos a tu score abajo a la derecha. Si fallas en el ranking, se desplegará otro diálogo y se restarán puntos a ese mismo score.";
+"how_to_play_final" = "Intenta acertar la mayor cantidad de rankings para sumar a tu score final. Con un buen score el Salón de la Fama te espera. Que te diviertas!!";
+
+"reset_prefs_description" = "Parece ser que ya has completado el juego una vez, pero veo que quieres mejorar ese ranking, eh? Pues excelente, no se diga más!!\n\nPresiona el botón aquí abajo y eso borrará cualquier avance que tengas guardado de tu partida anterior. No te preocupes, si estás en el Salón de la Fama, ese récord seguirá ahí.\n\nMuchas gracias por jugarlo nuevamente y buena suerte!!";
+
