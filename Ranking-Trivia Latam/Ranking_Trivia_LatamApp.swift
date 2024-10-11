@@ -13,11 +13,12 @@ struct Ranking_Trivia_LatamApp: App {
     
     init() {
         //FirebaseApp.configure()
+        // TODO: Initialize firebase here
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
         }
     }
 }
