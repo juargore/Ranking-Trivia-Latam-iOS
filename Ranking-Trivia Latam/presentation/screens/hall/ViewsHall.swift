@@ -14,7 +14,6 @@ struct HeaderBackAndCategory: View {
     
     var body: some View {
         VStack {
-            //Spacer().frame(height: 25)
             HStack {
                 Button(action: {
                     onBack()
@@ -41,8 +40,6 @@ struct HeaderBackAndCategory: View {
             }
             
         }
-        //.ignoresSafeArea()
-        //.edgesIgnoringSafeArea(.top)
     }
 }
 

@@ -55,7 +55,7 @@ struct HomeScreen: View {
                                         showResetDialog = true
                                     } else {
                                         selectedDestination = .playScreen
-                                        print("=== AQUI: selectedDestination = \(selectedDestination)")
+                                        //print("=== AQUI: selectedDestination = \(selectedDestination)")
                                     }
                                 }
                             ) {
@@ -74,7 +74,7 @@ struct HomeScreen: View {
                                 buttonType: .HallOfFame,
                                 onClick: {
                                     selectedDestination = .hallOfFameScreen
-                                    print("=== AQUI: selectedDestination = \(selectedDestination)")
+                                    //print("=== AQUI: selectedDestination = \(selectedDestination)")
                                 }
                             ) {
                                 Text("Salón de la fama ✧✧")
@@ -85,11 +85,6 @@ struct HomeScreen: View {
                                     .padding(.horizontal, 30)
                             }
                         }
-                        //.frame(maxHeight: .infinity)
-                        //.padding(.horizontal, 24)
-                        //.frame(maxWidth: .infinity)
-                        //.frame(maxHeight: .infinity)
-                        .background(Color.red)
                     }
                 }
                 .padding(.horizontal, 24)
@@ -219,7 +214,7 @@ struct HomeScreen: View {
                             .stroke(Color.black, lineWidth: 3)
                     )
                     .onTapGesture {
-                        print("==== AQUI: Click!")
+                        //print("==== AQUI: Click!")
                         onClick()
                         if playSound && viewModel.shouldPlaySound() {
                             Ranking_Trivia_Latam.playSound("sound_next_level")
