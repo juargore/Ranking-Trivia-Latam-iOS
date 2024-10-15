@@ -24,4 +24,13 @@ struct Ranking: FirebaseModel, Codable, Hashable {
         self.score = score
         self.flag = flag
     }
+    
+    init(id: String? = nil) {
+        self.id = id
+        self.position = 1
+        self.country_id = "ARG"
+        self.user_name = "Pedro Perez"
+        self.score = 123
+        self.flag = TriviaFlag(id: .AR, name: "ARG", image: "flag_argentina", alreadyPlayed: false)
+    }
 }

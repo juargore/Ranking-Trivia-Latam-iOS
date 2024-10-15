@@ -12,8 +12,7 @@ import Firebase
 struct Ranking_Trivia_LatamApp: App {
     
     init() {
-        //FirebaseApp.configure()
-        // TODO: Initialize firebase here
+        FirebaseApp.configure()
     }
     
     var body: some Scene {

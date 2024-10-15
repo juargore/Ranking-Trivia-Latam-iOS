@@ -18,14 +18,20 @@ final class AppNavigation: ObservableObject {
     @Published var navPath = NavigationPath()
     
     func navigate(to destination: Destination) {
-        try navPath.append(destination)
+        navPath.append(destination)
     }
     
     func navigateBack() {
-        try navPath.removeLast()
+        navPath.removeLast()
     }
     
     func navigateToRoot() {
-        try navPath.removeLast(navPath.count)
+        navPath.removeLast(navPath.count)
     }
+}
+
+enum NavigationDestination: Hashable {
+    case playScreen
+    case hallOfFameScreen
+    case homeScreen
 }

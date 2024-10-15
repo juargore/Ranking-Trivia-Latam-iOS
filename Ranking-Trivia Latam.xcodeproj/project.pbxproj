@@ -35,6 +35,29 @@
 		709842B62CB72AD300C7A28F /* Ranking-Trivia LatamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ranking-Trivia LatamUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		70C714142CBDCB250046BC1F /* Exceptions for "Ranking-Trivia Latam" folder in "Ranking-Trivia LatamTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"font/fredoka-condensed-bold.ttf",
+				"font/fredoka-condensed-medium.ttf",
+				"font/fredoka-condensed-semibold.ttf",
+				"GoogleService-Info.plist",
+			);
+			target = 709842AB2CB72AD300C7A28F /* Ranking-Trivia LatamTests */;
+		};
+		70C714152CBDCB250046BC1F /* Exceptions for "Ranking-Trivia Latam" folder in "Ranking-Trivia LatamUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"font/fredoka-condensed-bold.ttf",
+				"font/fredoka-condensed-medium.ttf",
+				"font/fredoka-condensed-semibold.ttf",
+				"GoogleService-Info.plist",
+			);
+			target = 709842B52CB72AD300C7A28F /* Ranking-Trivia LatamUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		709842DE2CB72E6400C7A28F /* Preview Content */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -43,6 +66,10 @@
 		};
 		709842EE2CB7305C00C7A28F /* Ranking-Trivia Latam */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				70C714142CBDCB250046BC1F /* Exceptions for "Ranking-Trivia Latam" folder in "Ranking-Trivia LatamTests" target */,
+				70C714152CBDCB250046BC1F /* Exceptions for "Ranking-Trivia Latam" folder in "Ranking-Trivia LatamUITests" target */,
+			);
 			path = "Ranking-Trivia Latam";
 			sourceTree = "<group>";
 		};
@@ -404,6 +431,7 @@
 				DEVELOPMENT_TEAM = 4X96DB8457;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ranking-Trivia-Latam-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Ranking-Trivia Latam";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -440,6 +468,7 @@
 				DEVELOPMENT_TEAM = 4X96DB8457;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ranking-Trivia-Latam-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Ranking-Trivia Latam";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

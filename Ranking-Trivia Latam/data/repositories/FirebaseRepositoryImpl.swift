@@ -14,9 +14,10 @@ class FirebaseRepositoryImpl: IFirebaseRepository {
     private var firestore = Firestore.firestore()
     
     func gameHasNewerVersion(currentVersion: Int) -> AnyPublisher<Bool, any Error> {
-        let collection: DocumentReference = firestore.collection(Constants.SETTINGS).document("JQLvfCyWopfOC1gxKfC8")
+        let collection: DocumentReference = firestore.collection(Constants.SETTINGS).document("FkXSZl7EaV2HAx0ehWBN")
         return collection.documentListenerFlow(AndroidBuildVersion.self).map { serverVersion in
-            return currentVersion >= serverVersion?.android_build_number ?? 0
+            print("=== AQUI: cVersion = \(currentVersion) && serverVersion = \(serverVersion?.ios_build_number ?? 0)")
+            return currentVersion >= serverVersion?.ios_build_number ?? 0
         }.eraseToAnyPublisher()
     }
     

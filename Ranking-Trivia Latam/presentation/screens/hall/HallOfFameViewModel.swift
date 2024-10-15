@@ -46,6 +46,7 @@ final class HallOfFameViewModel: ObservableObject {
         } else {
             getPointsForIncorrectResponse(question.level)
         }
+        appStorageUseCase.incrementScore(points: points)
     }
     
     func getPointsToAnimate(_ question: Question, _ isCorrect: Bool) -> Int {
