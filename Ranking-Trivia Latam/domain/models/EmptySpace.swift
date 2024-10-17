@@ -10,4 +10,6 @@ import Foundation
 struct EmptySpace: Codable, Hashable {
     let id: Int
     var flag: TriviaFlag? = nil
+    var flagIsOver: Bool = false
+    //var frame: CGRect? = nil
 }

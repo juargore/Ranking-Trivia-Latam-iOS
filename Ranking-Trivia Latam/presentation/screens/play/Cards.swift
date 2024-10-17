@@ -15,7 +15,7 @@ struct CardFlag: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
-                .fill(flag.alreadyPlayed ? Color.clear : Color.appCustomGreen.opacity(0.5))
+                .fill(Color.appCustomGreen.opacity(0.8))
                 .frame(width: 120, height: 110)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
@@ -23,27 +23,26 @@ struct CardFlag: View {
                 )
             
             VStack {
-                if !flag.alreadyPlayed {
-                    if let uiImage = flag.loadImage() {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 80, height: 50)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.black, lineWidth: 0.8)
-                            )
-                    }
-                    
-                    Text(flag.name)
-                        .multilineTextAlignment(.center)
-                        .font(.custom("FredokaCondensed-Bold", size: 18))
-                        .shadow(color: .gray, radius: 2, x: 2, y: 2)
-                        .foregroundColor(.white)
-                        .lineLimit(1)
-                        .padding(.top, 2)
+                if let uiImage = flag.loadImage() {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 80, height: 50)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.black, lineWidth: 0.8)
+                        )
                 }
+                
+                Text(flag.name)
+                    .multilineTextAlignment(.center)
+                    .font(.custom("FredokaCondensed-Bold", size: 18))
+                    .shadow(color: .gray, radius: 2, x: 2, y: 2)
+                    .foregroundColor(.white)
+                    .lineLimit(1)
+                    .padding(.top, 2)
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding()
@@ -71,7 +70,7 @@ struct CardEmptySpace: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white)
+                .fill(emptySpace.flagIsOver ? Color.red : Color.white)
                 .frame(width: 120, height: 110)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)

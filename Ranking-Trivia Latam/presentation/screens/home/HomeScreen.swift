@@ -94,13 +94,10 @@ struct HomeScreen: View {
             .navigationDestination(for: NavigationDestination.self) { destination in
                 switch destination {
                 case .playScreen:
-                    let _ = print("=== AQUI: Entró a .playScreen")
                     PlayScreen()
                 case .hallOfFameScreen:
-                    let _ = print("=== AQUI: Entró a .HallOfFameScreen")
                     HallOfFameScreen()
                 case .homeScreen:
-                    let _ = print("=== AQUI: Entró a .HomeScreen")
                     HomeScreen()
                 }
             }

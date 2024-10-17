@@ -62,7 +62,7 @@ struct DragTarget: View {
                         }
                     )
             )
-            .onChange(of: dragOffset) { newValue in
+            .onChange(of: dragOffset) { oldValue, newValue in
                 dragInfo.dragOffset = newValue
             }
     }
@@ -76,7 +76,7 @@ struct DropTarget: View {
     var body: some View {
         GeometryReader { geo in
             content(isDropTarget(geo: geo), dragInfo.dataToDrop)
-                .onChange(of: dragInfo.dragPosition) { _ in
+                .onChange(of: dragInfo.dragPosition) { oldValue, newValue in
                     if isDropTarget(geo: geo) && !dragInfo.isDragging {
                         // Se puede manejar la lógica de soltar aquí
                         dragInfo.dataToDrop = nil

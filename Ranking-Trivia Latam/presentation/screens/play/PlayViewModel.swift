@@ -20,7 +20,17 @@ final class PlayViewModel: ObservableObject {
     @Published var flags: [TriviaFlag] = []
     @Published var spaces: [EmptySpace] = []
     
+    func resetScreenData() {
+        /*
+        question = nil
+        flags = []
+        spaces = []
+        */
+        getQuestionToPlay()
+    }
+    
     func getQuestionToPlay() {
+        print("AQUI: Entro a getQuestionToPlay()")
         let lastQuestionIdPlayed: Int = appStorageUseCase.getLastQuestionIdPlayed() // questionId (Int) or -1
         if lastQuestionIdPlayed > 0 {
             let lastQuestionPlayed: Question = gameUseCase.getQuestionById(id: lastQuestionIdPlayed)
@@ -32,15 +42,15 @@ final class PlayViewModel: ObservableObject {
                 getEmptySpacesByLevel(nextQuestion!)
             } else {
                 // the level is complete -> continue to next level if exists
-                // print("AQUI: the level is complete -> continue to next level if exists")
+                print("AQUI: the level is complete -> continue to next level if exists")
                 let nextLevel: QuestionLevel? = gameUseCase.getNextQuestionLevel(currentLevel: lastQuestionPlayed.level)
                 if nextLevel == nil {
                     // no more levels available -> user has completed the game!!
-                    // print("AQUI: no more levels available -> user has completed the game!!")
+                    print("AQUI: no more levels available -> user has completed the game!!")
                     gameCompleted = true
                 } else {
                     // there are still pending levels -> get the first random question of nextLevel
-                    // print("AQUI: there are still pending levels -> get the first random question of nextLevel")
+                    print("AQUI: there are still pending levels -> get the first random question of nextLevel")
                     let newQuestion: Question? = gameUseCase.getQuestionByLevelAndExcludeTheOnesAlreadyPlayed(level: nextLevel!, idsAlreadyPlayedByLevel: [])
                     question = newQuestion
                     if newQuestion != nil {
@@ -50,8 +60,9 @@ final class PlayViewModel: ObservableObject {
             }
         } else {
             // no question stored in shared preferences -> user just started to play!
-            // print("AQUI: no question stored in shared preferences -> user just started to play!")
+            print("AQUI: no question stored in shared preferences -> user just started to play!")
             let newQuestion: Question? = gameUseCase.getQuestionByLevelAndExcludeTheOnesAlreadyPlayed(level: QuestionLevel.I, idsAlreadyPlayedByLevel: [])
+            question = newQuestion
             if newQuestion != nil {
                 getEmptySpacesByLevel(newQuestion!)
             }
@@ -60,6 +71,7 @@ final class PlayViewModel: ObservableObject {
     
     private func getEmptySpacesByLevel(_ question: Question) {
         spaces = gameUseCase.getEmptySpacesByLevel(level: question.level)
+        //print("AQUI: TotalSpaces: \(spaces.count)")
         getFlagsByQuestion(question)
     }
     
@@ -70,6 +82,7 @@ final class PlayViewModel: ObservableObject {
             mQuestions.append(flag)
         }
         flags = mQuestions
+        //print("AQUI: TotalFlags: \(flags.count)")
     }
     
     func verifyIfListIsCorrect(userResponse: [FlagId], question: Question) -> Bool {
@@ -141,15 +154,15 @@ final class PlayViewModel: ObservableObject {
         appStorageUseCase.resetErrors()
     }
     
-    func getTimeAccordingLevel(level: QuestionLevel) -> Int {
+    func getTimeAccordingLevel(level: QuestionLevel) -> Double {
         switch level {
-        case .I, .II, .III: return 60000
-        case .IV, .V: return 50000
-        case .VI, .VII: return 45000
-        case .VIII, .IX, .X: return 40000
-        case .XI: return 30000
-        case .XII: return 20000
-        case .XIII: return 15000
+        case .I, .II, .III: return 60
+        case .IV, .V: return 50
+        case .VI, .VII: return 45
+        case .VIII, .IX, .X: return 40
+        case .XI: return 30
+        case .XII: return 20
+        case .XIII: return 15
         }
     }
 }

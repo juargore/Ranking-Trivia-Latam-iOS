@@ -21,7 +21,6 @@ struct RankingCard: View {
                     .font(.custom("FredokaCondensed-Medium", size: 18))
                     .shadow(color: .gray, radius: 1, x: 2, y: 2)
                     .foregroundColor(Color.white)
-                    .shadow(color: .gray.opacity(0.6), radius: 2, x: 0, y: 1)
                     .frame(width: geometry.size.width * 0.10)
                 
                 // Bandera
