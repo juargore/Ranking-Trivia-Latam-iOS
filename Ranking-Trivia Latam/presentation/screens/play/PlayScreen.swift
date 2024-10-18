@@ -68,7 +68,8 @@ struct PlayScreen: View {
                                         emptySpace: item,
                                         viewModel: viewModel
                                     )
-                                    .onDrop(
+                                    
+                                    /*.onDrop(
                                         of: [.text],
                                         delegate: EmptySpaceDropDelegate(
                                             draggedItem: $draggedItem,
@@ -90,7 +91,7 @@ struct PlayScreen: View {
                                                 }
                                             }
                                         )
-                                    )
+                                    )*/
                                 }
                             }
                             .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -103,7 +104,6 @@ struct PlayScreen: View {
                             LazyVStack(alignment: .center, spacing: 10) {
                                 ForEach(Array(viewModel.flags.enumerated()), id: \.offset) { i, item in
                                     if !item.alreadyPlayed {
-                                        // CardFlag con gestos de arrastre
                                         CardFlag(flag: item)
                                             .offset(draggedItem == item ? draggedOffset : .zero)
                                             .gesture(
@@ -115,13 +115,14 @@ struct PlayScreen: View {
                                                             x: value.location.x + draggedOffset.width,
                                                             y: value.location.y + draggedOffset.height
                                                         )
-                                                        // Asegura que revise la columna izquierda
                                                         checkIfOverEmptySpace()
                                                     }
                                                     .onEnded { _ in
                                                         if let targetIndex = viewModel.spaces.firstIndex(where: { $0.flagIsOver }) {
-                                                            viewModel.spaces[targetIndex].flag = draggedItem
-                                                            viewModel.flags[i].alreadyPlayed = true
+                                                            if viewModel.spaces[targetIndex].flag == nil {
+                                                                viewModel.spaces[targetIndex].flag = draggedItem
+                                                                viewModel.flags[i].alreadyPlayed = true
+                                                            }
                                                         }
                                                         draggedItem = nil
                                                         draggedOffset = .zero
@@ -131,7 +132,6 @@ struct PlayScreen: View {
                                 }
                             }
                             .frame(maxWidth: .infinity, alignment: .topLeading)
-                            .border(Color.pink, width: 4)
                         //}
                         //.frame(width: UIScreen.screenWidth * 0.4)
                         //.border(Color.black, width: 3)
@@ -322,7 +322,6 @@ struct PlayScreen: View {
                     maxWidth: .infinity,
                     maxHeight: UIScreen.screenHeight * 0.2
                 )
-                .border(Color.yellow, width: 1)
             }
             .frame(maxWidth: UIScreen.screenWidth, maxHeight: UIScreen.screenHeight)
         }
@@ -363,8 +362,10 @@ struct PlayScreen: View {
     func checkIfOverEmptySpace() {
         for i in viewModel.spaces.indices {
             if let frame = viewModel.spaces[i].frame, frame.contains(dragPosition) {
+                print("AQUI: flagIsOver = true")
                 viewModel.spaces[i].flagIsOver = true
             } else {
+                print("AQUI: flagIsOver = false")
                 viewModel.spaces[i].flagIsOver = false
             }
         }
