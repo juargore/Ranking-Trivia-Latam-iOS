@@ -55,6 +55,7 @@ struct HallOfFameScreen: View {
                 )
             }
             .padding(.horizontal, 196)
+            .padding(.bottom, 60)
         }
         .toolbar(.hidden, for: .navigationBar)
     }
@@ -101,12 +102,9 @@ struct HallOfFameBackground: View {
             
             VignetteInverseEffect()
             
-            /*
-             AdmobBanner(
-             modifier = modifierAdmob,
-             adId = HOME_BOTTOM_SMALL_BANNER_ID
-             )
-             */
+            AdmobBanner(adUnitID: Constants.HALL_BOTTOM_SMALL_BANNER_ID)
+                .frame(width: UIScreen.screenWidth - 20, height: 50)
+                .frame(maxHeight: UIScreen.screenHeight, alignment: .bottom)
         }
     }
 }

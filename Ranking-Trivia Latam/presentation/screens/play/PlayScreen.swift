@@ -16,6 +16,7 @@ struct PlayScreen: View {
     
     @Environment(\.presentationMode) var presentationMode
     @StateObject var dragInfo = DragTargetInfo()
+    @StateObject private var interstitialAdManager = InterstitialAdsManager()
     
     @State private var timeUp = false
     @State private var showTimeUpDialog = false
@@ -29,17 +30,6 @@ struct PlayScreen: View {
     
     init() {
         viewModel.getQuestionToPlay()
-        if viewModel.shouldDisplayAdAtStart() {
-            // TODO: Load Ad here
-        }
-        /*
-         if (viewModel.shouldDisplayAdAtStart()) {
-                     loadAndShowAd(context, PLAY_FULL_SCREEN_BANNER_ID,
-                         onAdFailedToLoad = { onBack() },
-                         onAdDismissed = { viewModel.resetErrors() }
-                     )
-                 }
-         */
     }
     
     var body: some View {
@@ -290,7 +280,6 @@ struct PlayScreen: View {
                                 totalTime: viewModel.timePerLevel,
                                 isPaused: (showCorrectDialog || showIncorrectDialog),
                                 onTimeFinish: {
-                                    /*
                                     timeUp = true
                                     showTimeUpDialog = true
                                     if viewModel.shouldPlaySound() {
@@ -299,7 +288,6 @@ struct PlayScreen: View {
                                     animateScore = AnimatedScoreData(visible: true, isCorrect: false, question: viewModel.question!)
                                     vmh.incrementScore(viewModel.question!, isCorrect: false)
                                     viewModel.incrementCounterOfErrors()
-                                    */
                                 }
                             )
                             .padding(.horizontal, 16)
@@ -327,10 +315,19 @@ struct PlayScreen: View {
         }
         .toolbar(.hidden, for: .navigationBar)
         .toolbar(.hidden, for: .tabBar)
+        .onAppear{
+            interstitialAdManager.loadInterstitialAd()
+        }
+        .disabled(!interstitialAdManager.interstitialAdLoaded)
         .popUpDialog(isShowing: $showTimeUpDialog, dialogContent: {
             TimeUpDialog(isVisible: showTimeUpDialog) {
                 if viewModel.shouldDisplayAd() {
-                    // TODO: Ad here
+                    interstitialAdManager.displayInterstitialAd()
+                    interstitialAdManager.onAdClosed = {
+                        viewModel.resetErrors()
+                        viewModel.resetScreenData()
+                        showTimeUpDialog = false
+                    }
                 } else {
                     viewModel.resetScreenData()
                     showTimeUpDialog = false
@@ -340,7 +337,12 @@ struct PlayScreen: View {
         .popUpDialog(isShowing: $showIncorrectDialog, dialogContent: {
             IncorrectDialog(isVisible: showIncorrectDialog) {
                 if viewModel.shouldDisplayAd() {
-                    // TODO: Ad here
+                    interstitialAdManager.displayInterstitialAd()
+                    interstitialAdManager.onAdClosed = {
+                        viewModel.resetErrors()
+                        viewModel.resetScreenData()
+                        showIncorrectDialog = false
+                    }
                 } else {
                     viewModel.resetScreenData()
                     showIncorrectDialog = false
@@ -539,9 +541,9 @@ struct AnimateScoreNumber: View {
     }
 }
 
-#Preview {
+/*#Preview {
     PlayScreen()
-}
+}*/
 
 
 /*
