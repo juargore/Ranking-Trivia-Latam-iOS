@@ -15,74 +15,76 @@ struct PlayScreenHeader: View {
     var onBack: () -> Void
 
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                VStack {
-                    Spacer(minLength: 40)
-                    HStack {
-                        Button(action: {
-                            onBack()
-                        }) {
-                            ZStack {
-                                Circle()
-                                    .fill(Color.white)
-                                    .frame(width: 30, height: 30)
-                                    .overlay(
-                                        Circle()
-                                            .stroke(Color.black, lineWidth: 1)
-                                    )
-                                Image("ic_back")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 18, height: 20)
-                            }
+        
+        ZStack {
+            VStack {
+                HStack {
+                    Button(action: { onBack() }) {
+                        ZStack {
+                            Circle()
+                                .fill(Color.white)
+                                .frame(width: 30, height: 30)
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.black, lineWidth: 1)
+                                )
+                            Image("ic_back")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 18, height: 20)
                         }
-                        Spacer()
-                        Image("logo_no_background_letters")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 30)
-                    }
-                    .padding(.horizontal, 10)
-                    
-                    ScrollView {
-                        Text(question)
-                            .font(.custom("FredokaCondensed-Semibold", size: 26))
-                            .shadow(color: .gray, radius: 1, x: 2, y: 2)
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.white)
-                            .lineSpacing(0)
-                            .padding(.horizontal, 10)
-                            .padding(.bottom, 10)
-                            .frame(maxWidth: .infinity)
                     }
                     Spacer()
+                    Image("logo_no_background_letters")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 30)
                 }
-                .frame(height: 200)
-                .background(Color.appCustomBlue.opacity(0.5))
-                .padding(.bottom, 15)
+                .padding(.horizontal, 12)
                 
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        ButtonExitOrRetry(
-                            onClick: {},
-                            content: {
-                                Text("Nivel \(level.rawValue)")
-                                    .font(.custom("FredokaCondensed-Semibold", size: 16))
-                                    .foregroundColor(.black)
-                                    .padding(.vertical, 6)
-                                    .padding(.horizontal, 20)
-                            }
-                        )
-                        Spacer()
-                    }
+                ScrollView {
+                    Text(question)
+                        .font(.custom("FredokaCondensed-Semibold", size: 26))
+                        .shadow(color: .gray, radius: 1, x: 2, y: 2)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                        .lineSpacing(0)
+                        .padding(.horizontal, 10)
+                        .padding(.bottom, 10)
+                        .frame(maxWidth: .infinity)
                 }
-                .frame(height: 200)
             }
-            .frame(width: geometry.size.width, height: 200)
+            .frame(height: 150)
+            .background(Color.appCustomBlue.opacity(0.5))
+            .padding(.bottom, 25)
+            
+            VStack {
+                Spacer()
+                Color.gray.frame(height: 5)
+                    .padding(.bottom, 11)
+            }
+            .frame(height: 158)
+            
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    ButtonExitOrRetry(
+                        onClick: {},
+                        content: {
+                            Text("Nivel \(level.rawValue)")
+                                .font(.custom("FredokaCondensed-Semibold", size: 16))
+                                .foregroundColor(.black)
+                                .padding(.vertical, 6)
+                                .padding(.horizontal, 20)
+                        }
+                    )
+                    Spacer()
+                }
+            }
+            .frame(height: 158)
         }
+        .frame(width: UIScreen.screenWidth)
     }
 }
 
@@ -100,24 +102,22 @@ struct HeaderLevel: View {
 
     var body: some View {
         ZStack {
-            // Fondo amarillo con bordes redondeados
             Color.yellow
-                .cornerRadius(20) // Bordes redondeados
+                .cornerRadius(20)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.black, lineWidth: 2) // Borde negro
+                        .stroke(Color.black, lineWidth: 2)
                 )
-                .padding(.horizontal) // Espaciado horizontal opcional
+                .padding(.horizontal)
 
-            // Texto centrado
-            Text("Level \(level)") // Cambia a la traducción correspondiente
-                .font(.system(size: 18)) // Ajusta la fuente según sea necesario
+            Text("Level \(level)")
+                .font(.system(size: 18))
                 .multilineTextAlignment(.center)
-                .foregroundColor(Color.gray) // Color del texto
-                .padding(.vertical, 4) // Padding vertical
-                .padding(.horizontal, 16) // Padding horizontal
+                .foregroundColor(Color.gray)
+                .padding(.vertical, 4)
+                .padding(.horizontal, 16)
         }
-        .frame(minHeight: 40) // Altura mínima opcional
+        .frame(minHeight: 40)
     }
 }
 

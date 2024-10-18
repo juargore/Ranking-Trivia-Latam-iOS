@@ -31,7 +31,7 @@ struct HomeScreen: View {
                     VStack {
                         VStack {
                             HomeLogoLetters()
-                                .frame(maxWidth: .infinity, alignment: .top)
+                                .frame(maxWidth: UIScreen.screenWidth, alignment: .top)
                             
                             HomeSideButtons(
                                 viewModel: viewModel,
@@ -39,8 +39,7 @@ struct HomeScreen: View {
                                 onAboutClicked: { showAboutDialog = true },
                                 onTutorialClicked: { showTutorialDialog = true }
                             )
-                            .frame(maxWidth: .infinity, alignment: .bottomTrailing)
-                            .padding(.horizontal, 180)
+                            .frame(maxWidth: UIScreen.screenWidth, alignment: .bottomTrailing)
                         }
                         .frame(height: geometry.size.height * 0.55)
                         
@@ -126,30 +125,24 @@ struct HomeScreen: View {
                 
                 VignetteInverseEffect()
                 
+                AdmobBanner(adUnitID: Constants.HOME_BOTTOM_SMALL_BANNER_ID)
+                    .frame(height: 50)
+                    .frame(maxHeight: UIScreen.screenHeight, alignment: .bottom)
+                
                 if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
                    let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
                     
                     // version = 1.0 && build = "1.0.1"
                     let _ = print("current version = \(version)")
-                    HStack {
-                        Text("v\(build)")
-                            .font(.custom("FredokaCondensed-Semibold", size: 20))
-                            .shadow(color: .gray, radius: 2, x: 2, y: 2)
-                            .foregroundColor(Color.white)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-                    }
-                    .padding(.horizontal, 200)
+                    Text("v\(build)")
+                        .font(.custom("FredokaCondensed-Semibold", size: 20))
+                        .shadow(color: .black, radius: 2, x: 2, y: 2)
+                        .foregroundColor(Color.white)
+                        .frame(maxWidth: UIScreen.screenWidth, maxHeight: UIScreen.screenHeight, alignment: .bottomTrailing)
+                        .padding(.trailing, 25)
                 }
-                
-                VStack {
-                    Spacer()
-                    AdmobBanner(adUnitID: Constants.HOME_BOTTOM_SMALL_BANNER_ID)
-                        .frame(height: 50)
-                        .edgesIgnoringSafeArea(.bottom)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(.horizontal, 200)
             }
+            .frame(maxWidth: UIScreen.screenWidth, maxHeight: .infinity)
         }
     }
     

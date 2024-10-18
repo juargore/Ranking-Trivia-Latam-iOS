@@ -22,7 +22,10 @@ struct PlayScreen: View {
     @State private var showIncorrectDialog = false
     @State private var showCorrectDialog = false
     @State private var animateScore: AnimatedScoreData? = nil
+    
     @State var draggedItem: TriviaFlag?
+    @State var draggedOffset: CGSize = .zero
+    @State var dragPosition: CGPoint = .zero
     
     init() {
         viewModel.getQuestionToPlay()
@@ -43,142 +46,285 @@ struct PlayScreen: View {
         ZStack {
             PlayScreenBackground()
             
-            GeometryReader { geometry in
+            VStack {
                 VStack {
-                    VStack {
-                        if viewModel.question != nil {
-                            PlayScreenHeader(
-                                level: viewModel.question!.level,
-                                question: viewModel.question!.description,
-                                onBack: {
-                                    presentationMode.wrappedValue.dismiss()
-                                }
-                            )
-                            //.edgesIgnoringSafeArea(.top)
-                            .frame(width: 400)
-                        }
-                        
-                        HStack(spacing: 0) {
-                            LazyVStack(spacing: 10) {
+                    if viewModel.question != nil {
+                        PlayScreenHeader(
+                            level: viewModel.question!.level,
+                            question: viewModel.question!.description,
+                            onBack: {
+                                presentationMode.wrappedValue.dismiss()
+                            }
+                        )
+                    }
+                    
+                    HStack {
+                        // Columna izquierda: Empty Spaces
+                        //ScrollView {
+                            LazyVStack(alignment: .center, spacing: 10) {
                                 ForEach(Array(viewModel.spaces.enumerated()), id: \.offset) { i, item in
-                                    CardEmptySpace(index: i, emptySpace: item)
-                                        .onDrop(
-                                            of: [.text],
-                                            delegate: EmptySpaceDropDelegate(
-                                                draggedItem: $draggedItem,
-                                                onFinished: { triviaFlag in
-                                                    if viewModel.spaces[i].flag == nil {
-                                                        viewModel.spaces[i].flag = triviaFlag
-                                                        
-                                                        for rItem in viewModel.flags {
-                                                            if rItem.name == triviaFlag.name {
-                                                                rItem.alreadyPlayed = true
-                                                                return
-                                                            }
+                                    CardEmptySpace(
+                                        index: i,
+                                        emptySpace: item,
+                                        viewModel: viewModel
+                                    )
+                                    .onDrop(
+                                        of: [.text],
+                                        delegate: EmptySpaceDropDelegate(
+                                            draggedItem: $draggedItem,
+                                            onFinished: { triviaFlag in
+                                                if viewModel.spaces[i].flag == nil {
+                                                    viewModel.spaces[i].flag = triviaFlag
+                                                    
+                                                    for rItem in viewModel.flags {
+                                                        if rItem.name == triviaFlag.name {
+                                                            rItem.alreadyPlayed = true
+                                                            return
                                                         }
                                                     }
-                                                },
-                                                viewIsOverSpace: { isOverSpace in
-                                                    print("AQUI: isOver: \(isOverSpace)")
-                                                    if viewModel.spaces[i].flag == nil {
-                                                        viewModel.spaces[i].flagIsOver = isOverSpace
-                                                    }
                                                 }
-                                            )
+                                            },
+                                            viewIsOverSpace: { isOverSpace in
+                                                if viewModel.spaces[i].flag == nil {
+                                                    viewModel.spaces[i].flagIsOver = isOverSpace
+                                                }
+                                            }
                                         )
+                                    )
                                 }
-                                //Spacer()
                             }
+                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                        //}
+                        //.frame(width: UIScreen.screenWidth * 0.6)
+                        //.border(Color.white, width: 4)
                         
-                            LazyVStack(spacing: 10) {
+                        // Columna derecha: Flags
+                        //ScrollView {
+                            LazyVStack(alignment: .center, spacing: 10) {
                                 ForEach(Array(viewModel.flags.enumerated()), id: \.offset) { i, item in
                                     if !item.alreadyPlayed {
+                                        // CardFlag con gestos de arrastre
                                         CardFlag(flag: item)
-                                            .onDrag {
-                                                draggedItem = item
-                                                return NSItemProvider(object: item)
-                                            }
-                                            //.opacity(draggedItem == item ? 0 : 1) // TODO: here
+                                            .offset(draggedItem == item ? draggedOffset : .zero)
+                                            .gesture(
+                                                DragGesture()
+                                                    .onChanged { value in
+                                                        draggedItem = item
+                                                        draggedOffset = value.translation
+                                                        dragPosition = CGPoint(
+                                                            x: value.location.x + draggedOffset.width,
+                                                            y: value.location.y + draggedOffset.height
+                                                        )
+                                                        // Asegura que revise la columna izquierda
+                                                        checkIfOverEmptySpace()
+                                                    }
+                                                    .onEnded { _ in
+                                                        if let targetIndex = viewModel.spaces.firstIndex(where: { $0.flagIsOver }) {
+                                                            viewModel.spaces[targetIndex].flag = draggedItem
+                                                            viewModel.flags[i].alreadyPlayed = true
+                                                        }
+                                                        draggedItem = nil
+                                                        draggedOffset = .zero
+                                                    }
+                                            )
                                     }
                                 }
-                                //Spacer()
                             }
-                            
-                        }
-                        .padding(.horizontal, 190)
-                        
-                        Spacer()
+                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                            .border(Color.pink, width: 4)
+                        //}
+                        //.frame(width: UIScreen.screenWidth * 0.4)
+                        //.border(Color.black, width: 3)
                     }
-                    .frame(height: geometry.size.height * 0.8)
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity
+                    )
+                    .border(Color.black, width: 1)
+                }
+                .frame(
+                    maxWidth: .infinity,
+                    maxHeight: UIScreen.screenHeight * 0.7
+                )
+                Spacer()
+            }
+            .frame(maxWidth: UIScreen.screenWidth, maxHeight: UIScreen.screenHeight)
+
+            
+            /*VStack {
+                VStack {
+                    if viewModel.question != nil {
+                        PlayScreenHeader(
+                            level: viewModel.question!.level,
+                            question: viewModel.question!.description,
+                            onBack: {
+                                presentationMode.wrappedValue.dismiss()
+                            }
+                        )
+                    }
                     
-                    VStack {
-                        HStack {
-                            BottomButton(
-                                timeUp: timeUp,
-                                spaces: viewModel.spaces.filter { $0.flag == nil },
-                                onClick: {
-                                    let responseIsCorrect = viewModel.verifyIfListIsCorrect(
-                                        userResponse: viewModel.spaces.map { $0.flag!.id },
-                                        question: viewModel.question!
+                    HStack {
+                        ScrollView {
+                            LazyVStack(alignment: .center, spacing: 10) {
+                                ForEach(Array(viewModel.spaces.enumerated()), id: \.offset) { i, item in
+                                    CardEmptySpace(
+                                        index: i,
+                                        emptySpace: item,
+                                        viewModel: viewModel
                                     )
-                                    if responseIsCorrect {
-                                        if viewModel.shouldPlaySound() {
-                                            Ranking_Trivia_Latam.playSound("sound_success")
-                                        }
-                                        animateScore = AnimatedScoreData(visible: true, isCorrect: true, question: viewModel.question!)
-                                        vmh.incrementScore(viewModel.question!, isCorrect: true)
-                                        showCorrectDialog = true
-                                    } else {
-                                        print("AQUI: Incorrect")
-                                        if viewModel.shouldPlaySound() {
-                                            Ranking_Trivia_Latam.playSound("sound_error")
-                                        }
-                                        viewModel.incrementCounterOfErrors()
-                                        animateScore = AnimatedScoreData(visible: true, isCorrect: false, question: viewModel.question!)
-                                        vmh.incrementScore(viewModel.question!, isCorrect: false)
-                                        showIncorrectDialog = true
+                                    .onDrop(
+                                        of: [.text],
+                                        delegate: EmptySpaceDropDelegate(
+                                            draggedItem: $draggedItem,
+                                            onFinished: { triviaFlag in
+                                                if viewModel.spaces[i].flag == nil {
+                                                    viewModel.spaces[i].flag = triviaFlag
+                                                    
+                                                    for rItem in viewModel.flags {
+                                                        if rItem.name == triviaFlag.name {
+                                                            rItem.alreadyPlayed = true
+                                                            return
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            viewIsOverSpace: { isOverSpace in
+                                                //print("AQUI: isOver: \(isOverSpace)")
+                                                if viewModel.spaces[i].flag == nil {
+                                                    viewModel.spaces[i].flagIsOver = isOverSpace
+                                                }
+                                            }
+                                        )
+                                    )
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                        }
+                        .frame(width: UIScreen.screenWidth * 0.6)
+                        .border(Color.white, width: 4)
+                        
+                        ScrollView {
+                            LazyVStack(alignment: .center, spacing: 10) {
+                                ForEach(Array(viewModel.flags.enumerated()), id: \.offset) { i, item in
+                                    if !item.alreadyPlayed {
+                                        // TODO: Aqui!!!
+                                        CardFlag(flag: item)
+                                            .offset(draggedItem == item ? draggedOffset : .zero)
+                                            .gesture(
+                                                DragGesture()
+                                                    .onChanged { value in
+                                                        draggedItem = item
+                                                        draggedOffset = value.translation
+                                                        dragPosition = CGPoint(
+                                                            x: value.location.x + draggedOffset.width,
+                                                            y: value.location.y + draggedOffset.height
+                                                        )
+                                                        checkIfOverEmptySpace()
+                                                    }
+                                                    .onEnded { _ in
+                                                        if let targetIndex = viewModel.spaces.firstIndex(where: { $0.flagIsOver }) {
+                                                            viewModel.spaces[targetIndex].flag = draggedItem
+                                                            viewModel.flags[i].alreadyPlayed = true
+                                                        }
+                                                        draggedItem = nil
+                                                        draggedOffset = .zero
+                                                    }
+                                            )
                                     }
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                            .border(Color.pink, width: 4)
+                        }
+                        .frame(width: UIScreen.screenWidth * 0.4)
+                        .border(Color.black, width: 3)
+                    }
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity
+                    )
+                    .border(Color.black, width: 1)
+                }
+                .frame(
+                    maxWidth: .infinity,
+                    maxHeight: UIScreen.screenHeight * 0.7
+                )
+                Spacer()
+            }
+            .frame(maxWidth: UIScreen.screenWidth, maxHeight: UIScreen.screenHeight)
+            */
+            
+            VStack {
+                Spacer()
+                VStack {
+                    HStack {
+                        BottomButton(
+                            timeUp: timeUp,
+                            spaces: viewModel.spaces.filter { $0.flag == nil },
+                            onClick: {
+                                let responseIsCorrect = viewModel.verifyIfListIsCorrect(
+                                    userResponse: viewModel.spaces.map { $0.flag!.id },
+                                    question: viewModel.question!
+                                )
+                                if responseIsCorrect {
+                                    if viewModel.shouldPlaySound() {
+                                        Ranking_Trivia_Latam.playSound("sound_success")
+                                    }
+                                    animateScore = AnimatedScoreData(visible: true, isCorrect: true, question: viewModel.question!)
+                                    vmh.incrementScore(viewModel.question!, isCorrect: true)
+                                    showCorrectDialog = true
+                                } else {
+                                    print("AQUI: Incorrect")
+                                    if viewModel.shouldPlaySound() {
+                                        Ranking_Trivia_Latam.playSound("sound_error")
+                                    }
+                                    viewModel.incrementCounterOfErrors()
+                                    animateScore = AnimatedScoreData(visible: true, isCorrect: false, question: viewModel.question!)
+                                    vmh.incrementScore(viewModel.question!, isCorrect: false)
+                                    showIncorrectDialog = true
+                                }
+                            }
+                        )
+                        if viewModel.question != nil {
+                            CountdownTimer(
+                                totalTime: viewModel.timePerLevel,
+                                isPaused: (showCorrectDialog || showIncorrectDialog),
+                                onTimeFinish: {
+                                    /*
+                                    timeUp = true
+                                    showTimeUpDialog = true
+                                    if viewModel.shouldPlaySound() {
+                                        Ranking_Trivia_Latam.playSound("sound_error")
+                                    }
+                                    animateScore = AnimatedScoreData(visible: true, isCorrect: false, question: viewModel.question!)
+                                    vmh.incrementScore(viewModel.question!, isCorrect: false)
+                                    viewModel.incrementCounterOfErrors()
+                                    */
                                 }
                             )
-                            if viewModel.question != nil {
-                                CountdownTimer(
-                                    totalTime: viewModel.timePerLevel,
-                                    isPaused: (showCorrectDialog || showIncorrectDialog),
-                                    onTimeFinish: {
-                                        /*
-                                        timeUp = true
-                                        showTimeUpDialog = true
-                                        if viewModel.shouldPlaySound() {
-                                            Ranking_Trivia_Latam.playSound("sound_error")
-                                        }
-                                        animateScore = AnimatedScoreData(visible: true, isCorrect: false, question: viewModel.question!)
-                                        vmh.incrementScore(viewModel.question!, isCorrect: false)
-                                        viewModel.incrementCounterOfErrors()
-                                        */
-                                    }
-                                )
-                                .padding(.horizontal, 8)
-                            }
-                            
-                            ZStack {
-                                ScoreUI(score: vmh.getTotalScore())
-                                if let sc = animateScore {
-                                    AnimateScoreNumber(visible: sc.visible, score: vmh.getPointsToAnimate(sc.question, sc.isCorrect))
-                                }
-                            }
-                            .padding(.vertical, 8)
+                            .padding(.horizontal, 16)
                         }
                         
-                        AdmobBanner(adUnitID: Constants.HOME_BOTTOM_SMALL_BANNER_ID)
-                            .frame(height: 50)
-                            .padding(.vertical, 10)
-                            .edgesIgnoringSafeArea(.bottom)
+                        ZStack {
+                            ScoreUI(score: vmh.getTotalScore())
+                            if let sc = animateScore {
+                                AnimateScoreNumber(visible: sc.visible, score: vmh.getPointsToAnimate(sc.question, sc.isCorrect))
+                            }
+                        }
+                        .padding(.vertical, 8)
                     }
-                    //.padding(.horizontal, 196)
-                    .frame(height: geometry.size.height * 0.2)
+                    
+                    AdmobBanner(adUnitID: Constants.PLAY_BOTTOM_SMALL_BANNER_ID)
+                        .frame(height: 50)
+                        .padding(.top, 10)
                 }
-                //.frame(height: .infinity)
+                .frame(
+                    maxWidth: .infinity,
+                    maxHeight: UIScreen.screenHeight * 0.2
+                )
+                .border(Color.yellow, width: 1)
             }
+            .frame(maxWidth: UIScreen.screenWidth, maxHeight: UIScreen.screenHeight)
         }
         .toolbar(.hidden, for: .navigationBar)
         .toolbar(.hidden, for: .tabBar)
@@ -214,6 +360,15 @@ struct PlayScreen: View {
         })
     }
     
+    func checkIfOverEmptySpace() {
+        for i in viewModel.spaces.indices {
+            if let frame = viewModel.spaces[i].frame, frame.contains(dragPosition) {
+                viewModel.spaces[i].flagIsOver = true
+            } else {
+                viewModel.spaces[i].flagIsOver = false
+            }
+        }
+    }
     
     struct EmptySpaceDropDelegate: DropDelegate {
         
@@ -342,14 +497,12 @@ struct PlayScreen: View {
 
 struct PlayScreenBackground: View {
     var body: some View {
-        ZStack {
-            Image(uiImage: UIImage(named: "pyramid_one")!)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .ignoresSafeArea()
-            
-            VignetteInverseEffect()
-        }
+        Image(uiImage: UIImage(named: "pyramid_one")!)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .ignoresSafeArea()
+        
+        VignetteInverseEffect()
     }
 }
 
@@ -388,3 +541,14 @@ struct AnimateScoreNumber: View {
 #Preview {
     PlayScreen()
 }
+
+
+/*
+ CHIDO:
+ CardFlag(flag: item)
+     /*.onDrag {
+         draggedItem = item
+         return NSItemProvider(object: item)
+     }*/
+     //.opacity(draggedItem == item ? 0 : 1) // TODO: here
+ */
