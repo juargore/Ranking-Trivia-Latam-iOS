@@ -33,7 +33,7 @@ struct VignetteInverseEffect: View {
                     )
                 )
             }
-            .ignoresSafeArea() // O usa un .modifier si quieres controlar esto
+            .ignoresSafeArea()
         }
     }
 }

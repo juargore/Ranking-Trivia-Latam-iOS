@@ -5,11 +5,13 @@
 //  Created by Arturo Gomez on 10/14/24.
 //
 
+import Foundation
 import AVFoundation
 
 var audioPlayer: AVAudioPlayer?
 
 func playSound(_ resourceName: String) {
+    
     if let path = Bundle.main.path(forResource: resourceName, ofType: "wav") {
         let url = URL(fileURLWithPath: path)
         
@@ -38,3 +40,28 @@ class AVAudioPlayerDelegateWrapper: NSObject, AVAudioPlayerDelegate {
         onCompletion?()
     }
 }
+
+
+class SoundManager {
+
+var audioPlayer = AVAudioPlayer()
+let errorSoundFileName = "sounderror.wav"
+    
+@Published private(set) var soundEffectsEnabled = false
+@Published private(set) var musicEnabled = false
+
+func playError() {
+    
+let path = Bundle.main.path(forResource: errorSoundFileName, ofType: nil)!
+let url = URL(fileURLWithPath: path)
+
+do {
+audioPlayer = try AVAudioPlayer(contentsOf: url)
+audioPlayer.play()
+} catch {
+print("SoundManager.playHintSolved couldn't play")
+fatalError("Coudln't play file")
+}//catch
+}//func
+
+}//class

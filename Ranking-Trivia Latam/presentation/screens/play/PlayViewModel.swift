@@ -15,22 +15,25 @@ final class PlayViewModel: ObservableObject {
     private let appStorageUseCase = AppStorageUseCase()
     private var disposables = Set<AnyCancellable>()
     
+    @Published var timePerLevel: Double = 0
     @Published var gameCompleted: Bool = false
     @Published var question: Question? = nil
     @Published var flags: [TriviaFlag] = []
     @Published var spaces: [EmptySpace] = []
     
     func resetScreenData() {
-        /*
+        timePerLevel = 0
         question = nil
         flags = []
         spaces = []
-        */
-        getQuestionToPlay()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { // 0.1 second delay
+            self.getQuestionToPlay()
+        }
     }
     
     func getQuestionToPlay() {
-        print("AQUI: Entro a getQuestionToPlay()")
+        //print("AQUI: Entro a getQuestionToPlay()")
         let lastQuestionIdPlayed: Int = appStorageUseCase.getLastQuestionIdPlayed() // questionId (Int) or -1
         if lastQuestionIdPlayed > 0 {
             let lastQuestionPlayed: Question = gameUseCase.getQuestionById(id: lastQuestionIdPlayed)
@@ -82,7 +85,12 @@ final class PlayViewModel: ObservableObject {
             mQuestions.append(flag)
         }
         flags = mQuestions
+        getTimePerLevel(question)
         //print("AQUI: TotalFlags: \(flags.count)")
+    }
+    
+    private func getTimePerLevel(_ question: Question) {
+        timePerLevel = getTimeAccordingLevel(level: question.level)
     }
     
     func verifyIfListIsCorrect(userResponse: [FlagId], question: Question) -> Bool {
@@ -156,7 +164,7 @@ final class PlayViewModel: ObservableObject {
     
     func getTimeAccordingLevel(level: QuestionLevel) -> Double {
         switch level {
-        case .I, .II, .III: return 60
+        case .I, .II, .III: return 5
         case .IV, .V: return 50
         case .VI, .VII: return 45
         case .VIII, .IX, .X: return 40

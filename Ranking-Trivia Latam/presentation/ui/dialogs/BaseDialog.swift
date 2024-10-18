@@ -50,9 +50,7 @@ struct BaseDialog<Content: View>: View {
             }
             .padding(.top, 25)
         }
-        .background(Color.clear)
-        //.padding(.horizontal, 5)
-        .padding(.horizontal, 190)
+        .padding(.horizontal, 170)
     }
 }
 
@@ -82,9 +80,7 @@ struct CustomDialog<DialogContent: View>: ViewModifier {
         // of the screen
         ZStack {
           dialogContent
-            .background(
-              RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(.white))
+            
         }.padding(padding)
       }
     }

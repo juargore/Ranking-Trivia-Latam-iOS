@@ -15,36 +15,83 @@ struct PlayScreenHeader: View {
     var onBack: () -> Void
 
     var body: some View {
-        ZStack {
-            VStack {
-                HeaderBackAndCategory {
-                    onBack()
+        GeometryReader { geometry in
+            ZStack {
+                VStack {
+                    Spacer(minLength: 40)
+                    HStack {
+                        Button(action: {
+                            onBack()
+                        }) {
+                            ZStack {
+                                Circle()
+                                    .fill(Color.white)
+                                    .frame(width: 30, height: 30)
+                                    .overlay(
+                                        Circle()
+                                            .stroke(Color.black, lineWidth: 1)
+                                    )
+                                Image("ic_back")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 18, height: 20)
+                            }
+                        }
+                        Spacer()
+                        Image("logo_no_background_letters")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 30)
+                    }
+                    .padding(.horizontal, 10)
+                    
+                    ScrollView {
+                        Text(question)
+                            .font(.custom("FredokaCondensed-Semibold", size: 26))
+                            .shadow(color: .gray, radius: 1, x: 2, y: 2)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .lineSpacing(0)
+                            .padding(.horizontal, 10)
+                            .padding(.bottom, 10)
+                            .frame(maxWidth: .infinity)
+                    }
+                    Spacer()
                 }
+                .frame(height: 200)
+                .background(Color.appCustomBlue.opacity(0.5))
+                .padding(.bottom, 15)
                 
-                ScrollView {
-                    Text(question)
-                        .font(.custom("FredokaCondensed-Semibold", size: 26))
-                        .shadow(color: .gray, radius: 1, x: 2, y: 2)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.white)
-                        .lineSpacing(0) // Similar a lineHeight
-                        .padding(.horizontal, 10)
-                        .padding(.bottom, 10)
-                        .frame(maxWidth: .infinity)
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        ButtonExitOrRetry(
+                            onClick: {},
+                            content: {
+                                Text("Nivel \(level.rawValue)")
+                                    .font(.custom("FredokaCondensed-Semibold", size: 16))
+                                    .foregroundColor(.black)
+                                    .padding(.vertical, 6)
+                                    .padding(.horizontal, 20)
+                            }
+                        )
+                        Spacer()
+                    }
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.top)
-
-                //HeaderDivisions()
+                .frame(height: 200)
             }
-            .padding(.horizontal, 200)
-
-            // Nivel del encabezado
-            //HeaderLevel(level: level.hashValue + 1).alignmentGuide(.bottom) { _ in 0 } // Alinea en el centro
+            .frame(width: geometry.size.width, height: 200)
         }
-        .background(Color.appCustomBlue.opacity(0.5))
-        .frame(height: 160)
     }
+}
+
+#Preview {
+    PlayScreenHeader(
+        level: .I,
+        question: "Hello there sldflsjd flaksdj lsdhfkasjhd fksahdfk weurweyiuwyiwe 93847934759384b,cxmvxskdjfh",
+        onBack: {}
+    )
 }
 
 struct HeaderLevel: View {
@@ -142,7 +189,7 @@ struct CountdownTimer: View {
     }
 }
 
-#Preview {
+/*#Preview {
     CountdownTimer(
         totalTime: 60,
         isPaused: false,
@@ -150,7 +197,7 @@ struct CountdownTimer: View {
             
         }
     )
-}
+}*/
 
 struct TimerView: View {
     let timeLeft: TimeInterval

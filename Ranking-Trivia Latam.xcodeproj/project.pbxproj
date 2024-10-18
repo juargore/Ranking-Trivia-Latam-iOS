@@ -10,6 +10,7 @@
 		704EC1212CB9C5AD0093ACA5 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 704EC1202CB9C5AD0093ACA5 /* SwiftSVG */; };
 		709842DA2CB72DFF00C7A28F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 709842D92CB72DFF00C7A28F /* FirebaseDatabase */; };
 		709842DC2CB72DFF00C7A28F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 709842DB2CB72DFF00C7A28F /* FirebaseFirestore */; };
+		70C714DD2CC214D80046BC1F /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 70C714DC2CC214D80046BC1F /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,13 @@
 				"font/fredoka-condensed-medium.ttf",
 				"font/fredoka-condensed-semibold.ttf",
 				"GoogleService-Info.plist",
+				sound_click.wav,
+				sound_next_level.wav,
+				sound_remove.wav,
+				sound_success.wav,
+				"sound-error.wav",
+				tutorial_correct_incorrect.mp4,
+				tutorial_drag_and_drop.mp4,
 			);
 			target = 709842AB2CB72AD300C7A28F /* Ranking-Trivia LatamTests */;
 		};
@@ -53,6 +61,13 @@
 				"font/fredoka-condensed-medium.ttf",
 				"font/fredoka-condensed-semibold.ttf",
 				"GoogleService-Info.plist",
+				sound_click.wav,
+				sound_next_level.wav,
+				sound_remove.wav,
+				sound_success.wav,
+				"sound-error.wav",
+				tutorial_correct_incorrect.mp4,
+				tutorial_drag_and_drop.mp4,
 			);
 			target = 709842B52CB72AD300C7A28F /* Ranking-Trivia LatamUITests */;
 		};
@@ -80,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C714DD2CC214D80046BC1F /* GoogleMobileAds in Frameworks */,
 				709842DA2CB72DFF00C7A28F /* FirebaseDatabase in Frameworks */,
 				709842DC2CB72DFF00C7A28F /* FirebaseFirestore in Frameworks */,
 				704EC1212CB9C5AD0093ACA5 /* SwiftSVG in Frameworks */,
@@ -108,6 +124,7 @@
 			children = (
 				709842EE2CB7305C00C7A28F /* Ranking-Trivia Latam */,
 				709842DE2CB72E6400C7A28F /* Preview Content */,
+				70C714DB2CC214D80046BC1F /* Frameworks */,
 				7098429D2CB72AD200C7A28F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +137,13 @@
 				709842B62CB72AD300C7A28F /* Ranking-Trivia LatamUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		70C714DB2CC214D80046BC1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +170,7 @@
 				709842D92CB72DFF00C7A28F /* FirebaseDatabase */,
 				709842DB2CB72DFF00C7A28F /* FirebaseFirestore */,
 				704EC1202CB9C5AD0093ACA5 /* SwiftSVG */,
+				70C714DC2CC214D80046BC1F /* GoogleMobileAds */,
 			);
 			productName = "Ranking-Trivia Latam";
 			productReference = 7098429C2CB72AD200C7A28F /* Ranking-Trivia Latam.app */;
@@ -226,6 +251,7 @@
 			packageReferences = (
 				709842D82CB72DFF00C7A28F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				704EC11C2CB9C3BA0093ACA5 /* XCRemoteSwiftPackageReference "SwiftSVG" */,
+				70C714D42CC20B7C0046BC1F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7098429D2CB72AD200C7A28F /* Products */;
@@ -624,6 +650,14 @@
 				minimumVersion = 11.3.0;
 			};
 		};
+		70C714D42CC20B7C0046BC1F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -641,6 +675,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 709842D82CB72DFF00C7A28F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		70C714DC2CC214D80046BC1F /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70C714D42CC20B7C0046BC1F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -27,7 +27,7 @@ struct IncorrectDialog: View {
 
                         Text("Haz ordenado de forma incorrecta el ranking de las banderas.\nPero no te preocupes, estás muy cerca de lograrlo!!\n\nInténtalo nuevamente!")
                             .font(.custom("FredokaCondensed-Semibold", size: 22))
-                            .shadow(color: .gray, radius: 1, x: 1, y: 1)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, 10)
@@ -41,7 +41,6 @@ struct IncorrectDialog: View {
                                 content: {
                                     Text("Reintentar")
                                         .font(.custom("FredokaCondensed-Semibold", size: 24))
-                                        .shadow(color: .gray, radius: 1, x: 1, y: 1)
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)
                                         .padding(.horizontal, 20)

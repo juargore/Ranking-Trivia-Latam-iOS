@@ -13,7 +13,7 @@ struct HeaderBackAndCategory: View {
     var onBack: () -> Void
     
     var body: some View {
-        VStack {
+        //VStack {
             HStack {
                 Button(action: {
                     onBack()
@@ -39,7 +39,7 @@ struct HeaderBackAndCategory: View {
                     .frame(width: 40, height: 30)
             }
             
-        }
+        //}
     }
 }
 

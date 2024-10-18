@@ -26,65 +26,71 @@ struct HomeScreen: View {
         NavigationStack {
             ZStack {
                 HomeBackground()
-                VStack {
+                
+                GeometryReader { geometry in
                     VStack {
-                        HomeLogoLetters()
-                            .frame(maxWidth: .infinity, alignment: .top)
-                        
-                        HomeSideButtons(
-                            viewModel: viewModel,
-                            onSettingsClicked: { showOptionsDialog = true },
-                            onAboutClicked: { showAboutDialog = true },
-                            onTutorialClicked: { showTutorialDialog = true }
-                        )
-                        .frame(maxWidth: .infinity, alignment: .bottomTrailing)
-                        .padding(.horizontal, 180)
-                    }
-                    .frame(maxHeight: .infinity)
-                    
-                    VStack(
-                        alignment: .center,
-                        spacing: 20
-                    ) {
-                        NavigationLink(value: NavigationDestination.playScreen) {
-                            HomeYellowButton(
+                        VStack {
+                            HomeLogoLetters()
+                                .frame(maxWidth: .infinity, alignment: .top)
+                            
+                            HomeSideButtons(
                                 viewModel: viewModel,
-                                buttonType: .Start,
-                                onClick: {
-                                    if viewModel.userCompletedGame() {
-                                        showResetDialog = true
-                                    } else {
-                                        selectedDestination = .playScreen
-                                        //print("=== AQUI: selectedDestination = \(selectedDestination)")
+                                onSettingsClicked: { showOptionsDialog = true },
+                                onAboutClicked: { showAboutDialog = true },
+                                onTutorialClicked: { showTutorialDialog = true }
+                            )
+                            .frame(maxWidth: .infinity, alignment: .bottomTrailing)
+                            .padding(.horizontal, 180)
+                        }
+                        .frame(height: geometry.size.height * 0.55)
+                        
+                        VStack(alignment: .center) {
+                            let startButton = RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.AppYellow.opacity(0.9))
+                                .frame(width: 200, height: 70)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 25)
+                                        .stroke(Color.black, lineWidth: 3)
+                                )
+                                .overlay {
+                                    Text("Iniciar")
+                                        .font(.custom("FredokaCondensed-Semibold", size: 36))
+                                        .shadow(color: .gray, radius: 1, x: 1, y: 1)
+                                        .foregroundColor(Color.appDarkGrey)
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal, 25)
+                                }
+                                .padding(.bottom, 10)
+                            
+                            if viewModel.userCompletedGame() {
+                                startButton.onTapGesture { showResetDialog = true }
+                            } else {
+                                NavigationLink(value: NavigationDestination.playScreen) {
+                                    Pulsating(duration: 2.0, pulseFraction: 1.1) {
+                                        startButton
                                     }
                                 }
-                            ) {
-                                Text("Iniciar")
-                                    .font(.custom("FredokaCondensed-Semibold", size: 36))
-                                    .shadow(color: .gray, radius: 2, x: 2, y: 2)
-                                    .foregroundColor(Color.appDarkGrey)
-                                    .padding(.vertical, 15)
-                                    .padding(.horizontal, 60)
+                            }
+                            
+                            NavigationLink(value: NavigationDestination.hallOfFameScreen) {
+                                RoundedRectangle(cornerRadius: 25)
+                                    .fill(Color.AppYellow.opacity(0.9))
+                                    .frame(width: 260, height: 60)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 25)
+                                            .stroke(Color.black, lineWidth: 3)
+                                    )
+                                    .overlay {
+                                        Text("Salón de la fama ✧✧")
+                                            .font(.custom("FredokaCondensed-Semibold", size: 25))
+                                            .shadow(color: .gray, radius: 1, x: 1, y: 1)
+                                            .foregroundColor(Color.appDarkGrey)
+                                            .padding(.vertical, 10)
+                                            .padding(.horizontal, 25)
+                                    }
                             }
                         }
-                        
-                        NavigationLink(value: NavigationDestination.hallOfFameScreen) {
-                            HomeYellowButton(
-                                viewModel: viewModel,
-                                buttonType: .HallOfFame,
-                                onClick: {
-                                    selectedDestination = .hallOfFameScreen
-                                    //print("=== AQUI: selectedDestination = \(selectedDestination)")
-                                }
-                            ) {
-                                Text("Salón de la fama ✧✧")
-                                    .font(.custom("FredokaCondensed-Semibold", size: 25))
-                                    .shadow(color: .gray, radius: 1, x: 1, y: 1)
-                                    .foregroundColor(Color.appDarkGrey)
-                                    .padding(.vertical, 10)
-                                    .padding(.horizontal, 30)
-                            }
-                        }
+                        .frame(height: geometry.size.height * 0.45)
                     }
                 }
                 .padding(.horizontal, 24)
@@ -101,6 +107,12 @@ struct HomeScreen: View {
                     HomeScreen()
                 }
             }
+            .popUpDialog(isShowing: $showAboutDialog, dialogContent: {
+                AboutDialog(onExitClicked: { showAboutDialog = false })
+            })
+            .popUpDialog(isShowing: $showTutorialDialog, dialogContent: {
+                TutorialDialog(onExitClicked: { showTutorialDialog = false })
+            })
         }
     }
     
@@ -129,13 +141,14 @@ struct HomeScreen: View {
                     .padding(.horizontal, 200)
                 }
                 
-                /*
-                 AdmobBanner(
-                 modifier = modifierAdmob,
-                 adId = HOME_BOTTOM_SMALL_BANNER_ID
-                 )
-                 */
-                
+                VStack {
+                    Spacer()
+                    AdmobBanner(adUnitID: Constants.HOME_BOTTOM_SMALL_BANNER_ID)
+                        .frame(height: 50)
+                        .edgesIgnoringSafeArea(.bottom)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(.horizontal, 200)
             }
         }
     }
@@ -189,124 +202,125 @@ struct HomeScreen: View {
             }
         }
     }
+}
+
+
+public enum HomeButtonType {
+    case Start
+    case Settings
+    case About
+    case Tutorial
+    case NewVersion
+    case HallOfFame
+}
+
+struct HomeYellowButton<Content: View>: View {
     
-    struct HomeYellowButton<Content: View>: View {
+    @ObservedObject var viewModel = HomeViewModel()
+    
+    var buttonType: HomeButtonType
+    var playSound: Bool = true
+    var onClick: () -> Void
+    var content: () -> Content
+    
+    var body: some View {
+        let width: CGFloat = (buttonType == .Start) ? 200 : 260
+        let height: CGFloat = (buttonType == .Start) ? 70 : 60
         
-        @ObservedObject var viewModel: HomeViewModel
-        
-        var buttonType: HomeButtonType
-        var playSound: Bool = true
-        var onClick: () -> Void
-        var content: () -> Content
-        
-        var body: some View {
-            let width: CGFloat = (buttonType == .Start) ? 200 : 260
-            let height: CGFloat = (buttonType == .Start) ? 70 : 60
-            let buttonContent = ZStack {
-                RoundedRectangle(cornerRadius: 25)
-                    .fill(Color.AppYellow.opacity(0.9))
-                    .frame(width: width, height: height)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 25)
-                            .stroke(Color.black, lineWidth: 3)
-                    )
-                    .onTapGesture {
-                        //print("==== AQUI: Click!")
-                        onClick()
-                        if playSound && viewModel.shouldPlaySound() {
-                            Ranking_Trivia_Latam.playSound("sound_next_level")
-                        }
+        let buttonContent = ZStack {
+            RoundedRectangle(cornerRadius: 25)
+                .fill(Color.AppYellow.opacity(0.9))
+                .frame(width: width, height: height)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                        .stroke(Color.black, lineWidth: 3)
+                )
+                .onTapGesture {
+                    onClick()
+                    if playSound && viewModel.shouldPlaySound() {
+                        Ranking_Trivia_Latam.playSound("sound_next_level")
                     }
-                
-                content()
-            }
+                }
             
-            VStack {
-                if buttonType == .Start {
-                    Pulsating(duration: 2.0, pulseFraction: 1.1) {
-                        buttonContent
-                    }
-                } else {
+            content()
+        }
+        
+        VStack {
+            if buttonType == .Start {
+                Pulsating(duration: 2.0, pulseFraction: 1.1) {
                     buttonContent
                 }
+            } else {
+                buttonContent
             }
         }
     }
+}
+
+
+struct CircledButtonStart: View {
+    var buttonType: HomeButtonType
+    var onClick: () -> Void
     
-    
-    struct CircledButtonStart: View {
-        var buttonType: HomeButtonType
-        var onClick: () -> Void
-        
-        var body: some View {
-            let boxContent: some View = Group {
-                ZStack {
-                    Circle()
-                        .fill(Color.appCustomBlue.opacity(0.6))
-                        .frame(width: 55, height: 55)
-                        .onTapGesture {
-                            onClick()
-                        }
-                        .overlay {
-                            Image("ic_border_circled_button")
-                                .resizable()
-                                .padding(.leading, 30)
-                                .padding(.top, 30)
-                                .frame(width: 120, height: 120)
-                        }
-                    
-                    switch buttonType {
-                    case .Settings:
-                        Image("ic_settings")
+    var body: some View {
+        let boxContent: some View = Group {
+            ZStack {
+                Circle()
+                    .fill(Color.appCustomBlue.opacity(0.6))
+                    .frame(width: 55, height: 55)
+                    .overlay {
+                        Image("ic_border_circled_button")
                             .resizable()
-                            .scaledToFit()
-                            .padding(10)
-                    case .About:
-                        Image("ic_info")
-                            .resizable()
-                            .scaledToFit()
-                            .padding(10)
-                    case .Tutorial:
-                        Image("ic_question_no_border")
-                            .resizable()
-                            .scaledToFit()
-                            .padding(5)
-                    case .NewVersion:
-                        Text("Nueva\nVersión")
-                            .font(.custom("FredokaCondensed-Semibold", size: 12))
-                            .shadow(color: .gray, radius: 2, x: 2, y: 2)
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Color.yellow)
-                    case .Start:
-                        Text("Start")
-                    case .HallOfFame:
-                        Text("Hall Of Fame")
+                            .padding(.leading, 30)
+                            .padding(.top, 30)
+                            .frame(width: 120, height: 120)
                     }
+                
+                switch buttonType {
+                case .Settings:
+                    Image("ic_settings")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(10)
+                case .About:
+                    Image("ic_info")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(10)
+                case .Tutorial:
+                    Image("ic_question_no_border")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(5)
+                case .NewVersion:
+                    Text("Nueva\nVersión")
+                        .font(.custom("FredokaCondensed-Semibold", size: 12))
+                        .shadow(color: .gray, radius: 2, x: 2, y: 2)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color.yellow)
+                case .Start:
+                    Text("Start")
+                case .HallOfFame:
+                    Text("Hall Of Fame")
                 }
             }
-            
-            if buttonType == .NewVersion {
-                Pulsating(duration: 1000, pulseFraction: 1.3) {
-                    boxContent
-                }
-            } else {
+            .onTapGesture {
+                onClick()
+            }
+        }
+        
+        if buttonType == .NewVersion {
+            Pulsating(duration: 1000, pulseFraction: 1.3) {
                 boxContent
             }
-            
-            Spacer().frame(height: 10)
+        } else {
+            boxContent
         }
+        
+        Spacer().frame(height: 10)
     }
-    
-    public enum HomeButtonType {
-        case Start
-        case Settings
-        case About
-        case Tutorial
-        case NewVersion
-        case HallOfFame
-    }
-    
-    #Preview {
-        HomeScreen()
-    }
+}
+
+#Preview {
+    HomeScreen()
 }

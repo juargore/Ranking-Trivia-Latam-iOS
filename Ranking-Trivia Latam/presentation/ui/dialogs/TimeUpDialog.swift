@@ -27,28 +27,26 @@ struct TimeUpDialog: View {
 
                         Text("Necesitas apresurarte para lograr acomodar correctamente las banderas en el orden correcto.\n\n¡Venga! Tú puedes!!")
                             .font(.custom("FredokaCondensed-Semibold", size: 22))
-                            .shadow(color: .gray, radius: 1, x: 1, y: 1)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, 10)
 
                         Spacer().frame(height: 40)
 
-                        HStack {
-                            Spacer()
+                        
                             ButtonExitOrRetry(
                                 onClick: onRetryClicked,
                                 content: {
                                     Text("Reintentar")
                                         .font(.custom("FredokaCondensed-Semibold", size: 24))
-                                        .shadow(color: .gray, radius: 1, x: 1, y: 1)
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)
                                         .padding(.horizontal, 20)
                                 }
                             )
-                            Spacer()
-                        }
+                            
+                        
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -64,19 +62,15 @@ struct ButtonExitOrRetry<Content: View>: View {
 
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 18)
-                .fill(Color.AppYellow)
-                .frame(width: 150, height: 50)
-                .shadow(radius: 5)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 18)
-                        .stroke(Color.black, lineWidth: 4)
-                )
-                .onTapGesture {
-                    onClick()
-                }
-
             content()
+        }
+        .onTapGesture { onClick() }
+        .fixedSize(horizontal: false, vertical: true)
+        .background(Color.appYellow)
+        .cornerRadius(18)
+        .overlay {
+            RoundedRectangle(cornerRadius: 18)
+                .stroke(Color.black, lineWidth: 3)
         }
     }
 }

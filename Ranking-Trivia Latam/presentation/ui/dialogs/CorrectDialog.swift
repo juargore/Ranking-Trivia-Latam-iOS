@@ -27,7 +27,7 @@ struct CorrectDialog: View {
 
                         Text("Excelente trabajo! Lo estás haciendo muy bien!!.\n\nPasemos a algo más retador!")
                             .font(.custom("FredokaCondensed-Semibold", size: 22))
-                            .shadow(color: .gray, radius: 1, x: 1, y: 1)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, 10)
@@ -41,7 +41,6 @@ struct CorrectDialog: View {
                                 content: {
                                     Text("Siguiente")
                                         .font(.custom("FredokaCondensed-Semibold", size: 24))
-                                        .shadow(color: .gray, radius: 1, x: 1, y: 1)
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)
                                         .padding(.horizontal, 20)
