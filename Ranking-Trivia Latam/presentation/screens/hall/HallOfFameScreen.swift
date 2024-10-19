@@ -14,6 +14,8 @@ struct HallOfFameScreen: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State private var showNewRankingDialog = false
+    @State private var showToast = false
+    @State private var messageToast = ""
     
     var body: some View {
         ZStack {
@@ -53,11 +55,30 @@ struct HallOfFameScreen: View {
                     RoundedRectangle(cornerRadius: 15)
                         .stroke(Color.black, lineWidth: 2)
                 )
+                
             }
             .padding(.horizontal, 196)
             .padding(.bottom, 60)
+            
+            // TODO: Delete FAB for PROD
+            /*FloatingButtonV2() {
+                showNewRankingDialog = true
+            }*/
         }
         .toolbar(.hidden, for: .navigationBar)
+        .toast(message: messageToast, isShowing: $showToast, duration: Toast.short)
+        .popUpDialog(isShowing: $showNewRankingDialog, dialogContent: {
+            SaveRankingDialog(
+                viewModel: viewModel,
+                onSavedSuccess: {
+                    messageToast = "Guardando récord..."
+                    showToast = true
+                },
+                onDismiss: {
+                    showNewRankingDialog = false
+                }
+            )
+        })
     }
 }
 
@@ -106,6 +127,32 @@ struct HallOfFameBackground: View {
                 .frame(width: UIScreen.screenWidth - 20, height: 50)
                 .frame(maxHeight: UIScreen.screenHeight, alignment: .bottom)
         }
+    }
+}
+
+struct FloatingButtonV2: View {
+    
+    var onClick: () -> Void
+    
+    var body: some View {
+        Button(action: { onClick() }) {
+            ZStack {
+                Circle()
+                    .fill(Color.white)
+                    .frame(width: 50, height: 50)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.black, lineWidth: 4)
+                    )
+                    .overlay {
+                        Text("+")
+                            .font(.largeTitle)
+                    }
+            }
+        }
+        .frame(width: UIScreen.screenWidth - 20, height: 50)
+        .frame(maxHeight: UIScreen.screenHeight, alignment: .bottom)
+        .padding(.bottom, 70)
     }
 }
 

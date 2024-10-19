@@ -24,6 +24,9 @@ struct PlayScreen: View {
     @State private var showCorrectDialog = false
     @State private var animateScore: AnimatedScoreData? = nil
     
+    @State private var showToast = false
+    @State private var messageToast = ""
+    
     @State var draggedItem: TriviaFlag?
     @State var draggedOffset: CGSize = .zero
     @State var dragPosition: CGPoint = .zero
@@ -318,7 +321,8 @@ struct PlayScreen: View {
         .onAppear{
             interstitialAdManager.loadInterstitialAd()
         }
-        .disabled(!interstitialAdManager.interstitialAdLoaded)
+        //.disabled(!interstitialAdManager.interstitialAdLoaded)
+        .toast(message: messageToast, isShowing: $showToast, duration: Toast.short)
         .popUpDialog(isShowing: $showTimeUpDialog, dialogContent: {
             TimeUpDialog(isVisible: showTimeUpDialog) {
                 if viewModel.shouldDisplayAd() {
@@ -357,7 +361,17 @@ struct PlayScreen: View {
             }
         })
         .popUpDialog(isShowing: $viewModel.gameCompleted, dialogContent: {
-            
+            SaveRankingDialog(
+                viewModel: vmh,
+                onSavedSuccess: {
+                    messageToast = "Guardando récord..."
+                    showToast = true
+                    presentationMode.wrappedValue.dismiss()
+                },
+                onDismiss: {
+                    viewModel.gameCompleted = false
+                }
+            )
         })
     }
     

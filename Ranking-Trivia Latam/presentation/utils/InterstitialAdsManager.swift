@@ -10,7 +10,6 @@ import GoogleMobileAds
 
 class InterstitialAdsManager: NSObject, GADFullScreenContentDelegate, ObservableObject {
     
-    // Properties
    @Published var interstitialAdLoaded:Bool = false
     var interstitialAd: GADInterstitialAd?
     
@@ -20,13 +19,13 @@ class InterstitialAdsManager: NSObject, GADFullScreenContentDelegate, Observable
         super.init()
     }
     
-    // Load InterstitialAd
-    func loadInterstitialAd(){
+    func loadInterstitialAd() {
         GADInterstitialAd.load(withAdUnitID: Constants.PLAY_FULL_SCREEN_BANNER_ID, request: GADRequest()) { [weak self] add, error in
             guard let self = self else {return}
             if let error = error{
                 print("🔴: \(error.localizedDescription)")
                 self.interstitialAdLoaded = false
+                onAdClosed?()
                 return
             }
             print("🟢: Loading succeeded")
@@ -36,15 +35,14 @@ class InterstitialAdsManager: NSObject, GADFullScreenContentDelegate, Observable
         }
     }
     
-    // Display InterstitialAd
-    func displayInterstitialAd(){
+    func displayInterstitialAd() {
         guard let root = UIApplication.shared.windows.first?.rootViewController else {
             return
         }
         if let add = interstitialAd{
             add.present(fromRootViewController: root)
             self.interstitialAdLoaded = false
-        }else{
+        } else {
             print("🔵: Ad wasn't ready")
             self.interstitialAdLoaded = false
             self.loadInterstitialAd()

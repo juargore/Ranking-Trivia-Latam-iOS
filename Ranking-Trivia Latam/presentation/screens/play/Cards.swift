@@ -85,6 +85,7 @@ struct CardEmptySpace: View {
                         }
                     }
                     .onAppear {
+                        /*
                         let rect = geometry.frame(in: .global)
                             
                         // Ajustar las coordenadas moviendo el cuadro un poco hacia la izquierda.
@@ -102,9 +103,10 @@ struct CardEmptySpace: View {
                         let adjustedRect = CGRect(x: adjustedX, y: adjustedY, width: increasedWidth, height: increasedHeight)
                         
                         viewModel.spaces[index].frame = adjustedRect
+                        */
                         
-                        //let i = geometry.frame(in: .global)
-                        //viewModel.spaces[index].frame = i
+                        let i = geometry.frame(in: .global)
+                        viewModel.spaces[index].frame = i
                     }
             }
             .frame(width: 120, height: 110)

@@ -169,7 +169,7 @@ struct CountdownTimer: View {
             .onAppear {
                 runTimer()
             }
-            .onChange(of: isPaused) { old, new in
+            .onChange(of: isPaused) { new in
                 runTimer()
             }
     }
@@ -262,10 +262,10 @@ struct BottomButton: View {
             .onAppear {
                 buttonEnabled = !timeUp && spaces.isEmpty
             }
-            .onChange(of: timeUp) { oldValue, newValue in
+            .onChange(of: timeUp) { newValue in
                 buttonEnabled = !newValue && spaces.isEmpty
             }
-            .onChange(of: spaces) { oldValue, newValue in
+            .onChange(of: spaces) { newValue in
                 buttonEnabled = !timeUp && newValue.isEmpty
             }
         }

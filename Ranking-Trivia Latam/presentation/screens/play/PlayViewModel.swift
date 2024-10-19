@@ -164,7 +164,7 @@ final class PlayViewModel: ObservableObject {
     
     func getTimeAccordingLevel(level: QuestionLevel) -> Double {
         switch level {
-        case .I, .II, .III: return 5
+        case .I, .II, .III: return 60
         case .IV, .V: return 50
         case .VI, .VII: return 45
         case .VIII, .IX, .X: return 40

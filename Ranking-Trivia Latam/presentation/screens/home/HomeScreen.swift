@@ -16,6 +16,9 @@ struct HomeScreen: View {
     @State private var showTutorialDialog = false
     @State private var showResetDialog = false
     
+    @State private var showToast = false
+    @State private var messageToast = ""
+    
     @State private var selectedDestination: NavigationDestination?
     
     init(homeViewModel: HomeViewModel = HomeViewModel()) {
@@ -106,11 +109,23 @@ struct HomeScreen: View {
                     HomeScreen()
                 }
             }
+            .toast(message: messageToast, isShowing: $showToast, duration: Toast.short)
+            .popUpDialog(isShowing: $showOptionsDialog, dialogContent: {
+                OptionsDialog(viewModel: viewModel, onExitClicked: { showOptionsDialog = false })
+            })
             .popUpDialog(isShowing: $showAboutDialog, dialogContent: {
                 AboutDialog(onExitClicked: { showAboutDialog = false })
             })
             .popUpDialog(isShowing: $showTutorialDialog, dialogContent: {
                 TutorialDialog(onExitClicked: { showTutorialDialog = false })
+            })
+            .popUpDialog(isShowing: $showResetDialog, dialogContent: {
+                ResetPrefsDialog(onResetClicked: {
+                    viewModel.resetAllData()
+                    showResetDialog = false
+                    messageToast = "Todo listo! Inicia nuevamente"
+                    showToast = true
+                })
             })
         }
     }

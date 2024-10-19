@@ -59,7 +59,6 @@ struct TutorialDialog: View {
                     .padding(.horizontal, 10)
                 }
                 .frame(height: 550)
-                //.fixedSize(horizontal: true, vertical: true)
             }
         )
     }

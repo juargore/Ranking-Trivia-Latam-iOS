@@ -48,7 +48,6 @@ struct AboutDialog: View {
                     .padding(.horizontal, 10)
                 }
                 .frame(height: 300)
-                //.fixedSize(horizontal: true, vertical: true)
             }
         )
     }

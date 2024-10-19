@@ -50,7 +50,8 @@ struct BaseDialog<Content: View>: View {
             }
             .padding(.top, 25)
         }
-        .padding(.horizontal, 170)
+        .frame(maxWidth: UIScreen.screenWidth)
+
     }
 }
 
