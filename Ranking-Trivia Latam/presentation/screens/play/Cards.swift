@@ -65,51 +65,24 @@ struct CardEmptySpace: View {
     
     var body: some View {
         HStack {
-            GeometryReader { geometry in
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(emptySpace.flagIsOver ? Color.red : Color.white)
-                    .frame(width: 120, height: 110)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color.black, lineWidth: 2)
-                    ).overlay {
-                        VStack {
-                            if emptySpace.flag == nil {
-                                Text("\(index + 1)°")
-                                    .font(.custom("FredokaCondensed-Bold", size: 28))
-                                    .shadow(color: .gray, radius: 1, x: 1, y: 1)
-                                    .foregroundColor(.gray).opacity(0.5)
-                            } else {
-                                CardFlag(flag: emptySpace.flag!)
-                            }
+            RoundedRectangle(cornerRadius: 12)
+                .fill(emptySpace.flagIsOver ? Color.red : Color.white)
+                .frame(width: 120, height: 110)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color.black, lineWidth: 2)
+                ).overlay {
+                    VStack {
+                        if emptySpace.flag == nil {
+                            Text("\(index + 1)°")
+                                .font(.custom("FredokaCondensed-Bold", size: 28))
+                                .shadow(color: .gray, radius: 1, x: 1, y: 1)
+                                .foregroundColor(.gray).opacity(0.5)
+                        } else {
+                            CardFlag(flag: emptySpace.flag!)
                         }
                     }
-                    .onAppear {
-                        /*
-                        let rect = geometry.frame(in: .global)
-                            
-                        // Ajustar las coordenadas moviendo el cuadro un poco hacia la izquierda.
-                        let adjustedX = rect.origin.x - 200 // Ajusta el valor según lo que necesites.
-                        // Aumentar el ancho del cuadro en 20 puntos (o el valor que prefieras).
-                        let increasedWidth = rect.width + 150
-                        
-                        // Ajustar las coordenadas moviendo el cuadro un poco hacia la izquierda.
-                        let adjustedY = rect.origin.y + 200 // Ajusta el valor según lo que necesites.
-                        // Aumentar el ancho del cuadro en 20 puntos (o el valor que prefieras).
-                        let increasedHeight = rect.height + 20
-                        //let increasedHeight = 210.0
-                        
-                        // Crear un nuevo CGRect con el nuevo valor ajustado y el ancho aumentado.
-                        let adjustedRect = CGRect(x: adjustedX, y: adjustedY, width: increasedWidth, height: increasedHeight)
-                        
-                        viewModel.spaces[index].frame = adjustedRect
-                        */
-                        
-                        let i = geometry.frame(in: .global)
-                        viewModel.spaces[index].frame = i
-                    }
-            }
-            .frame(width: 120, height: 110)
+                }
             
             
             /*if emptySpace.flag != nil {

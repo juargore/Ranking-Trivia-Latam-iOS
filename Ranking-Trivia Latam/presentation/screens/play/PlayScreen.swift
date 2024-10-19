@@ -53,81 +53,90 @@ struct PlayScreen: View {
                     
                     HStack {
                         // Columna izquierda: Empty Spaces
-                        //ScrollView {
-                            LazyVStack(alignment: .center, spacing: 10) {
-                                ForEach(Array(viewModel.spaces.enumerated()), id: \.offset) { i, item in
-                                    CardEmptySpace(
-                                        index: i,
-                                        emptySpace: item,
-                                        viewModel: viewModel
-                                    )
-                                    
-                                    /*.onDrop(
-                                        of: [.text],
-                                        delegate: EmptySpaceDropDelegate(
-                                            draggedItem: $draggedItem,
-                                            onFinished: { triviaFlag in
-                                                if viewModel.spaces[i].flag == nil {
-                                                    viewModel.spaces[i].flag = triviaFlag
-                                                    
-                                                    for rItem in viewModel.flags {
-                                                        if rItem.name == triviaFlag.name {
-                                                            rItem.alreadyPlayed = true
-                                                            return
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            viewIsOverSpace: { isOverSpace in
-                                                if viewModel.spaces[i].flag == nil {
-                                                    viewModel.spaces[i].flagIsOver = isOverSpace
-                                                }
-                                            }
-                                        )
-                                    )*/
-                                }
+                        LazyVStack(alignment: .center, spacing: 10) {
+                            ForEach(Array(viewModel.spaces.enumerated()), id: \.offset) { i, item in
+                                CardEmptySpace(
+                                    index: i,
+                                    emptySpace: item,
+                                    viewModel: viewModel
+                                )
+                                .background(GeometryReader { geometry in
+                                    Color.clear
+                                        .onAppear {
+                                            let rect = geometry.frame(in: .global)
+                                            
+                                            let adjustedX = rect.origin.x
+                                            let adjustedY = rect.origin.y
+                                            
+                                            let increasedWidth = rect.width
+                                            let increasedHeight = rect.height
+                                            
+                                            let adjustedRect = CGRect(
+                                                x: adjustedX,
+                                                y: adjustedY,
+                                                width: increasedWidth,
+                                                height: increasedHeight
+                                            )
+                                            viewModel.spaces[i].frame = geometry.frame(in: .global)
+                                        }
+                                    }
+                                )
                             }
-                            .frame(maxWidth: .infinity, alignment: .topLeading)
-                        //}
-                        //.frame(width: UIScreen.screenWidth * 0.6)
-                        //.border(Color.white, width: 4)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
                         
                         // Columna derecha: Flags
-                        //ScrollView {
-                            LazyVStack(alignment: .center, spacing: 10) {
-                                ForEach(Array(viewModel.flags.enumerated()), id: \.offset) { i, item in
-                                    if !item.alreadyPlayed {
-                                        CardFlag(flag: item)
-                                            .offset(draggedItem == item ? draggedOffset : .zero)
-                                            .gesture(
-                                                DragGesture()
-                                                    .onChanged { value in
-                                                        draggedItem = item
-                                                        draggedOffset = value.translation
-                                                        dragPosition = CGPoint(
-                                                            x: value.location.x + draggedOffset.width,
-                                                            y: value.location.y + draggedOffset.height
+                        LazyVStack(alignment: .center, spacing: 10) {
+                            ForEach(Array(viewModel.flags.enumerated()), id: \.offset) { i, item in
+                                if !item.alreadyPlayed {
+                                    CardFlag(flag: item)
+                                        .offset(draggedItem == item ? draggedOffset : .zero)
+                                        .gesture(
+                                            DragGesture()
+                                                .onChanged { value in
+                                                    draggedItem = item
+                                                    //draggedOffset = value.translation
+                                                    if draggedOffset == .zero {
+                                                        // La diferencia entre el punto de inicio del gesto y el centro de la vista
+                                                        draggedOffset = CGSize(
+                                                            width: value.startLocation.x - 60,
+                                                            height: value.startLocation.y - 55
                                                         )
-                                                        checkIfOverEmptySpace()
                                                     }
-                                                    .onEnded { _ in
-                                                        if let targetIndex = viewModel.spaces.firstIndex(where: { $0.flagIsOver }) {
-                                                            if viewModel.spaces[targetIndex].flag == nil {
-                                                                viewModel.spaces[targetIndex].flag = draggedItem
-                                                                viewModel.flags[i].alreadyPlayed = true
-                                                            }
+
+                                                    // Ajustar la traslación del drag y agregar el offset inicial
+                                                    draggedOffset = CGSize(
+                                                        width: value.translation.width + (value.startLocation.x - 60),
+                                                        height: value.translation.height + (value.startLocation.y - 55)
+                                                    )
+
+                                                    // Nueva posición basada en la traslación y el centro de la vista
+                                                    dragPosition = CGPoint(
+                                                        x: value.startLocation.x + draggedOffset.width,
+                                                        y: value.startLocation.y + draggedOffset.height
+                                                    )
+                                                    /*dragPosition = CGPoint(
+                                                        x: value.location.x, //+ draggedOffset.width,
+                                                        y: value.location.y //+ draggedOffset.height
+                                                    )*/
+
+                                                    checkIfOverEmptySpace()
+                                                }
+                                                .onEnded { _ in
+                                                    if let targetIndex = viewModel.spaces.firstIndex(where: { $0.flagIsOver }) {
+                                                        if viewModel.spaces[targetIndex].flag == nil {
+                                                            viewModel.spaces[targetIndex].flag = draggedItem
+                                                            viewModel.flags[i].alreadyPlayed = true
                                                         }
-                                                        draggedItem = nil
-                                                        draggedOffset = .zero
                                                     }
-                                            )
-                                    }
+                                                    draggedItem = nil
+                                                    draggedOffset = .zero
+                                                }
+                                        )
                                 }
                             }
-                            .frame(maxWidth: .infinity, alignment: .topLeading)
-                        //}
-                        //.frame(width: UIScreen.screenWidth * 0.4)
-                        //.border(Color.black, width: 3)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
                     }
                     .frame(
                         maxWidth: .infinity,
@@ -146,15 +155,6 @@ struct PlayScreen: View {
             
             /*VStack {
                 VStack {
-                    if viewModel.question != nil {
-                        PlayScreenHeader(
-                            level: viewModel.question!.level,
-                            question: viewModel.question!.description,
-                            onBack: {
-                                presentationMode.wrappedValue.dismiss()
-                            }
-                        )
-                    }
                     
                     HStack {
                         ScrollView {
@@ -378,10 +378,8 @@ struct PlayScreen: View {
     func checkIfOverEmptySpace() {
         for i in viewModel.spaces.indices {
             if let frame = viewModel.spaces[i].frame, frame.contains(dragPosition) {
-                print("AQUI: flagIsOver = true")
                 viewModel.spaces[i].flagIsOver = true
             } else {
-                print("AQUI: flagIsOver = false")
                 viewModel.spaces[i].flagIsOver = false
             }
         }
@@ -416,101 +414,6 @@ struct PlayScreen: View {
         }
     }
 }
-
-/*struct PlayScreen: View {
-    
-    @Environment(\.presentationMode) var presentationMode
-    @StateObject var dragInfo = DragTargetInfo()
-    
-    @State private var leftItems: [EmptySpace] = [
-        EmptySpace(id: 0, flag: nil),
-        EmptySpace(id: 1, flag: nil),
-        EmptySpace(id: 2, flag: nil)
-    ]
-    
-    @State private var rightItems: [TriviaFlag] = [
-        TriviaFlag(id: .AR, name: NSLocalizedString("country_name_argentina", comment: ""), image: "flag_argentina", alreadyPlayed: false),
-        TriviaFlag(id: .BZ, name: NSLocalizedString("country_name_belize", comment: ""), image: "flag_belize", alreadyPlayed: false),
-        TriviaFlag(id: .BO, name: NSLocalizedString("country_name_bolivia", comment: ""), image: "flag_bolivia", alreadyPlayed: false),
-        TriviaFlag(id: .BR, name: NSLocalizedString("country_name_brasil", comment: ""), image: "flag_brasil", alreadyPlayed: false)
-    ]
-    
-    @State var draggedItem: TriviaFlag?
-    @State var draggedOffset: CGSize = .zero
-    @State var dragPosition: CGPoint = .zero
-    
-    var body: some View {
-        ZStack {
-            PlayScreenBackground()
-            
-            VStack {
-                HeaderBackAndCategory {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                
-                HStack {
-                    // Left side where the items will be dropped
-                    LazyVStack(spacing: 10) {
-                        ForEach(Array(leftItems.enumerated()), id: \.offset) { i, item in
-                            GeometryReader { geometry in
-                                CardEmptySpace(index: i, emptySpace: item)
-                                    .onAppear {
-                                        leftItems[i].frame = geometry.frame(in: .global)
-                                    }
-                            }
-                            .frame(height: 120)
-                        }
-                    }
-                
-                    // Right side with draggable flags
-                    LazyVStack(spacing: 10) {
-                        ForEach(Array(rightItems.enumerated()), id: \.offset) { i, item in
-                            if !item.alreadyPlayed {
-                                CardFlag(flag: item)
-                                    .offset(draggedItem == item ? draggedOffset : .zero)
-                                    .gesture(
-                                        DragGesture()
-                                            .onChanged { value in
-                                                draggedItem = item
-                                                draggedOffset = value.translation
-                                                dragPosition = CGPoint(
-                                                    x: value.location.x + draggedOffset.width,
-                                                    y: value.location.y + draggedOffset.height
-                                                )
-                                                checkIfOverEmptySpace()
-                                            }
-                                            .onEnded { _ in
-                                                if let targetIndex = leftItems.firstIndex(where: { $0.flagIsOver }) {
-                                                    leftItems[targetIndex].flag = draggedItem
-                                                    rightItems[i].alreadyPlayed = true
-                                                }
-                                                draggedItem = nil
-                                                draggedOffset = .zero
-                                            }
-                                    )
-                            }
-                        }
-                    }
-                }
-                Spacer()
-            }
-            .toolbar(.hidden, for: .navigationBar)
-            .toolbar(.hidden, for: .tabBar)
-            .padding(.horizontal, 196)
-        }
-    }
-    
-    func checkIfOverEmptySpace() {
-        for i in leftItems.indices {
-            if let frame = leftItems[i].frame, frame.contains(dragPosition) {
-                leftItems[i].flagIsOver = true
-            } else {
-                leftItems[i].flagIsOver = false
-            }
-        }
-    }
-}*/
-
 
 struct PlayScreenBackground: View {
     var body: some View {
@@ -555,9 +458,9 @@ struct AnimateScoreNumber: View {
     }
 }
 
-/*#Preview {
+#Preview {
     PlayScreen()
-}*/
+}
 
 
 /*
