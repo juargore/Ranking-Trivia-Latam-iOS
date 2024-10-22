@@ -21,14 +21,20 @@ final class PlayViewModel: ObservableObject {
     @Published var flags: [TriviaFlag] = []
     @Published var spaces: [EmptySpace] = []
     
-    func resetScreenData() {
+    func resetTime() {
+        timePerLevel = 0.0
+    }
+    
+    func resetScreenData(getNewQuestion: Bool) {
         timePerLevel = 0
         question = nil
         flags = []
         spaces = []
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { // 0.1 second delay
-            self.getQuestionToPlay()
+        if getNewQuestion {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { // 0.1 second delay
+                self.getQuestionToPlay()
+            }
         }
     }
     
@@ -164,7 +170,7 @@ final class PlayViewModel: ObservableObject {
     
     func getTimeAccordingLevel(level: QuestionLevel) -> Double {
         switch level {
-        case .I, .II, .III: return 240 // 60
+        case .I, .II, .III: return 20
         case .IV, .V: return 50
         case .VI, .VII: return 45
         case .VIII, .IX, .X: return 40
@@ -173,4 +179,5 @@ final class PlayViewModel: ObservableObject {
         case .XIII: return 15
         }
     }
+    
 }

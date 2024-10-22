@@ -11,10 +11,13 @@ import SwiftUI
 struct CardFlag: View {
     
     let flag: TriviaFlag
+    var duration: Double = 0.5
+    var pulseFraction: CGFloat = 1.1
+    @State private var scale: CGFloat = 1.0
     
     var body: some View {
         RoundedRectangle(cornerRadius: 12)
-            .fill(Color.appCustomGreen.opacity(0.8))
+            .fill(flag.isClicked ? Color.appCustomGreen.opacity(0.9) : Color.gray)
             .frame(width: 120, height: 110)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
@@ -42,6 +45,24 @@ struct CardFlag: View {
                         .lineLimit(1)
                         .padding(.top, 2)
                     
+                }
+            }
+            .scaleEffect(scale)
+            .onChange(of: flag) { new in
+                if new.isClicked {
+                    withAnimation(
+                        Animation.easeInOut(duration: duration)
+                            .repeatForever(autoreverses: true)
+                    ) {
+                        scale = pulseFraction
+                    }
+                } else {
+                    // remove animation
+                    withAnimation(
+                        Animation.easeInOut(duration: duration)
+                    ) {
+                        scale = 1.0
+                    }
                 }
             }
     }
@@ -79,13 +100,20 @@ struct CardEmptySpace: View {
                                 .shadow(color: .gray, radius: 1, x: 1, y: 1)
                                 .foregroundColor(.gray).opacity(0.5)
                         } else {
-                            CardFlag(flag: emptySpace.flag!)
+                            let mFlag = TriviaFlag(
+                                id: emptySpace.flag!.id,
+                                name: emptySpace.flag!.name,
+                                image: emptySpace.flag!.image,
+                                isClicked: false,
+                                isEnable: false
+                            )
+                            CardFlag(flag: mFlag)
                         }
                     }
                 }
             
             
-            /*if emptySpace.flag != nil {
+            if emptySpace.flag != nil {
                 Image("ic_remove_filled")
                     .resizable()
                     .scaledToFill()
@@ -103,7 +131,7 @@ struct CardEmptySpace: View {
                 Circle()
                     .frame(width: 30, height: 30)
                     .foregroundColor(Color.black.opacity(0.005))
-            }*/
+            }
         }
     }
 }

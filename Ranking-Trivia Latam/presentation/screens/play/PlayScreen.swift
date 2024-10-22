@@ -30,6 +30,7 @@ struct PlayScreen: View {
     @State var draggedItem: TriviaFlag?
     @State var draggedOffset: CGSize = .zero
     @State var dragPosition: CGPoint = .zero
+    @State var selectedFlag: TriviaFlag? = nil
     
     init() {
         viewModel.getQuestionToPlay()
@@ -43,120 +44,18 @@ struct PlayScreen: View {
                 VStack {
                     if viewModel.question != nil {
                         PlayScreenHeader(
+                            viewModel: viewModel,
                             level: viewModel.question!.level,
                             question: viewModel.question!.description,
                             onBack: {
+                                viewModel.resetScreenData(getNewQuestion: false)
                                 presentationMode.wrappedValue.dismiss()
                             }
                         )
                     }
                     
                     HStack {
-                        // Columna izquierda: Empty Spaces
-                        LazyVStack(alignment: .center, spacing: 10) {
-                            ForEach(Array(viewModel.spaces.enumerated()), id: \.offset) { i, item in
-                                CardEmptySpace(
-                                    index: i,
-                                    emptySpace: item,
-                                    viewModel: viewModel
-                                )
-                                .background(GeometryReader { geometry in
-                                    Color.clear
-                                        .onAppear {
-                                            let rect = geometry.frame(in: .global)
-                                            
-                                            let adjustedX = rect.origin.x
-                                            let adjustedY = rect.origin.y
-                                            
-                                            let increasedWidth = rect.width
-                                            let increasedHeight = rect.height
-                                            
-                                            let adjustedRect = CGRect(
-                                                x: adjustedX,
-                                                y: adjustedY,
-                                                width: increasedWidth,
-                                                height: increasedHeight
-                                            )
-                                            viewModel.spaces[i].frame = geometry.frame(in: .global)
-                                        }
-                                    }
-                                )
-                            }
-                        }
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                        
-                        // Columna derecha: Flags
-                        LazyVStack(alignment: .center, spacing: 10) {
-                            ForEach(Array(viewModel.flags.enumerated()), id: \.offset) { i, item in
-                                if !item.alreadyPlayed {
-                                    CardFlag(flag: item)
-                                        .offset(draggedItem == item ? draggedOffset : .zero)
-                                        .gesture(
-                                            DragGesture()
-                                                .onChanged { value in
-                                                    draggedItem = item
-                                                    //draggedOffset = value.translation
-                                                    if draggedOffset == .zero {
-                                                        // La diferencia entre el punto de inicio del gesto y el centro de la vista
-                                                        draggedOffset = CGSize(
-                                                            width: value.startLocation.x - 60,
-                                                            height: value.startLocation.y - 55
-                                                        )
-                                                    }
-
-                                                    // Ajustar la traslación del drag y agregar el offset inicial
-                                                    draggedOffset = CGSize(
-                                                        width: value.translation.width + (value.startLocation.x - 60),
-                                                        height: value.translation.height + (value.startLocation.y - 55)
-                                                    )
-
-                                                    // Nueva posición basada en la traslación y el centro de la vista
-                                                    dragPosition = CGPoint(
-                                                        x: value.startLocation.x + draggedOffset.width,
-                                                        y: value.startLocation.y + draggedOffset.height
-                                                    )
-                                                    /*dragPosition = CGPoint(
-                                                        x: value.location.x, //+ draggedOffset.width,
-                                                        y: value.location.y //+ draggedOffset.height
-                                                    )*/
-
-                                                    checkIfOverEmptySpace()
-                                                }
-                                                .onEnded { _ in
-                                                    if let targetIndex = viewModel.spaces.firstIndex(where: { $0.flagIsOver }) {
-                                                        if viewModel.spaces[targetIndex].flag == nil {
-                                                            viewModel.spaces[targetIndex].flag = draggedItem
-                                                            viewModel.flags[i].alreadyPlayed = true
-                                                        }
-                                                    }
-                                                    draggedItem = nil
-                                                    draggedOffset = .zero
-                                                }
-                                        )
-                                }
-                            }
-                        }
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                    }
-                    .frame(
-                        maxWidth: .infinity,
-                        maxHeight: .infinity
-                    )
-                    .border(Color.black, width: 1)
-                }
-                .frame(
-                    maxWidth: .infinity,
-                    maxHeight: UIScreen.screenHeight * 0.7
-                )
-                Spacer()
-            }
-            .frame(maxWidth: UIScreen.screenWidth, maxHeight: UIScreen.screenHeight)
-
-            
-            /*VStack {
-                VStack {
-                    
-                    HStack {
+                        // left column: Empty Spaces
                         ScrollView {
                             LazyVStack(alignment: .center, spacing: 10) {
                                 ForEach(Array(viewModel.spaces.enumerated()), id: \.offset) { i, item in
@@ -165,78 +64,69 @@ struct PlayScreen: View {
                                         emptySpace: item,
                                         viewModel: viewModel
                                     )
-                                    .onDrop(
-                                        of: [.text],
-                                        delegate: EmptySpaceDropDelegate(
-                                            draggedItem: $draggedItem,
-                                            onFinished: { triviaFlag in
-                                                if viewModel.spaces[i].flag == nil {
-                                                    viewModel.spaces[i].flag = triviaFlag
-                                                    
-                                                    for rItem in viewModel.flags {
-                                                        if rItem.name == triviaFlag.name {
-                                                            rItem.alreadyPlayed = true
-                                                            return
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            viewIsOverSpace: { isOverSpace in
-                                                //print("AQUI: isOver: \(isOverSpace)")
-                                                if viewModel.spaces[i].flag == nil {
-                                                    viewModel.spaces[i].flagIsOver = isOverSpace
-                                                }
+                                    .onTapGesture {
+                                        if selectedFlag != nil && item.flag == nil {
+                                            viewModel.spaces[i].flag = selectedFlag
+                                            if let flagIndex = viewModel.flags.firstIndex(where: { $0.id == selectedFlag!.id }) {
+                                                viewModel.flags[flagIndex].alreadyPlayed = true
                                             }
-                                        )
-                                    )
-                                }
-                            }
-                            .frame(maxWidth: .infinity, alignment: .topLeading)
-                        }
-                        .frame(width: UIScreen.screenWidth * 0.6)
-                        .border(Color.white, width: 4)
-                        
-                        ScrollView {
-                            LazyVStack(alignment: .center, spacing: 10) {
-                                ForEach(Array(viewModel.flags.enumerated()), id: \.offset) { i, item in
-                                    if !item.alreadyPlayed {
-                                        // TODO: Aqui!!!
-                                        CardFlag(flag: item)
-                                            .offset(draggedItem == item ? draggedOffset : .zero)
-                                            .gesture(
-                                                DragGesture()
-                                                    .onChanged { value in
-                                                        draggedItem = item
-                                                        draggedOffset = value.translation
-                                                        dragPosition = CGPoint(
-                                                            x: value.location.x + draggedOffset.width,
-                                                            y: value.location.y + draggedOffset.height
-                                                        )
-                                                        checkIfOverEmptySpace()
-                                                    }
-                                                    .onEnded { _ in
-                                                        if let targetIndex = viewModel.spaces.firstIndex(where: { $0.flagIsOver }) {
-                                                            viewModel.spaces[targetIndex].flag = draggedItem
-                                                            viewModel.flags[i].alreadyPlayed = true
-                                                        }
-                                                        draggedItem = nil
-                                                        draggedOffset = .zero
-                                                    }
-                                            )
+                                            if viewModel.shouldPlaySound() {
+                                                Ranking_Trivia_Latam.playSound("sound_click")
+                                            }
+                                            selectedFlag = nil
+                                            
+                                        }
                                     }
                                 }
                             }
                             .frame(maxWidth: .infinity, alignment: .topLeading)
-                            .border(Color.pink, width: 4)
+                            .padding(.top, 10)
                         }
-                        .frame(width: UIScreen.screenWidth * 0.4)
-                        .border(Color.black, width: 3)
+                        
+                        
+                        // right column: Flags
+                        ScrollView {
+                            LazyVStack(alignment: .center, spacing: 10) {
+                                ForEach(Array(viewModel.flags.enumerated()), id: \.offset) { i, item in
+                                    if !item.alreadyPlayed {
+                                        CardFlag(flag: item)
+                                            .onTapGesture {
+                                                if item.isEnable {
+                                                    
+                                                    var newFlags: [TriviaFlag] = []
+                                                    for f in viewModel.flags {
+                                                        let nFlag = TriviaFlag(
+                                                            id: f.id,
+                                                            name: f.name,
+                                                            image: f.image,
+                                                            alreadyPlayed: f.alreadyPlayed,
+                                                            isClicked: false
+                                                        )
+                                                        newFlags.append(nFlag)
+                                                    }
+                                                    viewModel.flags = newFlags
+                                                    
+                                                    let mFlag = viewModel.flags[i]
+                                                    viewModel.flags[i] = TriviaFlag(
+                                                        id: mFlag.id,
+                                                        name: mFlag.name,
+                                                        image: mFlag.image,
+                                                        isClicked: true
+                                                    )
+                                                    selectedFlag = item
+                                                }
+                                            }
+                                    }
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                            .padding(.top, 10)
+                        }
                     }
                     .frame(
                         maxWidth: .infinity,
                         maxHeight: .infinity
                     )
-                    .border(Color.black, width: 1)
                 }
                 .frame(
                     maxWidth: .infinity,
@@ -245,7 +135,7 @@ struct PlayScreen: View {
                 Spacer()
             }
             .frame(maxWidth: UIScreen.screenWidth, maxHeight: UIScreen.screenHeight)
-            */
+
             
             VStack {
                 Spacer()
@@ -259,6 +149,7 @@ struct PlayScreen: View {
                                     userResponse: viewModel.spaces.map { $0.flag!.id },
                                     question: viewModel.question!
                                 )
+                                viewModel.resetTime()
                                 if responseIsCorrect {
                                     if viewModel.shouldPlaySound() {
                                         Ranking_Trivia_Latam.playSound("sound_success")
@@ -267,7 +158,6 @@ struct PlayScreen: View {
                                     vmh.incrementScore(viewModel.question!, isCorrect: true)
                                     showCorrectDialog = true
                                 } else {
-                                    print("AQUI: Incorrect")
                                     if viewModel.shouldPlaySound() {
                                         Ranking_Trivia_Latam.playSound("sound_error")
                                     }
@@ -280,11 +170,12 @@ struct PlayScreen: View {
                         )
                         if viewModel.question != nil {
                             CountdownTimer(
-                                totalTime: viewModel.timePerLevel,
-                                isPaused: (showCorrectDialog || showIncorrectDialog),
+                                totalTime: Int(viewModel.timePerLevel),
+                                isPaused: (showCorrectDialog || showIncorrectDialog || showTimeUpDialog),
                                 onTimeFinish: {
                                     timeUp = true
                                     showTimeUpDialog = true
+                                    viewModel.resetTime()
                                     if viewModel.shouldPlaySound() {
                                         Ranking_Trivia_Latam.playSound("sound_error")
                                     }
@@ -329,12 +220,14 @@ struct PlayScreen: View {
                     interstitialAdManager.displayInterstitialAd()
                     interstitialAdManager.onAdClosed = {
                         viewModel.resetErrors()
-                        viewModel.resetScreenData()
+                        viewModel.resetScreenData(getNewQuestion: true)
                         showTimeUpDialog = false
+                        timeUp = false
                     }
                 } else {
-                    viewModel.resetScreenData()
+                    viewModel.resetScreenData(getNewQuestion: true)
                     showTimeUpDialog = false
+                    timeUp = false
                 }
             }
         })
@@ -344,11 +237,11 @@ struct PlayScreen: View {
                     interstitialAdManager.displayInterstitialAd()
                     interstitialAdManager.onAdClosed = {
                         viewModel.resetErrors()
-                        viewModel.resetScreenData()
+                        viewModel.resetScreenData(getNewQuestion: true)
                         showIncorrectDialog = false
                     }
                 } else {
-                    viewModel.resetScreenData()
+                    viewModel.resetScreenData(getNewQuestion: true)
                     showIncorrectDialog = false
                 }
             }
@@ -356,7 +249,7 @@ struct PlayScreen: View {
         .popUpDialog(isShowing: $showCorrectDialog, dialogContent: {
             CorrectDialog(isVisible: showCorrectDialog) {
                 viewModel.saveQuestionAlreadyPlayed(question: viewModel.question!)
-                viewModel.resetScreenData()
+                viewModel.resetScreenData(getNewQuestion: true)
                 showCorrectDialog = false
             }
         })
@@ -373,16 +266,6 @@ struct PlayScreen: View {
                 }
             )
         })
-    }
-    
-    func checkIfOverEmptySpace() {
-        for i in viewModel.spaces.indices {
-            if let frame = viewModel.spaces[i].frame, frame.contains(dragPosition) {
-                viewModel.spaces[i].flagIsOver = true
-            } else {
-                viewModel.spaces[i].flagIsOver = false
-            }
-        }
     }
     
     struct EmptySpaceDropDelegate: DropDelegate {
@@ -461,14 +344,3 @@ struct AnimateScoreNumber: View {
 #Preview {
     PlayScreen()
 }
-
-
-/*
- CHIDO:
- CardFlag(flag: item)
-     /*.onDrag {
-         draggedItem = item
-         return NSItemProvider(object: item)
-     }*/
-     //.opacity(draggedItem == item ? 0 : 1) // TODO: here
- */

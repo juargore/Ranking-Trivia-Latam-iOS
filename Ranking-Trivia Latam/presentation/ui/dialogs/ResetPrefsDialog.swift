@@ -51,7 +51,7 @@ struct ResetPrefsDialog: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, 10)
                 }
-                .frame(height: 300)
+                .frame(height: 400)
             }
         )
     }

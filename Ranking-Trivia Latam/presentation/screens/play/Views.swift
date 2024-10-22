@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PlayScreenHeader: View {
     
+    var viewModel: PlayViewModel
     var level: QuestionLevel
     var question: String
     var onBack: () -> Void
@@ -19,7 +20,12 @@ struct PlayScreenHeader: View {
         ZStack {
             VStack {
                 HStack {
-                    Button(action: { onBack() }) {
+                    Button(action: {
+                        if viewModel.shouldPlaySound() {
+                            
+                        }
+                        onBack()
+                    }) {
                         ZStack {
                             Circle()
                                 .fill(Color.white)
@@ -88,13 +94,6 @@ struct PlayScreenHeader: View {
     }
 }
 
-#Preview {
-    PlayScreenHeader(
-        level: .I,
-        question: "Hello there sldflsjd flaksdj lsdhfkasjhd fksahdfk weurweyiuwyiwe 93847934759384b,cxmvxskdjfh",
-        onBack: {}
-    )
-}
 
 struct HeaderLevel: View {
     
@@ -121,34 +120,84 @@ struct HeaderLevel: View {
     }
 }
 
-/*struct HeaderDivisions: View {
-    var body: some View {
-        VStack {
-            Spacer()
-                .frame(width: .infinity, height: 14)
-                .background(Color.gray)
-                //.shadow(radius: 5)
-            
-            Spacer()
-                .frame(height: 2)
-                .background(Color.gray)
-                //.shadow(radius: 5)
-        }
-        .frame(maxWidth: .infinity)
-    }
-}*/
-
-/*#Preview {
-    PlayScreenHeader(
-        level: .I,
-        question: "Hola mundo! Este es un mensaje largo para ver como se comporta la pantalla con más texto aquí",
-        onBack: {
-            
-        }
-    )
-}*/
-
 struct CountdownTimer: View {
+    
+    @State private var timeLeft: Int
+    @State private var isTimerRunning: Bool = false
+
+    
+    @State private var minutes = 0
+    @State private var seconds = 0
+    
+    let totalTime: Int
+    let isPaused: Bool
+    let onTimeFinish: () -> Void
+
+    init(totalTime: Int, isPaused: Bool, onTimeFinish: @escaping () -> Void) {
+        self.totalTime = totalTime
+        self.isPaused = isPaused
+        self.onTimeFinish = onTimeFinish
+        _timeLeft = State(initialValue: totalTime)
+    }
+
+    var body: some View {
+        Text(String(format: "%02d:%02d", minutes, seconds))
+            .font(.custom("FredokaCondensed-Semibold", size: 34))
+            .shadow(color: .gray, radius: 2, x: 2, y: 2)
+            .foregroundColor(Color.gray)
+            .padding(.vertical, 18)
+            .padding(.horizontal, 24)
+            .background(Color.appYellow)
+            .cornerRadius(12)
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.black, lineWidth: 2)
+            )
+            .onAppear {
+                startTimer()
+            }
+            .onChange(of: isPaused) { newValue in
+                if newValue {
+                    resetTimer()
+                } else {
+                    startTimer()
+                }
+            }
+            .onChange(of: timeLeft) { newValue in
+                minutes = Int(timeLeft) / 60
+                seconds = Int(timeLeft) % 60
+                if newValue <= 0 {
+                    isTimerRunning = false
+                    onTimeFinish()
+                }
+            }
+    }
+
+    private func startTimer() {
+        guard !isTimerRunning && !isPaused else { return }
+        isTimerRunning = true
+        runTimer()
+    }
+
+    private func runTimer() {
+        if isTimerRunning {
+            guard timeLeft > 0 && !isPaused else { return }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                timeLeft -= 1
+                runTimer()
+            }
+        }
+        
+    }
+
+    private func resetTimer() {
+        isTimerRunning = false
+        //timeLeft = totalTime
+    }
+}
+
+/*struct CountdownTimer: View {
     
     @State private var timeLeft: TimeInterval
     @State private var isTimerRunning: Bool = true
@@ -167,10 +216,14 @@ struct CountdownTimer: View {
     var body: some View {
         TimerView(timeLeft: timeLeft)
             .onAppear {
-                runTimer()
+                if timeLeft != 0 {
+                    runTimer()
+                }
             }
             .onChange(of: isPaused) { new in
-                runTimer()
+                if timeLeft != 0 {
+                    runTimer()
+                }
             }
     }
 
@@ -187,7 +240,7 @@ struct CountdownTimer: View {
             }
         }
     }
-}
+}*/
 
 /*#Preview {
     CountdownTimer(

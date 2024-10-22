@@ -45,10 +45,10 @@
 				"font/fredoka-condensed-semibold.ttf",
 				"GoogleService-Info.plist",
 				sound_click.wav,
+				sound_error.wav,
 				sound_next_level.wav,
 				sound_remove.wav,
 				sound_success.wav,
-				"sound-error.wav",
 				tutorial_correct_incorrect.mp4,
 				tutorial_drag_and_drop.mp4,
 			);
@@ -62,10 +62,10 @@
 				"font/fredoka-condensed-semibold.ttf",
 				"GoogleService-Info.plist",
 				sound_click.wav,
+				sound_error.wav,
 				sound_next_level.wav,
 				sound_remove.wav,
 				sound_success.wav,
-				"sound-error.wav",
 				tutorial_correct_incorrect.mp4,
 				tutorial_drag_and_drop.mp4,
 			);

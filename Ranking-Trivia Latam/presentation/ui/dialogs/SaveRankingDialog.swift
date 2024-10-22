@@ -67,9 +67,10 @@ struct SaveRankingDialog: View {
                                         if connected {
                                             if !mWord.isEmpty {
                                                 if triviaFlag != nil {
-                                                    onSavedSuccess()
+                                                    
                                                     viewModel.saveNewRecord(flag: triviaFlag!, name: mWord)
-                                                    onDismiss()
+                                                    onSavedSuccess()
+                                                    //onDismiss()
                                                 } else {
                                                     messageToast = "Selecciona una bandera"
                                                     showToast = true
@@ -247,6 +248,7 @@ struct FlagsDropDownMenu: View {
                         }
                     }
                     .padding(.bottom, 180)
+                    .padding(.top, 100)
                 }
                 .background(Color.blue)
                 .frame(width: 100, height: 500)

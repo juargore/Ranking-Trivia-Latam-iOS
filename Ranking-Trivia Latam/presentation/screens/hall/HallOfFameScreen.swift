@@ -11,6 +11,7 @@ import SwiftUI
 struct HallOfFameScreen: View {
     
     @ObservedObject var viewModel = HallOfFameViewModel()
+    @ObservedObject var vmp = PlayViewModel()
     @Environment(\.presentationMode) var presentationMode
     
     @State private var showNewRankingDialog = false
@@ -22,7 +23,7 @@ struct HallOfFameScreen: View {
             HallOfFameBackground()
             
             VStack {
-                HeaderBackAndCategory {
+                HeaderBackAndCategory(viewModel: vmp) {
                     presentationMode.wrappedValue.dismiss()
                 }
                 

@@ -29,7 +29,7 @@ final class HomeViewModel: ObservableObject {
     }
     
     func shouldPlaySound() -> Bool {
-        print("AQUI: shouldPlaySound: \(appStorageUseCase.getIsSoundEnabled())")
+        //print("AQUI: shouldPlaySound: \(appStorageUseCase.getIsSoundEnabled())")
         return appStorageUseCase.getIsSoundEnabled()
     }
     

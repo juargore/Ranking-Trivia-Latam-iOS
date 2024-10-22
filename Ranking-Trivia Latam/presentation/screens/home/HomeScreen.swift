@@ -109,6 +109,11 @@ struct HomeScreen: View {
                     HomeScreen()
                 }
             }
+            .onDisappear {
+                if viewModel.shouldPlaySound() {
+                    Ranking_Trivia_Latam.playSound("sound_next_level")
+                }
+            }
             .toast(message: messageToast, isShowing: $showToast, duration: Toast.short)
             .popUpDialog(isShowing: $showOptionsDialog, dialogContent: {
                 OptionsDialog(viewModel: viewModel, onExitClicked: { showOptionsDialog = false })
@@ -144,11 +149,11 @@ struct HomeScreen: View {
                     .frame(height: 50)
                     .frame(maxHeight: UIScreen.screenHeight, alignment: .bottom)
                 
-                if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
+                if let _ = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
                    let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
                     
-                    // version = 1.0 && build = "1.0.1"
-                    let _ = print("current version = \(version)")
+                    // version (_) = 1.0 && build = "1.0.1"
+                    //let _ = print("current version = \(version)")
                     Text("v\(build)")
                         .font(.custom("FredokaCondensed-Semibold", size: 20))
                         .shadow(color: .black, radius: 2, x: 2, y: 2)
@@ -174,6 +179,7 @@ struct HomeScreen: View {
     
     struct HomeSideButtons: View {
         
+        @Environment(\.openURL) private var openURL
         @State private var showNewerVersionButton = false
         
         var viewModel: HomeViewModel
@@ -185,16 +191,29 @@ struct HomeScreen: View {
             VStack {
                 if showNewerVersionButton {
                     CircledButtonStart(buttonType: .NewVersion) {
-                        //openUrl(urlString: GOOGLE_PLAY_GAME_URL)
+                        if viewModel.shouldPlaySound() {
+                            Ranking_Trivia_Latam.playSound("sound_click")
+                        }
+                        guard let url = URL(string: Constants.APP_STORE_GAME_URL) else { return }
+                        openURL(url)
                     }
                 }
                 CircledButtonStart(buttonType: .Settings) {
+                    if viewModel.shouldPlaySound() {
+                        Ranking_Trivia_Latam.playSound("sound_click")
+                    }
                     onSettingsClicked()
                 }
                 CircledButtonStart(buttonType: .About) {
+                    if viewModel.shouldPlaySound() {
+                        Ranking_Trivia_Latam.playSound("sound_click")
+                    }
                     onAboutClicked()
                 }
                 CircledButtonStart(buttonType: .Tutorial) {
+                    if viewModel.shouldPlaySound() {
+                        Ranking_Trivia_Latam.playSound("sound_click")
+                    }
                     onTutorialClicked()
                 }
             }
@@ -227,7 +246,6 @@ struct HomeYellowButton<Content: View>: View {
     @ObservedObject var viewModel = HomeViewModel()
     
     var buttonType: HomeButtonType
-    var playSound: Bool = true
     var onClick: () -> Void
     var content: () -> Content
     
@@ -245,7 +263,7 @@ struct HomeYellowButton<Content: View>: View {
                 )
                 .onTapGesture {
                     onClick()
-                    if playSound && viewModel.shouldPlaySound() {
+                    if viewModel.shouldPlaySound() {
                         Ranking_Trivia_Latam.playSound("sound_next_level")
                     }
                 }
@@ -267,6 +285,7 @@ struct HomeYellowButton<Content: View>: View {
 
 
 struct CircledButtonStart: View {
+    
     var buttonType: HomeButtonType
     var onClick: () -> Void
     
@@ -289,17 +308,17 @@ struct CircledButtonStart: View {
                     Image("ic_settings")
                         .resizable()
                         .scaledToFit()
-                        .padding(10)
+                        .frame(width: 40, height: 40)
                 case .About:
                     Image("ic_info")
                         .resizable()
                         .scaledToFit()
-                        .padding(10)
+                        .frame(width: 40, height: 40)
                 case .Tutorial:
                     Image("ic_question_no_border")
                         .resizable()
                         .scaledToFit()
-                        .padding(5)
+                        .frame(width: 40, height: 40)
                 case .NewVersion:
                     Text("Nueva\nVersión")
                         .font(.custom("FredokaCondensed-Semibold", size: 12))

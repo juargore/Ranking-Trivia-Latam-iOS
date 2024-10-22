@@ -15,7 +15,6 @@ struct Pulsating<Content: View>: View {
     var pulseFraction: CGFloat
     var content: () -> Content
     
-    
     @State private var scale: CGFloat = 1.0
     
     var body: some View {

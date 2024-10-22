@@ -9,6 +9,7 @@ import Foundation
 import AVFoundation
 
 var audioPlayer: AVAudioPlayer?
+var audioPlayerDelegate: AVAudioPlayerDelegateWrapper?
 
 func playSound(_ resourceName: String) {
     
@@ -23,9 +24,11 @@ func playSound(_ resourceName: String) {
             print("Error al reproducir el sonido: \(error.localizedDescription)")
         }
         
-        audioPlayer?.delegate = AVAudioPlayerDelegateWrapper(onCompletion: {
+        audioPlayerDelegate = AVAudioPlayerDelegateWrapper(onCompletion: {
             audioPlayer = nil
         })
+        
+        audioPlayer?.delegate = audioPlayerDelegate
     }
 }
 

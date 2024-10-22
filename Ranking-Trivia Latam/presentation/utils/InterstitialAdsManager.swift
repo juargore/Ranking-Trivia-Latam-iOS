@@ -24,6 +24,7 @@ class InterstitialAdsManager: NSObject, GADFullScreenContentDelegate, Observable
             guard let self = self else {return}
             if let error = error{
                 print("🔴: \(error.localizedDescription)")
+                print("🔴: \(error)")
                 self.interstitialAdLoaded = false
                 onAdClosed?()
                 return
@@ -36,6 +37,23 @@ class InterstitialAdsManager: NSObject, GADFullScreenContentDelegate, Observable
     }
     
     func displayInterstitialAd() {
+        guard let windowScene = UIApplication.shared.connectedScenes
+                .first as? UIWindowScene,
+              let root = windowScene.windows.first?.rootViewController else {
+            return
+        }
+        
+        if let add = interstitialAd {
+            add.present(fromRootViewController: root)
+            self.interstitialAdLoaded = false
+        } else {
+            print("🔵: Ad wasn't ready")
+            self.interstitialAdLoaded = false
+            self.loadInterstitialAd()
+        }
+    }
+    
+    /*func displayInterstitialAd() {
         guard let root = UIApplication.shared.windows.first?.rootViewController else {
             return
         }
@@ -47,7 +65,7 @@ class InterstitialAdsManager: NSObject, GADFullScreenContentDelegate, Observable
             self.interstitialAdLoaded = false
             self.loadInterstitialAd()
         }
-    }
+    }*/
     
     // Failure notification
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
