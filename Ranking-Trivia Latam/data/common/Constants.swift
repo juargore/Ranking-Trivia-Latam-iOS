@@ -29,6 +29,5 @@ struct Constants {
     static let PLAY_FULL_SCREEN_BANNER_ID = "ca-app-pub-3940256099942544/1712485313"
     */
     
-    // TODO: Real URL for App store
-    static let APP_STORE_GAME_URL = "https://www.apple.com/app-store/"
+    static let APP_STORE_GAME_URL = "https://apps.apple.com/us/app/ranking-trivia-latam/id6737213140"
 }
