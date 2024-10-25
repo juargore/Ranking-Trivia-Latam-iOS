@@ -218,7 +218,7 @@ struct BottomButton: View {
                     onClick()
                 }
             }) {
-                Text(NSLocalizedString("game_done", comment: ""))
+                Text(LocalizedStringKey("game_done"))
                     .font(.custom("FredokaCondensed-Semibold", size: 34))
                     .shadow(color: .gray, radius: 2, x: 2, y: 2)
                     .foregroundColor(buttonEnabled ? .white : Color.white.opacity(0.6))

@@ -28,7 +28,7 @@ struct SaveRankingDialog: View {
                     ScoreUI(score: viewModel.getTotalScore())
                     
                     ScrollView(.vertical, showsIndicators: false) {
-                        Text(NSLocalizedString("new_record_description_top", comment: ""))
+                        Text(LocalizedStringKey("new_record_description_top"))
                             .font(.custom("FredokaCondensed-Semibold", size: 18))
                             .foregroundColor(Color.black)
                             .multilineTextAlignment(.center)
@@ -49,7 +49,7 @@ struct SaveRankingDialog: View {
                         )
                         
                         if !isShowingScroll {
-                            Text(NSLocalizedString("new_record_description_bottom", comment: ""))
+                            Text(LocalizedStringKey("new_record_description_bottom"))
                                 .font(.custom("FredokaCondensed-Semibold", size: 18))
                                 .foregroundColor(Color.black)
                                 .multilineTextAlignment(.center)
@@ -85,7 +85,7 @@ struct SaveRankingDialog: View {
                                 )
                             },
                             content: {
-                                Text(NSLocalizedString("new_record_save", comment: ""))
+                                Text(LocalizedStringKey("new_record_save"))
                                     .font(.custom("FredokaCondensed-Semibold", size: 22))
                                     .foregroundColor(.black)
                                     .padding(.vertical, 6)

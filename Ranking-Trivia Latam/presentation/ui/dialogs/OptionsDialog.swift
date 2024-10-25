@@ -38,7 +38,7 @@ struct OptionsDialog: View {
                         
                         Spacer(minLength: 10)
                         Toggle(
-                            NSLocalizedString("options_sound", comment: ""),
+                            LocalizedStringKey("options_sound"),
                             isOn: $soundEnabled
                         )
                         Spacer(minLength: 40)
@@ -47,7 +47,7 @@ struct OptionsDialog: View {
                             ButtonExitOrRetry(
                                 onClick: onExitClicked,
                                 content: {
-                                    Text(NSLocalizedString("general_exit", comment: ""))
+                                    Text(LocalizedStringKey("general_exit"))
                                         .font(.custom("FredokaCondensed-Semibold", size: 22))
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)
@@ -60,7 +60,7 @@ struct OptionsDialog: View {
                                     onExitClicked()
                                 },
                                 content: {
-                                    Text(NSLocalizedString("general_save", comment: ""))
+                                    Text(LocalizedStringKey("general_save"))
                                         .font(.custom("FredokaCondensed-Semibold", size: 22))
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)

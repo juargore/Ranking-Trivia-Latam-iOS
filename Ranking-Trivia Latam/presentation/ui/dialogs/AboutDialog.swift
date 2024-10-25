@@ -36,7 +36,7 @@ struct AboutDialog: View {
                         ButtonExitOrRetry(
                             onClick: onExitClicked,
                             content: {
-                                Text(NSLocalizedString("general_exit", comment: ""))
+                                Text(LocalizedStringKey("general_exit"))
                                     .font(.custom("FredokaCondensed-Semibold", size: 22))
                                     .foregroundColor(.black)
                                     .padding(.vertical, 6)

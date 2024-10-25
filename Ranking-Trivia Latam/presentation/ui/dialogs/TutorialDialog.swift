@@ -26,19 +26,19 @@ struct TutorialDialog: View {
                         
                         Spacer(minLength: 10)
                         
-                        Text(NSLocalizedString("tutorial_description_top", comment: ""))
+                        Text(LocalizedStringKey("tutorial_description_top"))
                             .font(.custom("FredokaCondensed-Semibold", size: 15))
                             .foregroundColor(.black.opacity(0.7))
                         
                         VideoPlayerView(videoName: "tutorial_drag_and_drop")
                         
-                        Text(NSLocalizedString("tutorial_description_bottom", comment: ""))
+                        Text(LocalizedStringKey("tutorial_description_bottom"))
                             .font(.custom("FredokaCondensed-Semibold", size: 15))
                             .foregroundColor(.black.opacity(0.7))
                         
                         VideoPlayerView(videoName: "tutorial_correct_incorrect")
                         
-                        Text(NSLocalizedString("tutorial_description_final", comment: ""))
+                        Text(LocalizedStringKey("tutorial_description_final"))
                             .font(.custom("FredokaCondensed-Semibold", size: 15))
                             .foregroundColor(.black.opacity(0.7))
                         
@@ -47,7 +47,7 @@ struct TutorialDialog: View {
                         ButtonExitOrRetry(
                             onClick: onExitClicked,
                             content: {
-                                Text(NSLocalizedString("general_exit", comment: ""))
+                                Text(LocalizedStringKey("general_exit"))
                                     .font(.custom("FredokaCondensed-Semibold", size: 22))
                                     .foregroundColor(.black)
                                     .padding(.vertical, 6)

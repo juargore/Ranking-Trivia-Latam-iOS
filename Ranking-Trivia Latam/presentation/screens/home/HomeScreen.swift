@@ -55,7 +55,7 @@ struct HomeScreen: View {
                                         .stroke(Color.black, lineWidth: 3)
                                 )
                                 .overlay {
-                                    Text(NSLocalizedString("home_start", comment: ""))
+                                    Text(LocalizedStringKey("home_start"))
                                         .font(.custom("FredokaCondensed-Semibold", size: 36))
                                         .shadow(color: .gray, radius: 1, x: 1, y: 1)
                                         .foregroundColor(Color.appDarkGrey)
@@ -83,7 +83,7 @@ struct HomeScreen: View {
                                             .stroke(Color.black, lineWidth: 3)
                                     )
                                     .overlay {
-                                        Text(NSLocalizedString("home_hall_of_fame", comment: ""))
+                                        Text(LocalizedStringKey("home_hall_of_fame"))
                                             .font(.custom("FredokaCondensed-Semibold", size: 25))
                                             .shadow(color: .gray, radius: 1, x: 1, y: 1)
                                             .foregroundColor(Color.appDarkGrey)
@@ -320,7 +320,7 @@ struct CircledButtonStart: View {
                         .scaledToFit()
                         .frame(width: 40, height: 40)
                 case .NewVersion:
-                    Text(NSLocalizedString("home_new_version", comment: ""))
+                    Text(LocalizedStringKey("home_new_version"))
                         .font(.custom("FredokaCondensed-Semibold", size: 12))
                         .shadow(color: .gray, radius: 2, x: 2, y: 2)
                         .multilineTextAlignment(.center)

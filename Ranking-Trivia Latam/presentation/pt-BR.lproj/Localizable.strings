@@ -1,0 +1,248 @@
+/* 
+  Localizable.strings
+  Ranking-Trivia Latam
+
+  Created by Arturo Gomez on 10/10/24.
+  
+*/
+
+"app_name" = "Ranking-Trivia Latam";
+"general_exit" = "Sair";
+"general_save" = "Salvar";
+"general_next" = "Próximo";
+"general_retry" = "Tentar novamente";
+
+"home_start" = "Iniciar";
+"home_how_to_play" = "Como jogar?";
+"home_about" = "Sobre";
+"home_hall_of_fame" = "Salão da Fama ✧✧";
+"home_new_version" = "Nova\nversão!";
+"home_version_number" = "v%@";
+
+"error_loading_ad" = "Erro ao carregar o anúncio. Conecte-se à internet para continuar.";
+
+"game_level" = "Nível %s";
+"game_done" = "Pronto!!";
+
+"hof_title" = "Salão da Fama";
+"hof_description" = "Top 20 Jogadores - Maior Pontuação";
+
+/* Country name */
+"country_name_belize" = "Belize";
+"country_name_costa_rica" = "Costa Rica";
+"country_name_el_salvador" = "El Salvador";
+"country_name_guatemala" = "Guatemala";
+"country_name_honduras" = "Honduras";
+"country_name_mexico" = "México";
+"country_name_nicaragua" = "Nicaragua";
+"country_name_panama" = "Panamá";
+"country_name_argentina" = "Argentina";
+"country_name_bolivia" = "Bolivia";
+"country_name_brasil" = "Brasil";
+"country_name_chile" = "Chile";
+"country_name_colombia" = "Colombia";
+"country_name_ecuador" = "Ecuador";
+"country_name_jamaica" = "Jamaica";
+"country_name_guayana_francesa" = "Guayana Francesa";
+"country_name_guyana" = "Guyana";
+"country_name_paraguay" = "Paraguay";
+"country_name_peru" = "Perú";
+"country_name_surinam" = "Surinam";
+"country_name_uruguay" = "Uruguay";
+"country_name_venezuela" = "Venezuela";
+"country_name_cuba" = "Cuba";
+"country_name_republica_dominicana" = "República Dominicana";
+"country_name_haiti" = "Haití";
+"country_name_guadalupe" = "Guadalupe";
+"country_name_martinica" = "Martinica";
+"country_name_puerto_rico" = "Puerto Rico";
+"country_name_isla_san_martin" = "Isla San Martín";
+
+/* About dialog */
+"about_title" = "Sobre";
+"about_read_more" = "Leia mais";
+"about_read_less" = "Leia menos";
+"about_disclaimer" = "Sobre a precisão das informações.\n\nAs informações apresentadas neste jogo sobre rankings e dados de países da América Latina foram coletadas de fontes que consideramos confiáveis. No entanto, não garantimos a exatidão, integridade ou atualidade dessas informações. Os dados fornecidos são apenas para fins informativos e de entretenimento, e não devem ser utilizados como referência oficial ou para tomar decisões importantes.\nRecomendamos consultar fontes oficiais ou atualizadas se você precisar de informações precisas ou verificáveis.";
+
+"about_ads" = "Sobre o uso de anúncios.\n\nOs anúncios exibidos ao longo deste aplicativo são gerenciados por terceiros, e, portanto, não temos controle direto sobre o tipo de conteúdo mostrado. A finalidade desses anúncios é nos ajudar a cobrir os custos associados ao desenvolvimento do aplicativo, incluindo o trabalho das equipes de design, desenvolvimento, hospedagem e manutenção.\nAgradecemos sua compreensão e apoio, pois esses anúncios nos permitem continuar melhorando o aplicativo e oferecer uma experiência melhor para você.";
+
+"about_ui_and_sounds" = "Sobre os designs e conteúdos multimídia.\n\nA maior parte do design, gráficos, sons e outros elementos visuais e auditivos deste aplicativo foram gerados usando ferramentas de inteligência artificial e retocados ou editados pela equipe de desenvolvimento. Se algum desses elementos coincidir ou for semelhante a outros já existentes, é pura coincidência e não nos responsabilizamos por essas semelhanças.\nAgradecemos sua compreensão e garantimos que nosso objetivo é oferecer uma experiência única e inovadora na criação deste aplicativo.";
+
+
+/* Options dialog */
+"options_title" = "Opções";
+"options_sound" = "Som";
+"options_off" = "Off";
+"options_on" = "On";
+"options_language" = "Idioma";
+"options_spanish" = "Espanhol";
+"options_english" = "Inglês";
+"options_portuguese" = "Português";
+
+
+/* Tutorial dialog */
+"tutorial_title" = "Como jogar?";
+
+"tutorial_description_top" = "Muito simples! Arraste as bandeiras à esquerda com o dedo e coloque-as onde você acha que elas vão no ranking à direita. Se você cometer um erro ou quiser mudar, pressione o botão laranja e a bandeira voltará à sua posição original.";
+
+"tutorial_description_bottom" = "Se você acertar o ranking, uma caixa de diálogo aparecerá e pontos serão adicionados à sua pontuação no canto inferior direito. Se você errar o ranking, uma caixa de diálogo diferente aparecerá e pontos serão deduzidos da mesma pontuação.";
+
+"tutorial_description_final" = "Tente acertar o máximo de rankings possível para aumentar sua pontuação final. Com uma boa pontuação, o Hall of Fame o aguarda. Divirta-se!!";
+
+
+/* ResetPrefs dialog */
+"reset_prefs_title" = "Jogo concluído";
+"reset_prefs_start_again" = "Iniciar novo jogo";
+
+"reset_prefs_description" = "Parece que você já concluiu o jogo uma vez, mas vejo que está procurando melhorar esse ranking, hein? Bem, excelente, não diga mais nada!!\n\nPressione o botão abaixo e ele apagará qualquer progresso salvo do seu jogo anterior. Não se preocupe, se você estiver no Hall of Fame, esse registro ficará lá.\n\nMuito obrigado por jogar novamente e boa sorte!!";
+
+
+/* Correct dialog */
+"correct_title" = "Correto!";
+"correct_description" = "Ótimo trabalho! Você está indo muito bem!!\n\nVamos passar para algo mais desafiador!";
+
+
+/* Incorrect dialog */
+"incorrect_title" = "Incorreto!";
+"incorrect_description" = "Você organizou o ranking das bandeiras incorretamente.\nMas não se preocupe, você está muito perto de acertar!!\n\nTente novamente!";
+
+
+/* Save Ranking dialog */
+"new_record_title" = "¡¡Novo Recorde!!";
+"new_record_description_top" = "Uau! Você terminou todas as perguntas que o Ranking-Trivia Latin America tem por enquanto. Mas não se preocupe, estamos trabalhando dia a dia para oferecer mais e melhores rankings da Latam, então fique atento a uma atualização do aplicativo para continuar essa incrível aventura!\n\nPor enquanto, salve seu recorde (conexão com a internet necessária) e, se estiver entre os 20 melhores, ele aparecerá na seção = Hall of Fame = no menu principal.";
+
+"new_record_description_bottom" = "Toda a equipe envolvida na criação deste jogo agradece imensamente por jogá-lo. Espere novidades!";
+
+"new_record_save" = "Salvar meu recorde";
+"new_record_saving" = "Salvando recorde…";
+"new_record_select_flag" = "Selecione uma bandeira";
+"new_record_write_a_name" = "Escreva um nome";
+"new_record_need_internet" = "Conexão com a internet necessária";
+"new_record_your_current_score" = "Sua pontuação atual";
+
+
+/* TimeUp dialog */
+"time_up_title" = "O tempo acabou!";
+"time_up_description" = "Você precisa se apressar para organizar corretamente as bandeiras na ordem certa.\n\nVamos lá! Você consegue!!";
+
+
+/* Questions Level I */
+"question_i_11" = "Qual país ganhou mais COPAS DO MUNDO em sua história?";
+"question_i_12" = "Qual país tem o maior TERRITÓRIO?";
+"question_i_13" = "Qual país tem a maior POPULAÇÃO?";
+"question_i_14" = "Qual país tem mais VULCÕES ATIVOS?";
+"question_i_15" = "Onde há mais VENEZUELANOS fora da VENEZUELA na América Latina?";
+"question_i_16" = "Qual país tem mais PATRIMÔNIOS MUNDIAIS DA UNESCO na América Central e no Caribe?";
+"question_i_17" = "Onde estão os maiores fãs de Dragon Ball de acordo com a Bandai?";
+
+/* Questions Level II */
+"question_ii_21" = "Qual país tem a maior área de FLORESTA AMAZÔNICA?";
+"question_ii_22" = "Quais países têm as maiores taxas de CRIMINALIDADE?";
+"question_ii_23" = "Qual país tem os RIOS mais longos da América Latina?";
+"question_ii_24" = "Qual país produz mais PRATA na região?";
+"question_ii_25" = "Qual país tem mais medalhas olímpicas em ATLETISMO?";
+"question_ii_26" = "Qual país tem mais hectares para o cultivo de CAFÉ na América Central?";
+"question_ii_27" = "Qual país tem o maior número de sítios arqueológicos MAIAS?";
+
+/* Questions Level III */
+"question_iii_31" = "Quais países mais buscaram ANIME nos últimos anos na internet?";
+"question_iii_32" = "Qual país produz mais RUM no CARIBE?";
+"question_iii_33" = "Qual país tem a maior densidade populacional (PAÍSES PEQUENOS)?";
+"question_iii_34" = "Qual país tem a maior porcentagem de ÁREAS PROTEGIDAS em relação ao seu tamanho?";
+"question_iii_35" = "Qual país tem mais TURISMO internacional no Caribe?";
+"question_iii_36" = "Qual país tem a maior BIODIVERSIDADE MARINHA no Caribe e na América Central?";
+"question_iii_37" = "Qual país tem mais ILHAS como parte do seu território?";
+
+/* Questions Level IV */
+"question_iv_41" = "Para onde a maioria dos EQUATORIANOS emigrou na América Latina desde 2021?";
+"question_iv_42" = "Quais países ganharam mais Prêmios GOYA de Melhor Filme Ibero-americano?";
+"question_iv_43" = "Quais países tiveram mais DIRETORES premiados internacionalmente?";
+"question_iv_44" = "Quais países têm as maiores extensões de costa na América Central e no Caribe?";
+"question_iv_45" = "Quais países se classificaram mais vezes para a Copa do Mundo da FIFA?";
+"question_iv_46" = "Qual país EXPORTA mais FRUTAS tropicais?";
+"question_iv_47" = "Onde há mais CHILENOS fora do CHILE na América Latina?";
+
+/* Questions Level V */
+"question_v_51" = "Qual país tem a maior ECONOMIA baseada em seu PIB?";
+"question_v_52" = "Qual país tem a maior produção de PETRÓLEO?";
+"question_v_53" = "Onde há mais PARAGUAIOS fora do PARAGUAI?";
+"question_v_54" = "Quais países tiveram mais casos de COVID?";
+"question_v_55" = "Em quais países da região o anime One Piece é mais popular?";
+"question_v_56" = "Quem tem o maior número de Patrimônios Mundiais da UNESCO?";
+"question_v_57" = "Quem tem a maior cobertura de INTERNET?";
+"question_v_58" = "Quais países ganharam mais vezes a COPA AMÉRICA?";
+
+/* Questions Level VI */
+"question_vi_61" = "Quem tem as maiores FORÇAS MILITARES com base no número de efetivos?";
+"question_vi_62" = "Quem tem a maior EXTENSÃO DE COSTA na América Latina?";
+"question_vi_63" = "Quem produz mais AÇÚCAR na América Latina?";
+"question_vi_64" = "De acordo com o Taste Atlas, quem tem a melhor gastronomia da região?";
+"question_vi_65" = "Quem gera mais ENERGIA HIDROELÉTRICA?";
+"question_vi_66" = "Onde há mais COLOMBIANOS fora da COLÔMBIA na América Latina?";
+"question_vi_67" = "Quem PRODUZ mais FLORES na região?";
+
+/* Questions Level VII */
+"question_vii_71" = "Quais países ganharam mais vezes o Prêmio Ariel de Melhor Filme Ibero-Americano?";
+"question_vii_72" = "Quais países recebem mais turistas internacionais na América Central e no Caribe?";
+"question_vii_73" = "Quais países têm a maior produção de café na América Central e no Caribe?";
+"question_vii_74" = "Onde há mais MEXICANOS fora do MÉXICO na América Latina?";
+"question_vii_75" = "Quais países produziram filmes de comédia mais bem-sucedidos na América Latina?";
+"question_vii_76" = "Quais países tiveram mais filmes selecionados no Festival de Cinema de Berlim?";
+"question_vii_77" = "De acordo com o Taste Atlas, como ele classificou os países com base em seu PRATO PRINCIPAL (não sua gastronomia geral)?";
+
+/* Questions Level VIII */
+"question_viii_81" = "Onde há mais URUGUAIOS fora do URUGUAI na América Latina?";
+"question_viii_82" = "Quais países tiveram mais indicações ao Oscar na categoria de Melhor Filme Internacional?";
+"question_viii_83" = "Quais países têm os festivais de cinema internacionais mais reconhecidos?";
+"question_viii_84" = "Quem tem as maiores economias da América Central e do Caribe com base no PIB?";
+"question_viii_85" = "Quais países ganharam mais Prêmios Platino para o Cinema Ibero-americano?";
+"question_viii_86" = "Quais países produziram mais filmes com indicações em festivais internacionais?";
+"question_viii_87" = "Quais países tiveram mais atores indicados ao Oscar?";
+
+/* Questions Level IX */
+"question_ix_91" = "Quais países têm as produções animadas mais reconhecidas internacionalmente?";
+"question_ix_92" = "Quais países tiveram mais filmes selecionados no Festival de Cannes?";
+"question_ix_93" = "Quais países produziram mais documentários premiados internacionalmente?";
+"question_ix_94" = "Quais países têm as produções de cinema independente mais reconhecidas?";
+"question_ix_95" = "Quais países já sediaram o Festival de Cinema de Cartagena?";
+"question_ix_96" = "Quais países têm os filmes mais reconhecidos internacionalmente baseados em eventos históricos?";
+"question_ix_97" = "Quais países ganharam mais prêmios no Festival de Cinema de Mar del Plata?";
+"question_ix_98" = "Para onde a maioria dos BRASILEIROS emigrou desde 2022 na América Latina?";
+
+/* Questions Level X */
+"question_x_101" = "Quais países produziram mais filmes de cinema noir?";
+"question_x_102" = "Quais países tiveram mais filmes apresentados no Festival de Cinema de San Sebastián?";
+"question_x_103" = "Quais países têm a maior quantidade de manguezais na América Central e no Caribe?";
+"question_x_104" = "Quais países produziram mais filmes sobre conflitos sociais na América Latina?";
+"question_x_105" = "Para onde a maioria dos ARGENTINOS emigrou desde 2021 na América Latina?";
+"question_x_106" = "Quais países têm os filmes de animação infantil mais reconhecidos?";
+"question_x_107" = "Quais países produzem mais cana-de-açúcar na América Central e no Caribe?";
+
+/* Questions Level XI */
+"question_xi_111" = "Quem tem a maior produção de CARNE bovina?";
+"question_xi_112" = "Quem tem a maior extensão de FLORESTA tropical?";
+"question_xi_113" = "Quem tem os maiores SALÁRIOS mínimos?";
+"question_xi_114" = "Quem tem a maior produção de energia GEOTÉRMICA?";
+"question_xi_115" = "Quem PRODUZ mais vinho na América Latina?";
+"question_xi_116" = "Quem tem a maior área de terras agrícolas?";
+"question_xi_117" = "Quem tem a maior variedade de espécies de AVES?";
+
+/* Questions Level XII */
+"question_xii_121" = "Quem tem a maior produção de banana?";
+"question_xii_122" = "Quem gera mais eletricidade a partir de fontes renováveis?";
+"question_xii_123" = "Quem tem a maior produção de produtos lácteos?";
+"question_xii_124" = "Quem tem a maior biodiversidade marinha?";
+"question_xii_125" = "Quem tem mais linhas de metrô?";
+"question_xii_126" = "Quem tem a maior área de áreas protegidas?";
+"question_xii_127" = "Quem tem mais florestas tropicais protegidas?";
+"question_xii_128" = "Quais países tiveram mais equipes vencedoras da Copa Libertadores?";
+
+/* Questions Level XIII */
+"question_xiii_131" = "Quem tem os maiores portos marítimos?";
+"question_xiii_132" = "Quem tem a maior produção de camarão?";
+"question_xiii_133" = "Quem tem as maiores taxas de alfabetização?";
+"question_xiii_134" = "Quem tem a maior produção de cacau?";
+"question_xiii_135" = "Quem tem a maior produção de prata?";
+"question_xiii_136" = "De acordo com o Taste Atlas, quem tem a pior gastronomia da região?";
+"question_xiii_137" = "Quem tem a maior produção de milho?";
+"question_xiii_138" = "Quais países têm mais títulos da Copa Sudamericana?";

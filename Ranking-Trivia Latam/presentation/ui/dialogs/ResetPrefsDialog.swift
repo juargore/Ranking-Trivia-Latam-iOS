@@ -27,7 +27,7 @@ struct ResetPrefsDialog: View {
                         
                         Spacer(minLength: 10)
                         
-                        Text(NSLocalizedString("reset_prefs_description", comment: ""))
+                        Text(LocalizedStringKey("reset_prefs_description"))
                             .font(.custom("FredokaCondensed-Semibold", size: 20))
                             .shadow(color: .black, radius: 1, x: 1, y: 1)
                             .foregroundColor(.white)
@@ -40,7 +40,7 @@ struct ResetPrefsDialog: View {
                         ButtonExitOrRetry(
                             onClick: onResetClicked,
                             content: {
-                                Text(NSLocalizedString("reset_prefs_start_again", comment: ""))
+                                Text(LocalizedStringKey("reset_prefs_start_again"))
                                     .font(.custom("FredokaCondensed-Semibold", size: 22))
                                     .foregroundColor(.black)
                                     .padding(.vertical, 6)

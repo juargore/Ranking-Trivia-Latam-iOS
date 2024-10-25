@@ -88,7 +88,7 @@ struct HallOfFameScreen: View {
 struct HallOfFameTitle: View {
     var body: some View {
         VStack {
-            Text(NSLocalizedString("hof_title", comment: ""))
+            Text(LocalizedStringKey("hof_title"))
                 .font(.custom("FredokaCondensed-Medium", size: 32))
                 .shadow(color: .gray, radius: 2, x: 2, y: 2)
                 .foregroundColor(Color.white)
@@ -96,7 +96,7 @@ struct HallOfFameTitle: View {
                 .frame(maxWidth: .infinity)
                 .lineSpacing(24)
 
-            Text(NSLocalizedString("hof_description", comment: ""))
+            Text(LocalizedStringKey("hof_description"))
                 .font(.custom("FredokaCondensed-Medium", size: 18))
                 .shadow(color: .gray, radius: 2, x: 2, y: 2)
                 .foregroundColor(.white)

@@ -68,15 +68,6 @@ struct CardFlag: View {
     }
 }
 
-#Preview {
-    CardFlag(flag: TriviaFlag(
-        id: .MX,
-        name: NSLocalizedString("country_name_mexico", comment: ""),
-        image: "flag_mexico",
-        alreadyPlayed: false)
-    )
-}
-
 
 struct CardEmptySpace: View {
     
