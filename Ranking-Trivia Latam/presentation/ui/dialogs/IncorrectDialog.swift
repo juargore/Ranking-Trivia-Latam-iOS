@@ -16,7 +16,7 @@ struct IncorrectDialog: View {
         if isVisible {
             BaseDialog(
                 titleWidth: 190,
-                title: "Incorrecto!",
+                title: NSLocalizedString("incorrect_title", comment: ""),
                 content: {
                     VStack(alignment: .center) {
                         Image("ic_error")
@@ -25,7 +25,7 @@ struct IncorrectDialog: View {
                             .frame(width: 60, height: 60)
                             .padding(.bottom, 5)
 
-                        Text("Haz ordenado de forma incorrecta el ranking de las banderas.\nPero no te preocupes, estás muy cerca de lograrlo!!\n\nInténtalo nuevamente!")
+                        Text(NSLocalizedString("incorrect_description", comment: ""))
                             .font(.custom("FredokaCondensed-Semibold", size: 22))
                             .shadow(color: .black, radius: 1, x: 1, y: 1)
                             .foregroundColor(.white)
@@ -39,7 +39,7 @@ struct IncorrectDialog: View {
                             ButtonExitOrRetry(
                                 onClick: onRetryClicked,
                                 content: {
-                                    Text("Reintentar")
+                                    Text(NSLocalizedString("general_retry", comment: ""))
                                         .font(.custom("FredokaCondensed-Semibold", size: 24))
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)

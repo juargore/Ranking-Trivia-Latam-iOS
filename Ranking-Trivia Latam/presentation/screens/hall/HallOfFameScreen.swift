@@ -62,9 +62,11 @@ struct HallOfFameScreen: View {
             .padding(.bottom, 60)
             
             // TODO: Delete FAB for PROD
-            /*FloatingButtonV2() {
+            /*
+             FloatingButtonV2() {
                 showNewRankingDialog = true
-            }*/
+            }
+            */
         }
         .toolbar(.hidden, for: .navigationBar)
         .toast(message: messageToast, isShowing: $showToast, duration: Toast.short)
@@ -86,15 +88,15 @@ struct HallOfFameScreen: View {
 struct HallOfFameTitle: View {
     var body: some View {
         VStack {
-            Text("Salón de la Fama")
+            Text(NSLocalizedString("hof_title", comment: ""))
                 .font(.custom("FredokaCondensed-Medium", size: 32))
                 .shadow(color: .gray, radius: 2, x: 2, y: 2)
                 .foregroundColor(Color.white)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
-                .lineSpacing(24) // lineHeight
+                .lineSpacing(24)
 
-            Text("Top 20 jugadores con mejor puntuación")
+            Text(NSLocalizedString("hof_description", comment: ""))
                 .font(.custom("FredokaCondensed-Medium", size: 18))
                 .shadow(color: .gray, radius: 2, x: 2, y: 2)
                 .foregroundColor(.white)

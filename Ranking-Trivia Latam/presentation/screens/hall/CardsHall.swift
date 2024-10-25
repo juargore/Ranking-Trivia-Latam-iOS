@@ -16,6 +16,7 @@ struct RankingCard: View {
     var body: some View {
         GeometryReader { geometry in
             HStack(spacing: 0) {
+                
                 // Posición
                 Text(String(ranking.position ?? 0))
                     .font(.custom("FredokaCondensed-Medium", size: 18))
@@ -54,7 +55,6 @@ struct RankingCard: View {
             }
         }
         .padding(.vertical, 12)
-        //.frame(height: 50)
         
     }
 }

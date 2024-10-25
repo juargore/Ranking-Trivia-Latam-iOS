@@ -16,7 +16,7 @@ struct TimeUpDialog: View {
         if isVisible {
             BaseDialog(
                 titleWidth: 260,
-                title: "¡Se terminó el tiempo!",
+                title: NSLocalizedString("time_up_title", comment: ""),
                 content: {
                     VStack(alignment: .center) {
                         Image("ic_clock")
@@ -25,7 +25,7 @@ struct TimeUpDialog: View {
                             .frame(width: 60, height: 60)
                             .padding(.bottom, 5)
 
-                        Text("Necesitas apresurarte para lograr acomodar correctamente las banderas en el orden correcto.\n\n¡Venga! Tú puedes!!")
+                        Text(NSLocalizedString("time_up_description", comment: ""))
                             .font(.custom("FredokaCondensed-Semibold", size: 22))
                             .shadow(color: .black, radius: 1, x: 1, y: 1)
                             .foregroundColor(.white)
@@ -38,7 +38,7 @@ struct TimeUpDialog: View {
                             ButtonExitOrRetry(
                                 onClick: onRetryClicked,
                                 content: {
-                                    Text("Reintentar")
+                                    Text(NSLocalizedString("general_retry", comment: ""))
                                         .font(.custom("FredokaCondensed-Semibold", size: 24))
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)

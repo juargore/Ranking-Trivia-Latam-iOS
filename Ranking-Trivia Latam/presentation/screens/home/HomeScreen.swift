@@ -55,7 +55,7 @@ struct HomeScreen: View {
                                         .stroke(Color.black, lineWidth: 3)
                                 )
                                 .overlay {
-                                    Text("Iniciar")
+                                    Text(NSLocalizedString("home_start", comment: ""))
                                         .font(.custom("FredokaCondensed-Semibold", size: 36))
                                         .shadow(color: .gray, radius: 1, x: 1, y: 1)
                                         .foregroundColor(Color.appDarkGrey)
@@ -83,7 +83,7 @@ struct HomeScreen: View {
                                             .stroke(Color.black, lineWidth: 3)
                                     )
                                     .overlay {
-                                        Text("Salón de la fama ✧✧")
+                                        Text(NSLocalizedString("home_hall_of_fame", comment: ""))
                                             .font(.custom("FredokaCondensed-Semibold", size: 25))
                                             .shadow(color: .gray, radius: 1, x: 1, y: 1)
                                             .foregroundColor(Color.appDarkGrey)
@@ -320,15 +320,15 @@ struct CircledButtonStart: View {
                         .scaledToFit()
                         .frame(width: 40, height: 40)
                 case .NewVersion:
-                    Text("Nueva\nVersión")
+                    Text(NSLocalizedString("home_new_version", comment: ""))
                         .font(.custom("FredokaCondensed-Semibold", size: 12))
                         .shadow(color: .gray, radius: 2, x: 2, y: 2)
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color.yellow)
                 case .Start:
-                    Text("Start")
+                    Text("") // unused
                 case .HallOfFame:
-                    Text("Hall Of Fame")
+                    Text("") // unused
                 }
             }
             .onTapGesture {

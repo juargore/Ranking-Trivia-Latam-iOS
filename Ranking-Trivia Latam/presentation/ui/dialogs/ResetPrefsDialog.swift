@@ -15,7 +15,7 @@ struct ResetPrefsDialog: View {
     var body: some View {
         BaseDialog(
             titleWidth: 250,
-            title: "Juego completado",
+            title: NSLocalizedString("reset_prefs_title", comment: ""),
             content: {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
@@ -40,7 +40,7 @@ struct ResetPrefsDialog: View {
                         ButtonExitOrRetry(
                             onClick: onResetClicked,
                             content: {
-                                Text("Comenzar nueva partida")
+                                Text(NSLocalizedString("reset_prefs_start_again", comment: ""))
                                     .font(.custom("FredokaCondensed-Semibold", size: 22))
                                     .foregroundColor(.black)
                                     .padding(.vertical, 6)

@@ -43,8 +43,3 @@ struct HeaderBackAndCategory: View {
         }
     }
 }
-
-
-/*#Preview {
-    HeaderBackAndCategory(onBack: {})
-}*/

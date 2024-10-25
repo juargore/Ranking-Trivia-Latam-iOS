@@ -14,7 +14,7 @@ struct AboutDialog: View {
     var body: some View {
         BaseDialog(
             titleWidth: 150,
-            title: "Acerca de",
+            title: NSLocalizedString("about_title", comment: ""),
             content: {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
@@ -36,7 +36,7 @@ struct AboutDialog: View {
                         ButtonExitOrRetry(
                             onClick: onExitClicked,
                             content: {
-                                Text("Salir")
+                                Text(NSLocalizedString("general_exit", comment: ""))
                                     .font(.custom("FredokaCondensed-Semibold", size: 22))
                                     .foregroundColor(.black)
                                     .padding(.vertical, 6)
@@ -56,8 +56,8 @@ struct AboutDialog: View {
 struct ExpandableText: View {
     let text: String
     let maxLines: Int = 1
-    let readMore: String = "Leer más"
-    let readLess: String = "Leer menos"
+    let readMore: String = NSLocalizedString("about_read_more", comment: "")
+    let readLess: String = NSLocalizedString("about_read_less", comment: "")
     
     @State private var expandedState: Bool = false
     
@@ -71,7 +71,6 @@ struct ExpandableText: View {
                     expandedState.toggle()
                 }
             
-            // Mostrar el texto "Leer más" o "Leer menos" si el texto es más largo que 44 caracteres
             if text.count > 44 {
                 Text(expandedState ? readLess : readMore)
                     .font(.custom("FredokaCondensed-Semibold", size: 15))
@@ -84,13 +83,6 @@ struct ExpandableText: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
-
-/*struct ExpandableText_Previews: PreviewProvider {
-    static var previews: some View {
-        ExpandableText(text: "Este es un texto largo que puede ser expandido para mostrar más contenido.")
-            .padding()
-    }
-}*/
 
 #Preview {
     AboutDialog(onExitClicked: {})

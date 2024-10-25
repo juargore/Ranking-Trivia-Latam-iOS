@@ -78,7 +78,7 @@ struct PlayScreenHeader: View {
                     ButtonExitOrRetry(
                         onClick: {},
                         content: {
-                            Text("Nivel \(level.rawValue)")
+                            Text(String(format: NSLocalizedString("game_level", comment: ""), level.rawValue))
                                 .font(.custom("FredokaCondensed-Semibold", size: 16))
                                 .foregroundColor(.black)
                                 .padding(.vertical, 6)
@@ -94,31 +94,6 @@ struct PlayScreenHeader: View {
     }
 }
 
-
-struct HeaderLevel: View {
-    
-    var level: Int
-
-    var body: some View {
-        ZStack {
-            Color.yellow
-                .cornerRadius(20)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.black, lineWidth: 2)
-                )
-                .padding(.horizontal)
-
-            Text("Level \(level)")
-                .font(.system(size: 18))
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color.gray)
-                .padding(.vertical, 4)
-                .padding(.horizontal, 16)
-        }
-        .frame(minHeight: 40)
-    }
-}
 
 struct CountdownTimer: View {
     
@@ -193,64 +168,9 @@ struct CountdownTimer: View {
 
     private func resetTimer() {
         isTimerRunning = false
-        //timeLeft = totalTime
     }
 }
 
-/*struct CountdownTimer: View {
-    
-    @State private var timeLeft: TimeInterval
-    @State private var isTimerRunning: Bool = true
-    
-    let totalTime: TimeInterval
-    let isPaused: Bool
-    let onTimeFinish: () -> Void
-
-    init(totalTime: TimeInterval, isPaused: Bool, onTimeFinish: @escaping () -> Void) {
-        self.totalTime = totalTime
-        self.isPaused = isPaused
-        self.onTimeFinish = onTimeFinish
-        _timeLeft = State(initialValue: totalTime)
-    }
-
-    var body: some View {
-        TimerView(timeLeft: timeLeft)
-            .onAppear {
-                if timeLeft != 0 {
-                    runTimer()
-                }
-            }
-            .onChange(of: isPaused) { new in
-                if timeLeft != 0 {
-                    runTimer()
-                }
-            }
-    }
-
-    func runTimer() {
-        if isTimerRunning && !isPaused {
-            if timeLeft > 0 {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    timeLeft -= 1.0
-                    runTimer() // Recursive call to keep reducing time
-                }
-            } else {
-                isTimerRunning = false
-                onTimeFinish()
-            }
-        }
-    }
-}*/
-
-/*#Preview {
-    CountdownTimer(
-        totalTime: 60,
-        isPaused: false,
-        onTimeFinish: {
-            
-        }
-    )
-}*/
 
 struct TimerView: View {
     let timeLeft: TimeInterval
@@ -298,7 +218,7 @@ struct BottomButton: View {
                     onClick()
                 }
             }) {
-                Text("Listo!!")
+                Text(NSLocalizedString("game_done", comment: ""))
                     .font(.custom("FredokaCondensed-Semibold", size: 34))
                     .shadow(color: .gray, radius: 2, x: 2, y: 2)
                     .foregroundColor(buttonEnabled ? .white : Color.white.opacity(0.6))

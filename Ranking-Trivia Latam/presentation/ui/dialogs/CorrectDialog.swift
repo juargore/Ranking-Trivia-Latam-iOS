@@ -16,7 +16,7 @@ struct CorrectDialog: View {
         if isVisible {
             BaseDialog(
                 titleWidth: 160,
-                title: "Correcto!",
+                title: NSLocalizedString("correct_title", comment: ""),
                 content: {
                     VStack(alignment: .center) {
                         Image("ic_correct")
@@ -25,7 +25,7 @@ struct CorrectDialog: View {
                             .frame(width: 60, height: 60)
                             .padding(.bottom, 5)
 
-                        Text("Excelente trabajo! Lo estás haciendo muy bien!!.\n\nPasemos a algo más retador!")
+                        Text(NSLocalizedString("correct_description", comment: ""))
                             .font(.custom("FredokaCondensed-Semibold", size: 22))
                             .shadow(color: .black, radius: 1, x: 1, y: 1)
                             .foregroundColor(.white)
@@ -39,7 +39,7 @@ struct CorrectDialog: View {
                             ButtonExitOrRetry(
                                 onClick: onNextClicked,
                                 content: {
-                                    Text("Siguiente")
+                                    Text(NSLocalizedString("general_next", comment: ""))
                                         .font(.custom("FredokaCondensed-Semibold", size: 24))
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)

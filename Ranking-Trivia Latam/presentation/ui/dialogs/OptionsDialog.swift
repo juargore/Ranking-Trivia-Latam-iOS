@@ -26,7 +26,7 @@ struct OptionsDialog: View {
     var body: some View {
         BaseDialog(
             titleWidth: 150,
-            title: "Opciones",
+            title: NSLocalizedString("options_title", comment: ""),
             content: {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
@@ -37,14 +37,17 @@ struct OptionsDialog: View {
                             .padding(.bottom, 5)
                         
                         Spacer(minLength: 10)
-                        Toggle("Sonido", isOn: $soundEnabled)
+                        Toggle(
+                            NSLocalizedString("options_sound", comment: ""),
+                            isOn: $soundEnabled
+                        )
                         Spacer(minLength: 40)
                         
                         HStack {
                             ButtonExitOrRetry(
                                 onClick: onExitClicked,
                                 content: {
-                                    Text("Salir")
+                                    Text(NSLocalizedString("general_exit", comment: ""))
                                         .font(.custom("FredokaCondensed-Semibold", size: 22))
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)
@@ -57,7 +60,7 @@ struct OptionsDialog: View {
                                     onExitClicked()
                                 },
                                 content: {
-                                    Text("Guardar")
+                                    Text(NSLocalizedString("general_save", comment: ""))
                                         .font(.custom("FredokaCondensed-Semibold", size: 22))
                                         .foregroundColor(.black)
                                         .padding(.vertical, 6)

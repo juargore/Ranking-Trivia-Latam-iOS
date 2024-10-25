@@ -14,7 +14,7 @@ struct TutorialDialog: View {
     var body: some View {
         BaseDialog(
             titleWidth: 150,
-            title: "Cómo jugar?",
+            title: NSLocalizedString("tutorial_title", comment: ""),
             content: {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
@@ -26,19 +26,19 @@ struct TutorialDialog: View {
                         
                         Spacer(minLength: 10)
                         
-                        Text(NSLocalizedString("how_to_play_top", comment: ""))
+                        Text(NSLocalizedString("tutorial_description_top", comment: ""))
                             .font(.custom("FredokaCondensed-Semibold", size: 15))
                             .foregroundColor(.black.opacity(0.7))
                         
                         VideoPlayerView(videoName: "tutorial_drag_and_drop")
                         
-                        Text(NSLocalizedString("how_to_play_bottom", comment: ""))
+                        Text(NSLocalizedString("tutorial_description_bottom", comment: ""))
                             .font(.custom("FredokaCondensed-Semibold", size: 15))
                             .foregroundColor(.black.opacity(0.7))
                         
                         VideoPlayerView(videoName: "tutorial_correct_incorrect")
                         
-                        Text(NSLocalizedString("how_to_play_final", comment: ""))
+                        Text(NSLocalizedString("tutorial_description_final", comment: ""))
                             .font(.custom("FredokaCondensed-Semibold", size: 15))
                             .foregroundColor(.black.opacity(0.7))
                         
@@ -47,7 +47,7 @@ struct TutorialDialog: View {
                         ButtonExitOrRetry(
                             onClick: onExitClicked,
                             content: {
-                                Text("Salir")
+                                Text(NSLocalizedString("general_exit", comment: ""))
                                     .font(.custom("FredokaCondensed-Semibold", size: 22))
                                     .foregroundColor(.black)
                                     .padding(.vertical, 6)

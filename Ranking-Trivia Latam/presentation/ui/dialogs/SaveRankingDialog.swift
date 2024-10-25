@@ -22,7 +22,7 @@ struct SaveRankingDialog: View {
     var body: some View {
         BaseDialog(
             titleWidth: 180,
-            title: "¡¡Nuevo Récord!!",
+            title: NSLocalizedString("new_record_title", comment: ""),
             content: {
                 VStack {
                     ScoreUI(score: viewModel.getTotalScore())
@@ -67,27 +67,25 @@ struct SaveRankingDialog: View {
                                         if connected {
                                             if !mWord.isEmpty {
                                                 if triviaFlag != nil {
-                                                    
                                                     viewModel.saveNewRecord(flag: triviaFlag!, name: mWord)
                                                     onSavedSuccess()
-                                                    //onDismiss()
                                                 } else {
-                                                    messageToast = "Selecciona una bandera"
+                                                    messageToast = NSLocalizedString("new_record_select_flag", comment: "")
                                                     showToast = true
                                                 }
                                             } else {
-                                                messageToast = "Ingresa un nombre"
+                                                messageToast = NSLocalizedString("new_record_write_a_name", comment: "")
                                                 showToast = true
                                             }
                                         } else {
-                                            messageToast = "Necesitas conexión a internet"
+                                            messageToast = NSLocalizedString("new_record_need_internet", comment: "")
                                             showToast = true
                                         }
                                     }
                                 )
                             },
                             content: {
-                                Text("Guardar mi Récord")
+                                Text(NSLocalizedString("new_record_save", comment: ""))
                                     .font(.custom("FredokaCondensed-Semibold", size: 22))
                                     .foregroundColor(.black)
                                     .padding(.vertical, 6)
@@ -144,9 +142,6 @@ struct ScoreUI: View {
     }
 }
 
-/*#Preview {
-    ScoreUI(score: 1234)
-}*/
 
 #Preview {
     SaveRankingDialog(
@@ -182,7 +177,7 @@ struct TextFieldTrivia: View {
                 .onChange(of: word) { new in
                     onWordChange(new)
                 }
-            .font(.custom("FredokaCondensed-Medium", size: 18)) // Replace with your font
+            .font(.custom("FredokaCondensed-Medium", size: 18))
             .padding()
             .frame(height: 50)
             .background(Color.white)
