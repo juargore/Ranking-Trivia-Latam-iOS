@@ -15,6 +15,17 @@ final class HomeViewModel: ObservableObject {
     private let appStorageUseCase = AppStorageUseCase()
     private var disposables = Set<AnyCancellable>()
     
+    @Published var selectedLanguage: String {
+        didSet {
+            UserDefaults.standard.set([selectedLanguage], forKey: "AppleLanguages")
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    init() {
+        let currentLanguage = UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first ?? "en"
+        self.selectedLanguage = currentLanguage
+    }
     
     func gameHasNewerVersion(currentVersion: Int, onResponse: @escaping (Bool) -> Void ) {
         firebaseUseCase
@@ -39,5 +50,16 @@ final class HomeViewModel: ObservableObject {
     
     func resetAllData() {
         appStorageUseCase.resetAllData()
+    }
+    
+    func getInitialOptionForRB() -> String {
+        let mLanguage: String = {
+            switch selectedLanguage {
+            case "en": return NSLocalizedString("options_english", comment: "")
+            case "pt-BR": return NSLocalizedString("options_portuguese", comment: "")
+            default: return NSLocalizedString("options_spanish", comment: "")
+            }
+        }()
+        return mLanguage
     }
 }

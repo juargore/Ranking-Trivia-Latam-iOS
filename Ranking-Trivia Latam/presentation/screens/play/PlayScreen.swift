@@ -82,6 +82,7 @@ struct PlayScreen: View {
                             .frame(maxWidth: .infinity, alignment: .topLeading)
                             .padding(.top, 10)
                         }
+                        .frame(maxWidth: UIScreen.screenWidth * 0.6)
                         
                         
                         // right column: Flags
@@ -122,9 +123,11 @@ struct PlayScreen: View {
                             .frame(maxWidth: .infinity, alignment: .topLeading)
                             .padding(.top, 10)
                         }
+                        .frame(maxWidth: UIScreen.screenWidth * 0.4)
+                        
                     }
                     .frame(
-                        maxWidth: .infinity,
+                        maxWidth: UIScreen.screenWidth,
                         maxHeight: .infinity
                     )
                 }

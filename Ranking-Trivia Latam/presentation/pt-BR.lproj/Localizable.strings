@@ -18,10 +18,13 @@
 "home_hall_of_fame" = "Salão da Fama ✧✧";
 "home_new_version" = "Nova\nversão!";
 "home_version_number" = "v%@";
+"home_restart_title" = "Salvar idioma";
+"home_restart_description" = "O app será fechado para aplicar as mudanças de idioma selecionadas.\n\nDepois disso, abra o app normalmente.";
+"home_restart_got_it" = "Entendido";
 
 "error_loading_ad" = "Erro ao carregar o anúncio. Conecte-se à internet para continuar.";
 
-"game_level" = "Nível %s";
+"game_level" = "Nível %@";
 "game_done" = "Pronto!!";
 
 "hof_title" = "Salão da Fama";

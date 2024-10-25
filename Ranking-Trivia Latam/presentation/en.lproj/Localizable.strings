@@ -18,6 +18,9 @@
 "home_hall_of_fame" = "Hall of Fame ✧✧";
 "home_new_version" = "¡New\nversion!";
 "home_version_number" = "v%@";
+"home_restart_title" = "Save language";
+"home_restart_description" = "The app will close to apply the selected language changes.\n\nAfter that, open the app as usual.";
+"home_restart_got_it" = "Got it";
 
 "error_loading_ad" = "Error loading ad. Connect to internet to continue.";
 

@@ -15,6 +15,7 @@ struct HomeScreen: View {
     @State private var showAboutDialog = false
     @State private var showTutorialDialog = false
     @State private var showResetDialog = false
+    @State private var showRestartAppDialog = false
     
     @State private var showToast = false
     @State private var messageToast = ""
@@ -116,13 +117,33 @@ struct HomeScreen: View {
             }
             .toast(message: messageToast, isShowing: $showToast, duration: Toast.short)
             .popUpDialog(isShowing: $showOptionsDialog, dialogContent: {
-                OptionsDialog(viewModel: viewModel, onExitClicked: { showOptionsDialog = false })
+                OptionsDialog(
+                    viewModel: viewModel,
+                    onExitClicked: { language in
+                        showOptionsDialog = false
+                        if language != nil {
+                            let lan: String = {
+                                switch language {
+                                    case NSLocalizedString("options_english", comment: ""): return "en"
+                                    case NSLocalizedString("options_portuguese", comment: ""): return "pt-BR"
+                                    default: return "es"
+                                }
+                            }()
+                            
+                            viewModel.selectedLanguage = lan
+                            showRestartAppDialog = true
+                        }
+                    }
+                )
             })
             .popUpDialog(isShowing: $showAboutDialog, dialogContent: {
                 AboutDialog(onExitClicked: { showAboutDialog = false })
             })
             .popUpDialog(isShowing: $showTutorialDialog, dialogContent: {
                 TutorialDialog(onExitClicked: { showTutorialDialog = false })
+            })
+            .popUpDialog(isShowing: $showRestartAppDialog, dialogContent: {
+                RestartAppDialog()
             })
             .popUpDialog(isShowing: $showResetDialog, dialogContent: {
                 ResetPrefsDialog(onResetClicked: {

@@ -18,6 +18,9 @@
 "home_hall_of_fame" = "Salón de la Fama ✧✧";
 "home_new_version" = "¡Nueva\nversión!";
 "home_version_number" = "v%@";
+"home_restart_title" = "Guardar idioma";
+"home_restart_description" = "La app se cerrará para aplicar los cambios de idioma seleccionados.\nDespués de eso abra la app con normalidad.";
+"home_restart_got_it" = "Entendido";
 
 "error_loading_ad" = "Error al cargar anuncio. Conéctese a internet para continuar.";
 

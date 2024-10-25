@@ -77,6 +77,34 @@ struct CardEmptySpace: View {
     
     var body: some View {
         HStack {
+            let icon: String? = {
+                switch index {
+                case 0: return "ic_medal_gold"
+                case 1: return "ic_medal_silver"
+                case 2: return "ic_medal_bronze"
+                default: return nil
+                }
+            }()
+            
+            if icon != nil {
+                Image(icon!)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 32, height: 32)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 1)
+                            
+                    }
+                    .background(Color.appCustomBlue.opacity(0.4))
+                    .cornerRadius(10)
+            } else {
+                Circle()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(Color.black.opacity(0.005))
+            }
+            
             RoundedRectangle(cornerRadius: 12)
                 .fill(emptySpace.flagIsOver ? Color.red : Color.white)
                 .frame(width: 120, height: 110)
