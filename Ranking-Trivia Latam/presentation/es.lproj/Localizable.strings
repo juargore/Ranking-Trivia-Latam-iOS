@@ -11,6 +11,8 @@
 "general_save" = "Guardar";
 "general_next" = "Siguiente";
 "general_retry" = "Reintentar";
+"general_cancel" = "Cancelar";
+"general_accept" = "Aceptar";
 
 "home_start" = "Iniciar";
 "home_how_to_play" = "¿Cómo jugar?";
@@ -103,6 +105,7 @@
 /* Correct dialog */
 "correct_title" = "Correcto!";
 "correct_description" = "Excelente trabajo! Lo estás haciendo muy bien!!\n\nPasemos a algo más retador!";
+"interesting_fact" = "Dato interesante";
 
 
 /* Incorrect dialog */
@@ -112,6 +115,7 @@
 
 /* Save Ranking dialog */
 "new_record_title" = "¡¡Nuevo Récord!!";
+
 "new_record_description_top" = "Wow! Has terminado con todas las preguntas que Ranking-Trivia Latinoamérica tiene por ahora. Pero no te preocupes, estamos trabajando día a día para ofrecer más y mejores rankings de Latam, así que, espera una actualización de la App para que puedas continuar con esta excelente aventura! \n\nPor ahora, graba tu récord (necesitas conexión a internet) y si estás en el Top 20, éste aparecerá en la sección = Salón de la Fama = en el menú inicial.";
 
 "new_record_description_bottom" = "Todo el equipo que participó en la realización de este juego te agradecemos inmensamente por jugarlo. Espera cosas nuevas!";
@@ -129,6 +133,12 @@
 "time_up_description" = "Necesitas apresurarte para lograr acomodar correctamente las banderas en el orden correcto.\n\nVenga! Tú puedes!!";
 
 
+/* Hint dialog */
+"hint_title" = "Pista!";
+"hint_description" = "¿Te gustaría ver un anuncio de nuestros patrocinadores y así desbloquear la posición de una de las banderas de la lista?";
+"hint_checkbox" = "No volver a mostrar este mensaje";
+
+
 /* Questions Level I */
 "question_i_11" = "¿Qué país ha ganado más MUNDIALES en su historia?";
 "question_i_12" = "¿Quién tiene mayor EXTENSIÓN territorial?";
@@ -137,6 +147,46 @@
 "question_i_15" = "¿Donde hay mas VENEZOLANOS fuera de VENEZUELA en Latinoamérica?";
 "question_i_16" = "¿Quién tiene más sitios declarados PATRIMONIO de la HUMANIDAD en Centroamérica y el Caribe?";
 "question_i_17" = "¿Dónde hay más fanáticos de Dragon Ball según Bandai?";
+
+"info_i_11" = 
+    "● Brasil: 5 Copas del mundo (1958, 1962, 1970, 1994, 2002). Único país en participar en todos los mundiales y ha ganado en cuatro continentes diferentes.
+    \n\n● Argentina: 3 Copas del mundo (1978, 1986, 2022). Recordada por el 'Gol del Siglo' de Maradona en 1986 y la victoria de Messi en 2022 en una final histórica.
+    \n\n● Uruguay: 2 Copas del mundo(1930, 1950). Ganó el primer mundial y protagonizó el famoso 'Maracanazo' en 1950.
+    \n\nCuriosidad: Brasil es el único equipo en ganar mundiales en cuatro continentes.";
+
+"info_i_12" =
+    "● Brasil: Mayor extensión territorial con aproximadamente 8.5 millones de km², siendo el quinto país más grande del mundo.
+    \n\n● Argentina: Segunda mayor extensión en América del Sur, con cerca de 2.8 millones de km².
+    \n\n● México: Tercero en la lista, con aproximadamente 1.96 millones de km².
+    \n\nCuriosidad: Brasil no solo es el país más grande de Latinoamérica, sino que su tamaño es mayor que el de todo el continente europeo.";
+
+"info_i_13" =
+    "● Brasil: Mayor población de la lista, con aproximadamente 213 millones de habitantes.
+    \n\n● México: Segundo con alrededor de 126 millones de personas.
+    \n\n● Colombia: Tercero, con cerca de 51 millones de habitantes.
+    \n\nCuriosidad: Brasil y México son, respectivamente, el primer y segundo país más poblado de Latinoamérica, y juntos concentran más de la mitad de la población de la región.";
+
+"info_i_14" =
+    "● Chile: Tiene el mayor número de volcanes activos en Latinoamérica, con más de 2,000 volcanes, de los cuales al menos 50 son considerados activos.
+    \n\n● México: Posee alrededor de 3,000 volcanes, pero solo unos 15 son considerados activos en la actualidad.
+    \n\n● Guatemala: Cuenta con volcanes activos, incluyendo el famoso Volcán de Fuego, que tiene una actividad constante.
+    \n\nCuriosidad: Chile se encuentra en el 'Cinturón de Fuego del Pacífico', una de las zonas más volcánicamente activas del mundo, lo que contribuye a su gran cantidad de volcanes.";
+
+"info_i_15" =
+    "● Colombia: Acoge la mayor cantidad de venezolanos en el extranjero, con más de 2 millones de migrantes venezolanos debido a la proximidad geográfica y vínculos culturales.
+    \n\n● Perú: Tiene alrededor de 1 millón de venezolanos, convirtiéndose en el segundo país con más migrantes de Venezuela.
+    \n\n● Brasil: Ha recibido cerca de 500,000 venezolanos, especialmente en el estado de Roraima, que limita con Venezuela.
+    \n\nCuriosidad: La crisis en Venezuela ha provocado uno de los movimientos migratorios más grandes en la historia de la región, y se estima que más de 6 millones de venezolanos han abandonado el país desde 2015.";
+
+"info_i_16" =
+    "● Cuba: Tiene 9 sitios declarados Patrimonio de la Humanidad por la UNESCO, incluyendo La Habana Vieja y el Parque Nacional Alejandro de Humboldt.
+    \n\n● Guatemala: Posee 3 sitios, siendo el más destacado las ruinas de Tikal, un importante centro de la civilización maya.
+    \n\n● Panamá: Cuenta con 4 sitios, entre ellos el Canal de Panamá y el Casco Viejo de la Ciudad de Panamá.
+    \n\nCuriosidad: Cuba es el país de Centroamérica y el Caribe con más sitios Patrimonio de la Humanidad, lo que refleja su rica historia y cultura diversa.";
+
+"info_i_17" =
+    "● Curiosidad: Dragon Ball es un fenómeno cultural en Latinoamérica, su popularidad ha influido en la programación de televisión y la venta de productos relacionados, convirtiéndolo en un referente del anime en la región.";
+    
 
 /* Questions Level II */
 "question_ii_21" = "¿Quién tiene mayor SUPERFICIE de selva AMAZÓNICA?";
@@ -147,6 +197,48 @@
 "question_ii_26" = "¿Quién tiene más hectáreas para el cultivo del CAFÉ en Centroamérica?";
 "question_ii_27" = "¿Quién tiene la mayor cantidad de sitios arqueológicos MAYAS?";
 
+"info_ii_21" = 
+    "● Brasil: Posee la mayor superficie de selva amazónica, con aproximadamente 60% de la Amazonía, abarcando alrededor de 4.1 millones de km².
+    \n\n● Perú: Tiene la segunda mayor superficie de selva amazónica, con alrededor de 13% de la región, equivalente a aproximadamente 850,000 km².
+    \n\n● Bolivia: Contiene aproximadamente 8% de la selva amazónica, que se traduce en cerca de 500,000 km².
+    \n\nCuriosidad: La Amazonía es el mayor bosque tropical del mundo y juega un papel crucial en la regulación del clima global, además de ser hogar de una rica biodiversidad y numerosas comunidades indígenas.";
+
+"info_ii_22" =
+    "● Colombia: Históricamente ha tenido altas tasas de criminalidad, aunque en años recientes ha visto una disminución en ciertos tipos de crímenes, la violencia relacionada con el narcotráfico sigue siendo un problema.
+    \n\n● México: Tiene una de las tasas de homicidio más altas en el mundo, influenciada por la violencia del narcotráfico y los enfrentamientos entre cárteles.
+    \n\n● Paraguay: Aunque su tasa de criminalidad es más baja en comparación con Colombia y México, ha experimentado un aumento en delitos relacionados con el narcotráfico y el crimen organizado en ciertos sectores.
+    \n\nCuriosidad: A pesar de los altos índices de criminalidad en Colombia y México, ambos países han implementado diversas estrategias de seguridad y programas de prevención del delito que han logrado resultados positivos en ciertas áreas.";
+
+"info_ii_23" =
+    "● Brasil: Tiene los ríos más largos de Latinoamérica, siendo el Río Amazonas el más extenso, con aproximadamente 7,000 km. También incluye el Río Paraná, que mide alrededor de 4,880 km.
+    \n\n● Venezuela: Posee ríos importantes como el Río Orinoco, que mide cerca de 2,140 km, pero no alcanza la longitud de los ríos brasileños.
+    \n\n● Bolivia: Tiene ríos como el Río Mamoré y el Río Beni, pero estos son considerablemente más cortos en comparación con los de Brasil.
+    \n\nCuriosidad: El Río Amazonas no solo es el río más largo de Latinoamérica, sino que también es el más caudaloso del mundo, transportando más agua que los siguientes siete ríos más caudalosos combinados.";
+
+"info_ii_24" =
+    "● México: Es el principal productor de plata en la región, con una producción anual que supera las 6,000 toneladas, siendo uno de los mayores productores a nivel mundial.
+    \n\n● Perú: Ocupa el segundo lugar en producción de plata en Latinoamérica, con alrededor de 3,500 toneladas anuales, destacándose por sus minas como la de Pasco y Huancavelica.
+    \n\n● Bolivia: Aunque tiene importantes reservas de plata, su producción es menor, rondando las 1,000 toneladas al año.
+    \n\nCuriosidad: México ha sido históricamente conocido como 'el país de la plata' desde la época colonial, cuando se establecieron minas que produjeron grandes cantidades de este metal, contribuyendo significativamente a la economía colonial española.";
+
+"info_ii_25" =
+    "● Jamaica: Tiene la mayor cantidad de medallas olímpicas en atletismo, destacándose especialmente en pruebas de velocidad, con estrellas como Usain Bolt, quien ha ganado 8 medallas de oro.
+    \n\n● Cuba: Ha obtenido un número significativo de medallas en atletismo, con un enfoque en eventos de salto y lanzamiento, acumulando un total de 30 medallas en los Juegos Olímpicos.
+    \n\n● Puerto Rico: Aunque ha logrado destacar en algunos eventos, especialmente en salto con garrocha, su total de medallas olímpicas en atletismo es menor, con 9 medallas.
+    \n\nCuriosidad: Jamaica es famosa por su dominio en pruebas de velocidad, especialmente en los Juegos Olímpicos, donde sus atletas han batido récords mundiales y han dejado una huella indeleble en la historia del atletismo.";
+
+"info_ii_26" =
+    "● Honduras: Tiene la mayor superficie dedicada al cultivo del café en Centroamérica, con aproximadamente 400,000 hectáreas cultivadas, lo que lo convierte en el principal productor de café de la región.
+    \n\n● Guatemala: Ocupa el segundo lugar, con alrededor de 275,000 hectáreas dedicadas al cultivo del café, conocido por su alta calidad y variedad.
+    \n\n● Nicaragua: Tiene cerca de 200,000 hectáreas cultivadas de café, aunque su producción ha enfrentado desafíos en los últimos años.
+    \n\nCuriosidad: Honduras ha experimentado un crecimiento significativo en la producción de café en la última década, convirtiéndose en el mayor exportador de café de la región, mientras que el café de Guatemala es muy apreciado en el mercado internacional por su sabor distintivo y calidad.";
+
+"info_ii_27" =
+    "● México: Tiene la mayor cantidad de sitios arqueológicos mayas, con importantes lugares como Chichén Itzá, Tulum y Palenque, entre otros. Se estima que hay más de 1,000 sitios en total.
+    \n\n● Guatemala: Posee importantes sitios arqueológicos mayas como Tikal y Quiriguá, con un total de alrededor de 500 sitios registrados.
+    \n\n● Belice: Tiene varios sitios arqueológicos destacados, como Caracol y Xunantunich, pero su número es menor, con aproximadamente 200 sitios.
+    \n\nCuriosidad: La civilización maya fue una de las culturas más avanzadas de Mesoamérica, y sus sitios arqueológicos no solo son importantes por su historia, sino también por su arquitectura, astronomía y desarrollo de un sistema de escritura.";
+    
 
 /* Questions Level III */
 "question_iii_31" = "¿Qué países buscan más ANIME en los últimos años en internet?";
@@ -157,6 +249,45 @@
 "question_iii_36" = "¿Quién mayor BIODIVERSIDAD marina en el Caribe y Centroamérica?";
 "question_iii_37" = "¿Quién tiene más ISLAS como parte de su territorio?";
 
+"info_iii_31" = 
+    "● Perú: Lidera las búsquedas de anime en internet entre estos países, con una comunidad de fanáticos creciente y eventos populares de anime y manga en ciudades como Lima.
+    \n\n● Bolivia: También presenta un alto interés en el anime, especialmente en las ciudades de La Paz y Santa Cruz, aunque en menor medida que Perú.
+    \n\n● El Salvador: Tiene una audiencia de anime dedicada, aunque su volumen de búsquedas es menor en comparación con Perú y Bolivia.
+    \n\nCuriosidad: Perú es uno de los países de Latinoamérica donde el anime ha tenido mayor popularidad desde los años 90, y series como Dragon Ball, Naruto, y One Piece han contribuido a esta afición masiva.";
+
+"info_iii_32" =
+    "● Puerto Rico: Es el mayor productor de ron en el Caribe, con marcas reconocidas internacionalmente como Bacardí y Don Q, que exportan grandes volúmenes al mercado global.
+    \n\n● Cuba: Es famosa por su ron de alta calidad, con marcas como Havana Club, aunque su volumen de producción es menor que el de Puerto Rico.
+    \n\n● República Dominicana: También tiene una notable producción de ron, con marcas populares como Brugal y Barceló, destacándose en la región.
+    \n\nCuriosidad: El ron caribeño es apreciado mundialmente y forma parte esencial de la cultura de cada país, donde cada uno tiene sus propias técnicas y tradiciones en la producción del ron.";
+
+"info_iii_33" =
+    "● Curiosidad: La densidad en estos territorios pequeños es significativa, especialmente en San Martín, donde el turismo y la infraestructura limitan aún más el espacio disponible.";
+
+"info_iii_34" =
+    "● Costa Rica: Aproximadamente el 26% de su superficie está bajo protección, destacándose por su enfoque en la conservación y ecoturismo.
+    \n\n● Ecuador: Protege cerca del 20% de su territorio, incluyendo las famosas Islas Galápagos y varias reservas en la Amazonía.
+    \n\nCuriosidad: Estos tres países son referentes en conservación en América Latina, pero Surinam destaca por su baja densidad poblacional, lo que facilita mantener grandes áreas de naturaleza intacta.";
+
+"info_iii_35" =
+    "● República Dominicana: Es el país con mayor turismo internacional en el Caribe, recibiendo más de 7 millones de turistas al año, especialmente en destinos como Punta Cana y Santo Domingo.
+    \n\n● Cuba: Recibe alrededor de 3 millones de turistas anuales, con La Habana y Varadero como principales atractivos.
+    \n\n● Puerto Rico: Alrededor de 4 millones de visitantes llegan cada año, aunque su turismo depende en gran parte del mercado estadounidense.
+    \n\nCuriosidad: La República Dominicana ha liderado en turismo caribeño gracias a su infraestructura hotelera y su clima de inversión, que han impulsado un flujo constante de turistas internacionales.";
+
+"info_iii_36" =
+    "● República Dominicana: Tiene la mayor biodiversidad marina entre estos países, con una gran variedad de especies en áreas protegidas como el Parque Nacional del Este y los Arrecifes de Samaná.
+    \n\n● Surinam: Aporta a la biodiversidad marina con su litoral atlántico y los estuarios de sus ríos, aunque su biodiversidad marina es menor en comparación con el Caribe insular.
+    \n\n● Martinica: Con sus arrecifes y áreas protegidas, tiene una rica vida marina, pero su diversidad es limitada por su tamaño en comparación con la República Dominicana.
+    \n\nCuriosidad: La República Dominicana alberga varias especies marinas endémicas y es uno de los pocos lugares en el Caribe donde se puede observar el desove de ballenas jorobadas, un espectáculo natural que atrae a investigadores y turistas.";
+
+"info_iii_37" =
+    "● Chile: Tiene la mayor cantidad de islas, con más de 5,000 a lo largo de su costa y en el archipiélago de Chiloé y la Patagonia, incluyendo la famosa Isla de Pascua en el Pacífico.
+    \n\n● Venezuela: Cuenta con más de 300 islas y cayos, siendo Margarita la más conocida, además de las islas de Los Roques y La Tortuga.
+    \n\n● Cuba: Está formada por la isla principal y alrededor de 4,000 cayos e islotes, con destinos famosos como Cayo Coco y Cayo Largo.
+    \n\nCuriosidad: Aunque Chile tiene el mayor número de islas, muchas son remotas y de difícil acceso, mientras que las islas cubanas y venezolanas son populares por sus playas y su atractivo turístico.";
+    
+
 /* Questions Level IV */
 "question_iv_41" = "¿A dónde han emigrado mas ECUATORIANOS desde 2021 en Latinoamérica?";
 "question_iv_42" = "¿Qué países han ganado más Premios GOYA a la Mejor Película Iberoamericana?";
@@ -165,6 +296,49 @@
 "question_iv_45" = "¿Qué países han clasificado más veces a la Copa Mundial de la FIFA?";
 "question_iv_46" = "¿Quién EXPORTA más FRUTAS tropicales?";
 "question_iv_47" = "¿Donde hay mas CHILENOS fuera de CHILE en Latinoamérica?";
+
+"info_iv_41" = 
+    "● Colombia: Es el principal destino de los ecuatorianos en Latinoamérica desde 2021, debido a la cercanía geográfica y las facilidades migratorias entre ambos países.
+    \n\n● Perú: También ha recibido un número significativo de migrantes ecuatorianos, especialmente en áreas urbanas como Lima.
+    \n\n● Panamá: Aunque ha recibido migración ecuatoriana, el flujo es menor comparado con Colombia y Perú.
+    \n\nCuriosidad: La migración de ecuatorianos hacia Colombia y Perú ha aumentado en los últimos años debido a la búsqueda de oportunidades laborales y la facilidad para adaptarse culturalmente.";
+
+"info_iv_42" =
+    "● Argentina: Es el país con más premios Goya a la Mejor Película Iberoamericana, con 18 galardones hasta la fecha, destacándose películas como La historia oficial y El secreto de sus ojos.
+    \n\n● Chile: Ha ganado 4 premios Goya, con películas notables como Una mujer fantástica y La frontera.
+    \n\n● Cuba: Ha obtenido 2 premios Goya, destacando con películas como Fresa y chocolate.
+    \n\nCuriosidad: Argentina es uno de los países latinoamericanos con más éxitos en los Premios Goya, consolidándose como una potencia en cine iberoamericano.";
+
+"info_iv_43" =
+    "● México: Es líder en directores galardonados internacionalmente, con nombres como Alfonso Cuarón, Alejandro González Iñárritu y Guillermo del Toro, quienes han ganado múltiples premios Oscar y otros galardones en festivales como Cannes y Venecia.
+    \n\n● Argentina: Ha tenido varios directores reconocidos en el circuito internacional, como Juan José Campanella y Lucrecia Martel, cuyos trabajos han ganado premios en festivales de renombre, incluyendo los Goya y el Oscar.
+    \n\n● Brasil: Directores como Walter Salles y Fernando Meirelles han logrado reconocimiento mundial, especialmente con nominaciones al Oscar y premios en festivales de Europa y Estados Unidos.
+    \n\nCuriosidad: La 'trilogía' de directores mexicanos (Cuarón, Iñárritu y Del Toro) ha marcado una era dorada para el cine latinoamericano en Hollywood, siendo conocidos como los 'Tres Amigos' y ganando múltiples premios internacionales en la última década.";
+
+"info_iv_44" =
+    "● Cuba: Tiene la mayor extensión de costa, con aproximadamente 5,746 km de litoral, rodeando la isla principal y sus múltiples cayos e islotes.
+    \n\n● Panamá: Cuenta con alrededor de 2,857 km de costa entre el océano Pacífico y el mar Caribe, siendo uno de los pocos países con costas en dos océanos.
+    \n\n● Costa Rica: Posee aproximadamente 1,290 km de costa, también en el Caribe y el Pacífico, con playas reconocidas por su biodiversidad.
+    \n\nCuriosidad: Panamá es único en la región por su posición estratégica entre dos océanos, lo que lo convierte en un centro clave para el comercio marítimo mundial con el famoso Canal de Panamá.";
+
+"info_iv_45" =
+    "● Brasil: Lidera con 22 clasificaciones consecutivas, siendo el único país en participar en todas las ediciones de la Copa Mundial desde su inicio en 1930.
+    \n\n● Argentina: Ha clasificado 18 veces, destacándose con victorias en 1978, 1986 y 2022, y siendo uno de los equipos más competitivos en el torneo.
+    \n\n● México: Ha clasificado 17 veces, destacando como el país de la región de Concacaf con más participaciones.
+    \n\nCuriosidad: Brasil, además de ser el país con más clasificaciones, es el que más veces ha ganado la Copa Mundial, con cinco títulos en su historia (1958, 1962, 1970, 1994 y 2002).";
+
+"info_iv_46" =
+    "● Ecuador: Es el principal exportador, especialmente de banano y plátano, siendo uno de los mayores proveedores mundiales.
+    \n\n● Costa Rica: Destaca por su exportación de piña y banano, abasteciendo principalmente a mercados en Estados Unidos y Europa.
+    \n\n● Colombia: También es un gran exportador de banano y aguacate, aunque en menor escala comparado con Ecuador y Costa Rica.
+    \n\nCuriosidad: Ecuador y Costa Rica lideran las exportaciones de frutas tropicales en América Latina, y Costa Rica es el mayor exportador de piña a nivel mundial.";
+
+"info_iv_47" =
+    "● Argentina: Es el país con más chilenos fuera de Chile, con una comunidad de aproximadamente 500,000 personas, debido a la proximidad geográfica y la facilidad de desplazamiento.
+    \n\n● Brasil: También alberga una comunidad de chilenos, aunque en menor cantidad que Argentina.
+    \n\n● Venezuela: Si bien cuenta con chilenos residentes, la comunidad es significativamente menor comparada con Argentina y Brasil.
+    \n\nCuriosidad: Argentina ha sido el destino preferido para los chilenos emigrantes desde hace décadas, gracias a los lazos históricos y culturales, así como a políticas migratorias flexibles entre ambos países.";
+    
 
 /* Questions Level V */
 "question_v_51" = "¿Quién tiene la ECONOMÍA más grande según su PIB?";
@@ -176,6 +350,55 @@
 "question_v_57" = "¿Quién tiene mayor cobertura de INTERNET?";
 "question_v_58" = "¿Qué países han ganado más veces la COPA AMÉRICA?";
 
+"info_v_51" = 
+    "● Brasil: Tiene la economía más grande de Latinoamérica, con un PIB de aproximadamente 2.0 billones de dólares (2023), destacándose en sectores como la agricultura, la minería y la industria.
+    \n\n● México: Ocupa el segundo lugar, con un PIB de alrededor de 1.3 billones de dólares, impulsado por la manufactura, el comercio y el turismo.
+    \n\n● Argentina: Aunque es una economía significativa, su PIB es de aproximadamente 640 mil millones de dólares, enfocándose en la agricultura y la ganadería.
+    \n\nCuriosidad: Brasil y México son considerados los dos gigantes económicos de la región, y ambos países son miembros del G20, lo que resalta su importancia en la economía global.";
+
+"info_v_52" =
+    "● Venezuela: Tiene la mayor producción de petróleo en la región, con una capacidad de producción que ha fluctuado, pero que históricamente ha superado los 1.5 millones de barriles por día debido a sus vastas reservas en la Faja Petrolífera del Orinoco.
+    \n\n● Brasil: Es un importante productor de petróleo, especialmente en el ámbito offshore, con una producción que ronda los 3 millones de barriles por día en años recientes, gracias a la explotación de yacimientos en el pré-sal.
+    \n\n● México: Ha tenido una producción de alrededor de 1.7 millones de barriles por día, pero ha visto una disminución en los últimos años debido a la madurez de sus campos petroleros.
+    \n\nCuriosidad: Venezuela posee las mayores reservas de petróleo del mundo, pero su producción ha sido afectada por crisis económicas y políticas, lo que ha reducido su capacidad de exportación.";
+
+"info_v_53" =
+    "● Argentina: Es el país con más paraguayos en el extranjero, con una comunidad de aproximadamente 500,000 personas, atraídos por la proximidad geográfica y oportunidades laborales.
+    \n\n● Brasil: También alberga una significativa población paraguaya, especialmente en el estado de Paraná, donde viven alrededor de 200,000 paraguayos.
+    \n\n● Chile: Tiene una comunidad paraguaya más pequeña, con alrededor de 100,000 paraguayos, que han emigrado en busca de mejores oportunidades.
+    \n\nCuriosidad: La migración paraguaya hacia Argentina ha sido histórica, y muchos paraguayos mantienen fuertes lazos culturales y familiares con sus países de origen, facilitando la integración en la sociedad argentina.";
+
+"info_v_54" =
+    "● Brasil: Ha tenido el mayor número de casos de COVID-19 en Latinoamérica, con más de 37 millones de casos reportados desde el inicio de la pandemia, y es uno de los países más afectados del mundo.
+    \n\n● Argentina: Ha reportado alrededor de 10 millones de casos, siendo uno de los países con mayores tasas de infección en la región en momentos críticos.
+    \n\n● México: Ha tenido aproximadamente 7.5 millones de casos, enfrentando una alta mortalidad y una carga significativa en su sistema de salud.
+    \n\nCuriosidad: Brasil ha sido el epicentro de la pandemia en Latinoamérica, lo que llevó a un intenso debate sobre la gestión de la crisis y la importancia de la vacunación, que ha ayudado a controlar la propagación del virus en la región.";
+
+"info_v_55" =
+    "● México: Es el país donde One Piece es más popular, con una gran cantidad de fanáticos y eventos relacionados con el anime, además de que se transmitió en diversas plataformas de televisión.
+    \n\n● Brasil: También cuenta con una amplia comunidad de fanáticos de One Piece, con numerosas convenciones y grupos en redes sociales dedicados al anime.
+    \n\n● Argentina: Tiene una base de seguidores significativa, aunque es menos prominente en comparación con México y Brasil.
+    \n\nCuriosidad: México es conocido por su gran afición al anime en general, y eventos como la México Comic Con suelen incluir paneles y actividades dedicadas a One Piece, reflejando el entusiasmo de los fanáticos locales.";
+
+"info_v_56" =
+    "● México: Tiene la mayor cantidad de Patrimonios de la Humanidad, con 35 sitios reconocidos por la UNESCO, incluyendo maravillas como Chichén Itzá, el Centro Histórico de Ciudad de México y la zona de los monasterios de la Ruta de la Plata.
+    \n\n● Brasil: Cuenta con 23 sitios Patrimonio de la Humanidad, destacando el Parque Nacional de Iguazú y el Centro Histórico de Ouro Preto.
+    \n\n● Perú: Posee 12 sitios reconocidos, incluyendo Machu Picchu y el Centro Histórico de Cusco.
+    \n\nCuriosidad: México no solo lidera en cantidad de Patrimonios de la Humanidad, sino que también es el primer país en el mundo en recibir este reconocimiento por su rica herencia cultural e histórica, siendo un destino popular para turistas interesados en la historia y la arquitectura.";
+
+"info_v_57" =
+    "● Uruguay: Tiene la mayor cobertura de internet en la región, con un acceso que supera el 95% de la población, gracias a políticas de inclusión digital y un fuerte enfoque en la infraestructura de telecomunicaciones.
+    \n\n● Chile: Ofrece una alta cobertura de internet, alcanzando alrededor del 92% de la población, impulsada por una infraestructura avanzada y una fuerte competencia en el mercado de telecomunicaciones.
+    \n\n● Argentina: La cobertura de internet es de aproximadamente el 80%, aunque hay variaciones significativas entre áreas urbanas y rurales.
+    \n\nCuriosidad: Uruguay ha sido pionero en la implementación de programas de acceso a internet en escuelas y en la promoción de la conectividad, lo que ha contribuido a su alta tasa de cobertura y al desarrollo de una economía digital en crecimiento.";
+
+"info_v_58" =
+    "● Uruguay: Ha ganado la Copa América en 15 ocasiones, siendo el país con más títulos en la historia del torneo, destacando victorias en años como 1916, 1942 y 2011.
+    \n\n● Argentina: También ha sido campeona en 15 ocasiones, con triunfos notables en 1987, 1993 y más recientemente en 2021.
+    \n\n● Brasil: Ha ganado el torneo en 9 ocasiones, con títulos importantes en 1949, 1989 y 2019.
+    \n\nCuriosidad: La rivalidad entre Uruguay, Argentina y Brasil en la Copa América es intensa, y estos tres equipos han dominado el torneo desde su creación en 1916, siendo responsables de la mayoría de los títulos obtenidos.";
+    
+
 /* Questions Level VI */
 "question_vi_61" = "¿Quién tiene las FUERZAS MILITARES más grandes según el número de efectivos?";
 "question_vi_62" = "¿Quién tiene mayor EXTENSIÓN DE COSTA en Latinoamérica?";
@@ -184,6 +407,47 @@
 "question_vi_65" = "¿Quién genera más ENERGÍA HIDROELÉCTRICA?";
 "question_vi_66" = "¿Donde hay mas COLOMBIANOS fuera de COLOMBIA en Latinoamérica?";
 "question_vi_67" = "¿Quién PRODUCE más FLORES en la región?";
+
+"info_vi_61" = 
+    "● Brasil: Tiene las fuerzas militares más grandes de la región, con aproximadamente 400,000 efectivos en sus fuerzas armadas activas, además de un número significativo de reservistas.
+    \n\n● México: Cuenta con alrededor de 200,000 efectivos en sus fuerzas armadas, incluyendo tanto el Ejército como la Armada y la Fuerza Aérea.
+    \n\n● Chile: Tiene las fuerzas militares más pequeñas de este grupo, con aproximadamente 100,000 efectivos en total, incluyendo las fuerzas regulares y de reserva.
+    \n\nCuriosidad: Brasil no solo lidera en el número de efectivos, sino que también cuenta con el programa de entrenamiento militar más grande de América del Sur, y es conocido por participar en misiones de paz de la ONU a nivel mundial.";
+
+"info_vi_62" =
+    "● Chile: Tiene la mayor extensión de costa en Latinoamérica, con aproximadamente 6,435 kilómetros de litoral, gracias a su geografía que se extiende a lo largo de la costa del Océano Pacífico.
+    \n\n● Brasil: Cuenta con una extensa costa de alrededor de 7,491 kilómetros, que es la más larga de toda América del Sur, incluyendo famosas playas y una diversidad de ecosistemas marinos.
+    \n\n● Argentina: Posee una costa de aproximadamente 4,989 kilómetros, que incluye el litoral atlántico y el acceso a la Antártida.
+    \n\nCuriosidad: Aunque Brasil tiene la costa más larga en total, Chile tiene la mayor cantidad de litoral en relación con su tamaño territorial, lo que le otorga una gran diversidad de recursos marinos y oportunidades para la pesca y el turismo costero.";
+
+"info_vi_63" =
+    "● Brasil: Es el mayor productor de azúcar en Latinoamérica y a nivel mundial, con una producción que supera los 40 millones de toneladas anualmente, gracias a su vasto cultivo de caña de azúcar.
+    \n\n● México: Se encuentra en segundo lugar en la región, produciendo alrededor de 6 millones de toneladas de azúcar, con una industria azucarera que ha sido parte importante de su economía.
+    \n\n● Colombia: Produce aproximadamente 2.5 millones de toneladas de azúcar, siendo un productor menor en comparación con Brasil y México, pero con un crecimiento sostenido en su industria.
+    \n\nCuriosidad: Brasil no solo lidera en producción de azúcar, sino que también es el mayor exportador, y su industria es crucial para la producción de biocombustibles, especialmente el etanol, que se obtiene de la caña de azúcar.";
+
+"info_vi_64" =
+    "● Brasil: Aunque tiene una rica variedad de platos regionales, como la feijoada y el acarajé, se encuentra en una posición más baja en comparación con Perú y México en términos de reconocimiento global.
+    \n\nCuriosidad: La gastronomía peruana ha ganado notoriedad internacional en la última década, con varios restaurantes peruanos siendo clasificados entre los mejores del mundo, lo que refleja su influencia global y la calidad de su cocina.";
+
+"info_vi_65" =
+    "● Brasil: Es el mayor generador de energía hidroeléctrica en Latinoamérica y uno de los líderes mundiales, produciendo alrededor del 65% de su electricidad a través de plantas hidroeléctricas, como la famosa represa de Itaipú.
+    \n\n● Venezuela: Depende en gran medida de la energía hidroeléctrica, con un porcentaje similar al de Paraguay, pero su producción ha disminuido en los últimos años debido a problemas de infraestructura y mantenimiento.
+    \n\n● Paraguay: Genera una cantidad significativa de energía hidroeléctrica, también a partir de la represa de Itaipú, compartida con Brasil. Aproximadamente el 90% de su electricidad proviene de fuentes hidroeléctricas, lo que la convierte en un exportador de energía.
+    \n\nCuriosidad: La represa de Itaipú, ubicada en la frontera entre Brasil y Paraguay, fue durante muchos años la mayor planta hidroeléctrica del mundo en términos de producción de energía, simbolizando la colaboración energética entre ambos países.";
+
+"info_vi_66" =
+    "● Venezuela: Alberga la mayor cantidad de colombianos en el exterior, con aproximadamente 1.5 millones de migrantes colombianos, debido a la cercanía geográfica y vínculos históricos.
+    \n\n● Chile: Se ha convertido en un destino atractivo para los colombianos en años recientes, con alrededor de 600,000 colombianos residiendo en el país, atraídos por su estabilidad económica y oportunidades laborales.
+    \n\n● Ecuador: Tiene una considerable población colombiana, estimada en 300,000 personas, con muchos colombianos que migraron en busca de mejores oportunidades laborales y condiciones de vida.
+    \n\nCuriosidad: La migración colombiana hacia Venezuela ha sido histórica y se intensificó durante las crisis económicas y políticas de este país. Sin embargo, en años recientes, muchos colombianos también han comenzado a emigrar a países como Chile y Ecuador en busca de nuevas oportunidades.";
+
+"info_vi_67" =
+    "● Ecuador: Es el mayor productor de flores en la región, especialmente conocido por su producción de rosas, con aproximadamente 25,000 toneladas exportadas anualmente. La altitud y el clima favorable de Ecuador contribuyen a la calidad y variedad de sus flores.
+    \n\n● México: También tiene una industria floral significativa, produciendo diversas especies de flores, aunque su volumen es menor en comparación con Ecuador. La producción anual se sitúa en alrededor de 10,000 toneladas.
+    \n\n● Chile: Produce una cantidad menor de flores en comparación con Ecuador y México, aunque cuenta con una diversidad de especies y un mercado en crecimiento.
+    \n\nCuriosidad: Ecuador es uno de los principales exportadores de flores a nivel mundial, especialmente a Estados Unidos y Europa, y se celebra el \"Día de la Rosa\" en febrero, que resalta la importancia de esta flor en su economía.";
+    
 
 /* Questions Level VII */
 "question_vii_71" = "¿Qué países han ganado más veces el Premio Ariel a la Mejor Película Iberoamericana?";
@@ -194,6 +458,49 @@
 "question_vii_76" = "¿Qué países han tenido más películas seleccionadas en el Festival de Cine de Berlín?";
 "question_vii_77" = "Según Taste Atlas, ¿cómo ordenó los países según su PLATO PRINCIPAL (no su gastronomía general)";
 
+"info_vii_71" = 
+    "● Argentina: Es el país que ha ganado más veces el Premio Ariel a la Mejor Película Iberoamericana, con un total de 8 premios. Su cinematografía ha sido reconocida por su calidad y diversidad.
+    \n\n● Chile: Ha obtenido el premio en varias ocasiones, destacándose en la escena internacional con un total de 3 premios. Películas chilenas han logrado resonar tanto a nivel regional como global.
+    \n\n● Brasil: También ha tenido éxito en el ámbito cinematográfico, con 2 premios Ariel, aunque su enfoque ha sido más variado en términos de categorías y reconocimientos internacionales.
+    \n\nCuriosidad: El Premio Ariel es uno de los galardones más importantes del cine en México y en Iberoamérica, y su enfoque en las películas iberoamericanas refleja la rica diversidad cultural y cinematográfica de la región.";
+
+"info_vii_72" =
+    "● República Dominicana: Es el país que recibe más turistas internacionales en Centroamérica y el Caribe, atrayendo alrededor de 7 millones de visitantes al año, gracias a sus playas, resorts y el turismo de aventura.
+    \n\n● Cuba: También es un destino popular, recibiendo aproximadamente 4 millones de turistas anualmente. Su rica historia, cultura y playas lo hacen atractivo para visitantes de todo el mundo.
+    \n\n● Puerto Rico: Recibe alrededor de 3 millones de turistas al año, beneficiándose de su cercanía a Estados Unidos y su atractivo cultural, aunque su número es menor en comparación con la República Dominicana y Cuba.
+    \n\nCuriosidad: La República Dominicana ha visto un crecimiento constante en su industria turística, en parte debido a las inversiones en infraestructura y promoción, convirtiéndose en el principal destino turístico del Caribe.";
+
+"info_vii_73" =
+    "● Honduras: Es el mayor productor de café en Centroamérica, con una producción de aproximadamente 7 millones de sacos al año. Su café es reconocido por su calidad y diversidad de sabores, y se ha convertido en un importante exportador a nivel global.
+    \n\n● Guatemala: Ocupa el segundo lugar en producción de café en la región, con alrededor de 3 millones de sacos anualmente. El café guatemalteco es famoso por su perfil de sabor distintivo, especialmente el de las regiones de Antigua y Huehuetenango.
+    \n\n● Nicaragua: Aunque su producción es menor, con cerca de 1.5 millones de sacos al año, Nicaragua ha comenzado a ganar reconocimiento por la calidad de su café, especialmente en mercados especializados.
+    \n\nCuriosidad: El café es uno de los principales productos de exportación en estos países, y la producción se basa en métodos sostenibles y de comercio justo, lo que ayuda a mejorar las condiciones de vida de los agricultores en la región.";
+
+"info_vii_74" =
+    "● Guatemala: Es el país con la mayor población de mexicanos fuera de México en Latinoamérica, con aproximadamente 200,000 mexicanos viviendo allí. La cercanía geográfica y los lazos culturales facilitan la migración entre ambos países.
+    \n\n● Chile: Tiene una creciente comunidad mexicana, estimada en 120,000 personas, atraídas por oportunidades laborales y la estabilidad económica del país.
+    \n\n● Bolivia: Aunque cuenta con una población mexicana más pequeña, se estima que hay alrededor de 20,000 mexicanos residiendo en el país.
+    \n\nCuriosidad: La migración mexicana a Guatemala ha sido histórica, y la comunidad mexicana en Guatemala contribuye a la cultura local y a las relaciones comerciales entre ambos países.";
+
+"info_vii_75" =
+    "● México: Es el país que ha producido la mayor cantidad de películas de comedia exitosas en Latinoamérica, con una rica tradición en el género, incluyendo títulos que han sido grandes éxitos tanto en taquilla como en la televisión. Películas como \"Nosotros los Nobles\" y \"La Casa de las Flores\" son ejemplos destacados.
+    \n\n● Argentina: También ha producido varias comedias exitosas, destacándose en el cine independiente y comercial, con películas como \"El Hijo de la Novia\" y \"Relatos Salvajes\", que han sido aclamadas tanto nacional como internacionalmente.
+    \n\n● Brasil: Aunque ha tenido menos producciones de comedia en comparación con México y Argentina, cuenta con éxitos notables como \"O Auto da Compadecida\" y \"Minha Mãe é uma Peça\". La comedia brasileña ha ganado popularidad en la región.
+    \n\nCuriosidad: La comedia en el cine latinoamericano a menudo refleja la cultura y las problemáticas sociales de cada país, utilizando el humor como una herramienta para criticar y analizar la realidad.";
+
+"info_vii_76" =
+    "● Argentina: Ha tenido la mayor cantidad de películas seleccionadas en el Festival de Cine de Berlín, con una notable presencia a lo largo de los años. Títulos como \"El Secreto de Sus Ojos\" y \"Nadie Nos Mira\" han sido aclamados en este festival.
+    \n\n● Brasil: También cuenta con una fuerte representación, con numerosas películas seleccionadas. Producciones como \"City of God\" y \"Central Station\" han destacado en Berlín, obteniendo reconocimientos internacionales.
+    \n\n● Chile: Ha incrementado su presencia en los últimos años, con varias selecciones en el festival. Películas como \"Una Mujer Fantástica\" han recibido elogios y premios en Berlín, ayudando a consolidar la cinematografía chilena en el escenario internacional.
+    \n\nCuriosidad: El Festival de Cine de Berlín es uno de los más prestigiosos del mundo, y la participación de películas latinoamericanas refleja el crecimiento y la diversidad del cine en la región. La selección en este festival puede impulsar las carreras de cineastas y abrir puertas a nuevos mercados.";
+
+"info_vii_77" =
+    "● Argentina: Según Taste Atlas, el plato principal más destacado de Argentina es el asado, conocido por su calidad y la forma en que se cocina, convirtiéndose en una tradición cultural en el país.
+    \n\n● Brasil: El plato principal más reconocido es la feijoada, un guiso de frijoles negros con carne, que es un símbolo de la cocina brasileña y muy apreciado en todo el país.
+    \n\n● Colombia: El bandeja paisa se considera su plato principal más representativo, una abundante mezcla de arroz, frijoles, carne, plátano y huevo, que refleja la diversidad regional del país.
+    \n\nCuriosidad: Cada uno de estos platos principales no solo es un reflejo de la cocina local, sino que también representa la cultura y las tradiciones de cada país, siendo a menudo el centro de reuniones familiares y celebraciones.";
+    
+
 /* Questions Level VIII */
 "question_viii_81" = "¿Donde hay mas URUGUAYOS fuera de URUGUAY en Latinoamérica?";
 "question_viii_82" = "¿Qué países han tenido más nominaciones al Óscar en la categoría de Mejor Película Internacional?";
@@ -202,6 +509,49 @@
 "question_viii_85" = "¿Qué países han ganado más Premios Platino del Cine Iberoamericano?";
 "question_viii_86" = "¿Qué países han producido más películas con nominaciones a festivales internacionales?";
 "question_viii_87" = "¿Qué países han tenido más actores nominados al Óscar?";
+
+"info_viii_81" = 
+    "● Argentina: Es el país con la mayor población de uruguayos fuera de Uruguay, con aproximadamente 600,000 uruguayos viviendo allí. La cercanía geográfica y los vínculos históricos entre ambos países facilitan esta migración.
+    \n\n● Brasil: Cuenta con una comunidad uruguaya considerable, estimada en 50,000 personas, especialmente en estados como Río Grande del Sur, donde hay un fuerte intercambio cultural.
+    \n\n● Chile: Tiene una población uruguaya más pequeña, con alrededor de 20,000 uruguayos residiendo en el país, atraídos por oportunidades laborales y un ambiente similar.
+    \n\nCuriosidad: La migración uruguaya a Argentina ha sido histórica, y la comunidad uruguaya en Argentina mantiene vivas muchas tradiciones culturales, como el mate y la música del candombe.";
+
+"info_viii_82" =
+    "● Argentina: Ha tenido la mayor cantidad de nominaciones en la categoría de Mejor Película Internacional, con títulos como \"La Historia Oficial\" y \"El Secreto de Sus Ojos\", que ganaron el Oscar en esta categoría. Argentina ha sido reconocida en múltiples ediciones.
+    \n\n● México: También cuenta con una significativa cantidad de nominaciones, con películas como \"Roma\" y \"Amores Perros\" que han recibido aclamación internacional, destacando la calidad del cine mexicano en la escena global.
+    \n\n● Brasil: Aunque ha tenido menos nominaciones que Argentina y México, su cine ha sido reconocido con películas como \"Central Station\" y \"City of God\", que han dejado una huella en el ámbito internacional.
+    \n\nCuriosidad: Las nominaciones al Óscar en esta categoría reflejan el talento y la diversidad cultural de cada país, y muchas de estas películas abordan temas sociales y políticos relevantes, resonando con audiencias de todo el mundo.";
+
+"info_viii_83" =
+    "● Argentina: Es hogar de varios festivales de cine internacionales destacados, como el Festival de Cine de Buenos Aires (BAFICI) y el Festival Internacional de Cine de Mar del Plata, que atraen a cineastas y amantes del cine de todo el mundo.
+    \n\n● Brasil: Tiene un gran número de festivales reconocidos, incluyendo el Festival de Cine de Río de Janeiro y el Festival Internacional de Cine de São Paulo, que son plataformas importantes para el cine latinoamericano y mundial.
+    \n\n● México: Destaca por festivales como el Festival Internacional de Cine de Morelia y el Festival Internacional de Cine de Guadalajara, que han ganado reputación internacional y son cruciales para la promoción del cine en la región.
+    \n\nCuriosidad: Los festivales de cine en estos países no solo celebran el cine, sino que también sirven como un espacio para el intercambio cultural y la promoción de nuevas voces en la industria cinematográfica, contribuyendo al crecimiento del cine latinoamericano en el panorama global.";
+
+"info_viii_84" =
+    "● República Dominicana: Tiene la economía más grande de Centroamérica y el Caribe, con un PIB que ha mostrado un crecimiento significativo en los últimos años, impulsado por sectores como el turismo, la agricultura y las zonas francas.
+    \n\n● Guatemala: Es la segunda economía más grande de la región, con un PIB sustentado principalmente en la agricultura, la manufactura y el comercio. También es un importante exportador de productos como café y azúcar.
+    \n\n● Costa Rica: Aunque es más pequeña en términos de PIB en comparación con la República Dominicana y Guatemala, su economía es robusta, destacando en tecnología, turismo y agricultura sostenible, lo que la convierte en un modelo de desarrollo en la región.
+    \n\nCuriosidad: La economía de la República Dominicana ha crecido de manera notable, convirtiéndose en uno de los destinos turísticos más importantes del Caribe, mientras que Guatemala y Costa Rica están enfocándose en diversificar sus economías y mejorar la calidad de vida de sus habitantes.";
+
+"info_viii_85" =
+    "● Argentina: Ha sido el país más destacado en los Premios Platino, con múltiples galardones por películas como \"El secreto de sus ojos\" y \"La historia oficial\". Su industria cinematográfica ha ganado reconocimiento en diversas categorías.
+    \n\n● Chile: Aunque ha tenido menos premios en comparación con Argentina y Brasil, su cine ha sido reconocido en varias ocasiones, destacando obras como \"Una mujer fantástica\", que ganó el Oscar y tuvo una notable presencia en los Premios Platino.
+    \n\n● Brasil: También ha tenido un buen desempeño en los Premios Platino, con películas como \"Cidade de Deus\" y \"Aquarius\" recibiendo nominaciones y premios, reflejando la riqueza de su producción cinematográfica.
+    \n\nCuriosidad: Los Premios Platino celebran lo mejor del cine iberoamericano, y su crecimiento en popularidad refleja el reconocimiento internacional del talento y la creatividad en la región, promoviendo una mayor difusión del cine latinoamericano a nivel global.";
+
+"info_viii_86" =
+    "● Argentina: Ha producido una gran cantidad de películas que han sido nominadas y premiadas en festivales internacionales, como el Festival de Cannes y el Festival de Cine de Berlín. Películas como \"El secreto de sus ojos\" y \"La historia oficial\" han sido aclamadas mundialmente.
+    \n\n● Brasil: También cuenta con una notable cantidad de películas que han obtenido nominaciones en festivales internacionales, como \"Cidade de Deus\" y \"Central Station\". Su cine es reconocido por abordar temas sociales y culturales relevantes.
+    \n\n● Chile: Aunque ha tenido menos películas en festivales internacionales que Argentina y Brasil, ha ganado visibilidad con obras como \"Una mujer fantástica\" y \"El Club\", que han recibido nominaciones y premios en diversas competencias.
+    \n\nCuriosidad: La presencia de películas de estos países en festivales internacionales destaca la diversidad y la riqueza cultural de la cinematografía latinoamericana, además de abrir puertas a nuevos talentos y narrativas en la industria del cine global.";
+
+"info_viii_87" =
+    "● México: Ha tenido una notable cantidad de actores nominados al Óscar, incluyendo a figuras reconocidas como Salma Hayek, Gael García Bernal y Alfonso Cuarón (como director, también nominado como actor). México es uno de los países latinoamericanos más representados en esta categoría.
+    \n\n● Argentina: Ha producido actores nominados al Óscar, como Ricardo Darín y Javier Bardem (aunque es español, ha trabajado en producciones argentinas). Además, Argentina ha tenido una fuerte presencia en la categoría de películas extranjeras, lo que ha contribuido a la visibilidad de sus actores.
+    \n\n● Brasil: También ha visto nominaciones para sus actores, con ejemplos como Fernanda Montenegro, que fue nominada por su papel en 'Central Station'. Sin embargo, su número de nominaciones es menor en comparación con México y Argentina.
+    \n\nCuriosidad: La presencia de actores latinoamericanos en los Premios Óscar refleja el creciente reconocimiento y la influencia del cine latino en la industria cinematográfica mundial, ayudando a abrir camino a nuevas narrativas y talentos emergentes.";
+    
 
 /* Questions Level IX */
 "question_ix_91" = "¿Qué países tienen más producciones animadas reconocidas internacionalmente?";
@@ -213,6 +563,55 @@
 "question_ix_97" = "¿Qué países han ganado más premios en el Festival de Cine de Mar del Plata?";
 "question_ix_98" = "¿A dónde han emigrado mas BRASILEÑOS desde 2022 en Latinoamérica?";
 
+"info_ix_91" = 
+    "● Argentina: Ha tenido un impacto significativo en la producción de películas animadas, destacando con obras como 'Futbolín' y 'La famosa invasión de los osos en Italia'. Argentina ha ganado premios en festivales internacionales, lo que resalta su calidad en la animación.
+    \n\n● Brasil: También ha producido reconocidas películas animadas, como 'O Menino e o Mundo', que fue nominada al Óscar. La animación brasileña a menudo aborda temas sociales y culturales, captando la atención en festivales internacionales.
+    \n\n● Chile: Aunque ha producido menos películas animadas en comparación con Argentina y Brasil, ha destacado con obras como 'Historia de un oso', ganadora del Óscar al Mejor Cortometraje de Animación. Su industria está en crecimiento y comienza a ganar reconocimiento en el ámbito internacional.
+    \n\nCuriosidad: La animación en estos países refleja no solo un talento creativo, sino también una rica diversidad cultural, y cada vez más se está convirtiendo en una plataforma para contar historias latinoamericanas al público global.";
+
+"info_ix_92" =
+    "● Brasil: Ha tenido una notable presencia en el Festival de Cannes, con películas como 'Cidade de Deus' y 'Central Station'. Brasil ha recibido varias selecciones a lo largo de los años, lo que resalta la calidad y relevancia de su cine en el escenario internacional.
+    \n\n● Argentina: También ha tenido un fuerte impacto en Cannes, con películas como 'La historia oficial' y 'El secreto de sus ojos', que no solo han sido seleccionadas, sino que también han ganado premios importantes. Argentina es conocida por su sólida cinematografía y su capacidad para captar la atención de los críticos internacionales.
+    \n\n● México: Ha tenido un aumento en la cantidad de películas seleccionadas en Cannes en los últimos años, con directores como Alfonso Cuarón y Guillermo del Toro que han llevado su cine a la competencia. Aunque su número de selecciones históricas es menor en comparación con Brasil y Argentina, México está ganando visibilidad en festivales internacionales.
+    \n\nCuriosidad: La participación de estos países en el Festival de Cannes destaca no solo su talento cinematográfico, sino también su diversidad cultural, contribuyendo a la representación de América Latina en la industria del cine global.";
+
+"info_ix_93" =
+    "● Argentina: Ha destacado en la producción de documentales premiados internacionalmente, con obras como 'La historia oficial' y 'Nuestro matrimonio'. Argentina ha ganado premios en festivales importantes como el Festival de Cine de Cannes y el Festival Internacional de Documentales de Ámsterdam (IDFA), consolidándose como un líder en este género.
+    \n\n● Brasil: También ha tenido un impacto significativo en el mundo del documental, con títulos reconocidos como 'O processo' y 'Democracia em vertigem'. Brasil ha obtenido premios en varios festivales, incluyendo Cannes y Sundance, mostrando la fuerza de su narrativa documental.
+    \n\n● Chile: Ha producido documentales aclamados como 'El mocito' y 'Nostalgia de la luz', ganando premios en festivales internacionales. La industria del documental en Chile está en crecimiento y ha comenzado a recibir reconocimiento en el circuito global.
+    \n\nCuriosidad: La producción de documentales en estos países no solo refleja una rica diversidad cultural y social, sino que también se utiliza como herramienta para explorar y documentar la historia y las realidades contemporáneas de América Latina, atrayendo la atención del público internacional.";
+
+"info_ix_94" =
+    "● Argentina: Es conocida por su vibrante cine independiente, con películas como 'El hijo de la novia' y 'La mujer sin cabeza' que han recibido reconocimiento internacional. La diversidad de narrativas y estilos en el cine independiente argentino ha llevado a una fuerte presencia en festivales de cine, como el Festival de Cannes y el Festival Internacional de Cine de Toronto.
+    \n\n● Brasil: Ha tenido un crecimiento notable en su cine independiente, destacándose con películas como 'Que Horas Ela Volta?' (The Second Mother) y Cidade de Deus (City of God), que han obtenido premios y reconocimiento mundial. El cine brasileño independiente a menudo aborda temas sociales y políticos, reflejando la realidad del país.
+    \n\n● Chile: También ha producido cine independiente aclamado, con obras como 'Una mujer fantástica' y 'Nostalgia de la luz', que han sido premiadas en festivales internacionales. El cine chileno ha ganado visibilidad en el circuito global, y su producción independiente sigue creciendo.
+    \n\nCuriosidad: La producción de cine independiente en Argentina, Brasil y Chile ha permitido explorar una amplia gama de temas, desde problemas sociales hasta relatos personales, contribuyendo a la riqueza y diversidad del cine latinoamericano en el ámbito global. Estos países están en la vanguardia del cine independiente en la región, atrayendo tanto a críticos como a audiencias internacionales.";
+
+"info_ix_95" =
+    "● Colombia: Es el país sede del Festival Internacional de Cine de Cartagena de Indias, que se celebra anualmente desde 1960. Este festival es uno de los más importantes de América Latina y se enfoca en promover el cine colombiano y latinoamericano, además de servir como plataforma para nuevos cineastas.
+    \n\n● Brasil: Aunque Brasil no es sede del Festival de Cine de Cartagena, ha estado presente en el festival con una fuerte representación de sus películas y cineastas, participando en secciones competitivas y siendo reconocido por su contribución al cine latinoamericano.
+    \n\n● Argentina: Similar a Brasil, Argentina no ha sido sede del Festival de Cine de Cartagena, pero ha tenido una destacada participación en el festival, con numerosas producciones argentinas exhibidas y premiadas, reflejando la influencia del cine argentino en la región.
+    \n\nCuriosidad: El Festival de Cine de Cartagena no solo celebra películas de Colombia y Latinoamérica, sino que también atrae cineastas de todo el mundo, convirtiéndose en un punto de encuentro para la industria cinematográfica y promoviendo la cooperación cultural entre países.";
+
+"info_ix_96" =
+    "● Argentina: Ha producido varias películas históricas aclamadas, como 'El secreto de sus ojos' y 'La historia oficial' que exploran eventos significativos en la historia argentina, como la dictadura militar y los derechos humanos. Estas películas han recibido reconocimientos internacionales, incluyendo premios en festivales y nominaciones al Óscar.
+    \n\n● Brasil: Es conocido por sus producciones históricas, como 'City of God' y 'O Que É Isso, Companheiro?' que abordan momentos cruciales de la historia brasileña. Estas películas han sido bien recibidas en festivales internacionales y han contribuido a la narrativa del cine brasileño en el escenario global.
+    \n\n● México: También ha tenido éxito con películas basadas en hechos históricos, como 'Roma' y 'La historia de los mexicanos' que reflejan eventos culturales y sociales significativos. El cine mexicano ha ganado reconocimiento en festivales de cine internacional, destacando la riqueza de su historia.
+    \n\nCuriosidad: Las películas históricas de Argentina, Brasil y México no solo ofrecen entretenimiento, sino que también sirven como herramientas educativas, ayudando a las audiencias a comprender y reflexionar sobre su pasado y los acontecimientos que han moldeado sus sociedades. Estas producciones han sido fundamentales para dar voz a historias que a menudo se han silenciado o olvidado.";
+
+"info_ix_97" =
+    "● Argentina: Como país anfitrión del Festival Internacional de Cine de Mar del Plata, Argentina ha obtenido el mayor número de premios en diversas categorías. Películas argentinas como 'La historia oficial' y 'El secreto de sus ojos' han sido galardonadas, consolidando la reputación del festival como un importante evento para el cine argentino.
+    \n\n● Brasil: También ha tenido una destacada presencia en el festival, con varias producciones premiadas a lo largo de los años. Películas como 'Central do Brasil' y 'Cidade de Deus' han recibido reconocimiento, lo que refleja la fuerza del cine brasileño en el circuito internacional.
+    \n\n● México: Aunque México no es el país anfitrión, ha competido exitosamente en el festival. Películas como 'Amores perros' y 'Roma' han sido premiadas, destacando la calidad y diversidad del cine mexicano.
+    \n\nCuriosidad: El Festival de Cine de Mar del Plata es el único festival de cine de clase A en América Latina, según la Federación Internacional de Asociaciones de Productores de Cine (FIAPF). Esto atrae a cineastas de todo el mundo y fomenta un intercambio cultural significativo, contribuyendo a la visibilidad del cine latinoamericano en el ámbito global.";
+
+"info_ix_98" =
+    "● Panamá: Se ha convertido en un destino popular para los brasileños en los últimos años, especialmente debido a su economía en crecimiento y la facilidad para establecer negocios. La comunidad brasileña en Panamá ha crecido significativamente, atraída por oportunidades laborales y la calidad de vida.
+    \n\n● Argentina: Muchos brasileños han emigrado a Argentina, impulsados por la cercanía cultural y la posibilidad de acceso a la educación. Las ciudades argentinas, como Buenos Aires, son atractivas para los brasileños, que buscan nuevas oportunidades y un ambiente multicultural.
+    \n\n● Bolivia: Aunque en menor medida que los dos anteriores, Bolivia también ha visto un aumento en la inmigración brasileña, especialmente en áreas cercanas a la frontera. Los brasileños que se trasladan a Bolivia a menudo buscan trabajo en la agricultura y en sectores informales.
+    \n\nCuriosidad: La migración brasileña ha sido impulsada por factores como la búsqueda de empleo, la educación y las oportunidades de negocio. Además, la cercanía cultural y lingüística con países como Argentina y Panamá facilita la integración de los brasileños en estas sociedades.";
+    
+
 /* Questions Level X */
 "question_x_101" = "¿Qué países han producido más películas de cine negro?";
 "question_x_102" = "¿Qué países han tenido más películas presentadas en el Festival de San Sebastián?";
@@ -222,6 +621,49 @@
 "question_x_106" = "¿Qué países tienen más películas de animación infantil reconocidas?";
 "question_x_107" = "¿Qué países producen más caña de azúcar en Centroamérica y el Caribe?";
 
+"info_x_101" = 
+    "● México: Es conocido por su rica tradición en el cine negro, especialmente durante la época dorada del cine mexicano (1940-1950). Películas como 'Los olvidados' de Luis Buñuel y 'El ángel exterminador' son ejemplos destacados que reflejan el estilo y las temáticas del cine negro.
+    \n\n● Argentina: También ha contribuido significativamente al género con obras notables como 'La noche de los lápices' y 'El secreto de sus ojos', que aunque no son cine negro en el sentido clásico, presentan elementos oscuros y tramas de misterio y crimen que han resonado en el público.
+    \n\n● Brasil: Aunque el cine negro no es tan prominente como en México o Argentina, ha tenido algunas producciones interesantes, como 'O Invasor' y 'Cidade de Deus', que incorporan elementos de thriller y violencia, explorando la corrupción y la criminalidad en contextos urbanos.
+    \n\nCuriosidad: El cine negro en América Latina ha evolucionado incorporando elementos culturales y sociales únicos de cada país, lo que les ha permitido adaptar el género a su contexto y ofrecer narrativas que resuenan con el público local, además de atraer la atención internacional.";
+
+"info_x_102" =
+    "● Argentina: Ha tenido una fuerte presencia en el Festival de San Sebastián, con numerosas películas presentadas a lo largo de los años. Películas como 'El secreto de sus ojos' y 'La historia oficial' han sido reconocidas y premiadas en este festival.
+    \n\n● Brasil: También ha sido un participante destacado en el festival, con una variedad de películas que abordan temas sociales y políticos. Títulos como 'City of God' y 'Aquarius' han recibido atención internacional en este evento.
+    \n\n● Chile: Ha incrementado su presencia en el Festival de San Sebastián en los últimos años, presentando películas aclamadas como 'Una mujer fantástica' y 'El Club', que han ganado premios y reconocimiento por su innovación y narrativa.
+    \n\nCuriosidad: El Festival de San Sebastián es uno de los festivales de cine más importantes de Europa y actúa como una plataforma crucial para el cine iberoamericano, promoviendo el talento de directores emergentes y obras de cineastas consagrados, lo que fortalece la conexión cultural entre estos países y el resto del mundo.";
+
+"info_x_103" =
+    "● Cuba: Tiene la mayor extensión de manglares en el Caribe, especialmente en la zona de la península de Zapata y en los Cayos de la Isla de la Juventud. Los manglares cubanos son vitales para la biodiversidad y actúan como barreras naturales contra huracanes.
+    \n\n● Nicaragua: También cuenta con importantes ecosistemas de manglares, especialmente en la región de la costa caribeña, como la Reserva Biológica Indio Maíz. Estos manglares son cruciales para la vida marina y como refugio para diversas especies de aves y fauna silvestre.
+    \n\n● Honduras: Tiene manglares significativos en la costa caribeña, particularmente en la zona de la Bahía de Tela y el Parque Nacional Jeanette Kawas. Estos ecosistemas son esenciales para la protección de las costas y el mantenimiento de la biodiversidad.
+    \n\nCuriosidad: Los manglares en Centroamérica y el Caribe no solo son importantes para la ecología local, sino que también ofrecen beneficios económicos a las comunidades, como la pesca y el turismo, además de desempeñar un papel crucial en la mitigación del cambio climático al absorber grandes cantidades de carbono.";
+
+"info_x_104" =
+    "● Argentina: Es conocida por su fuerte tradición en el cine que aborda conflictos sociales, especialmente durante y después de la dictadura militar (1976-1983). Películas como 'La historia oficial' y 'El secreto de sus ojos' han ganado reconocimiento internacional.
+    \n\n● Brasil: Ha producido numerosas películas que exploran temas de desigualdad social y conflictos, como 'Cidade de Deus' (Ciudad de Dios) y 'Tropa de Elite', que muestran la vida en las favelas y la violencia policial.
+    \n\n● Chile: También ha contribuido al cine sobre conflictos sociales, especialmente a raíz de la dictadura de Augusto Pinochet (1973-1990). Obras como 'No' y 'Machuca' tratan sobre la memoria histórica y los efectos de la represión.
+    \n\nCuriosidad: El cine latinoamericano sobre conflictos sociales no solo entretiene, sino que también educa e inspira discusiones sobre derechos humanos, justicia social y memoria histórica, contribuyendo a la reflexión y el cambio en la sociedad.";
+
+"info_x_105" =
+    "● Chile: Es el país donde más argentinos han emigrado desde 2021, debido a la cercanía geográfica, la similitud cultural y oportunidades laborales. Santiago, la capital, alberga una gran comunidad argentina.
+    \n\n● Paraguay: También ha recibido un número creciente de emigrantes argentinos, en parte por la búsqueda de mejores condiciones de vida y empleo. La proximidad y la cultura compartida facilitan la integración.
+    \n\n● Bolivia: Aunque en menor medida que Chile y Paraguay, también hay una presencia de argentinos que buscan oportunidades laborales y educativas en Bolivia.
+    \n\nCuriosidad: La emigración de argentinos ha aumentado significativamente en los últimos años debido a factores económicos, sociales y políticos, lo que ha llevado a un interés por establecerse en países vecinos donde pueden encontrar mejores oportunidades.";
+
+"info_x_106" =
+    "● Argentina: Ha producido exitosas películas de animación infantil como 'Metegol' y 'Gaturro', que han tenido reconocimiento tanto a nivel nacional como internacional. La industria de la animación argentina ha crecido en las últimas décadas, destacando por su creatividad y estilo único.
+    \n\n● Brasil: Conocido por su animación vibrante y colorida, Brasil ha creado películas como 'O Menino e o Mundo' (El niño y el mundo), que recibió nominaciones al Óscar. Su enfoque en temas culturales y sociales resuena con audiencias jóvenes.
+    \n\n● México: La animación mexicana ha cobrado fuerza con producciones como 'El Libro de la Vida' y 'Coco', que han sido aclamadas por su calidad artística y narrativa, y han logrado gran éxito en taquilla y premios.
+    \n\nCuriosidad: La animación en estos países no solo entretiene, sino que también aborda temas educativos y culturales, ayudando a preservar la identidad cultural y fomentando el aprendizaje entre los más jóvenes.";
+
+"info_x_107" =
+    "● Guatemala: Es el principal productor de caña de azúcar en Centroamérica, con una industria azucarera bien establecida. En 2022, Guatemala exportó más de 2.2 millones de toneladas de azúcar, convirtiéndose en uno de los mayores exportadores de la región.
+    \n\n● Cuba: Históricamente, Cuba ha sido conocido por su producción de caña de azúcar, especialmente durante el siglo XX. Aunque la producción ha disminuido en las últimas décadas, sigue siendo un cultivo clave en la economía cubana, con plantaciones en diversas provincias.
+    \n\n● República Dominicana: La caña de azúcar es un cultivo importante en la República Dominicana, contribuyendo a su economía agrícola. La producción se centra en la región sur del país, y el azúcar dominicano es conocido por su calidad.
+    \n\nCuriosidad: La caña de azúcar es crucial no solo para la producción de azúcar, sino también para la producción de ron, especialmente en países como Cuba y la República Dominicana, donde el ron es una parte importante de la cultura y la economía local.";
+    
+
 /* Questions Level XI */
 "question_xi_111" = "¿Quién tiene la mayor producción de carne VACUNA?";
 "question_xi_112" = "¿Quién tiene mayor extensión de SELVA tropical?";
@@ -230,6 +672,47 @@
 "question_xi_115" = "¿Quién PRODUCE más vino Latinoamérica?";
 "question_xi_116" = "¿Quién tiene mayor superficie de tierras agrícolas?";
 "question_xi_117" = "¿Quién tiene más variedad de especies de AVES?";
+
+"info_xi_111" = 
+   " ● Brasil: Es el mayor productor de carne vacuna en el mundo, con una producción que supera los 9 millones de toneladas anuales. Brasil es también uno de los principales exportadores de carne bovina, abasteciendo mercados en Asia, Europa y América del Norte.
+    \n\n● Argentina: Conocida por su alta calidad de carne, Argentina ocupa el segundo lugar en producción de carne vacuna en Latinoamérica, con alrededor de 3 millones de toneladas anuales. La carne argentina es famosa por su sabor y es un símbolo de la cultura gastronómica del país.
+    \n\n● México: Aunque tiene una producción menor que Brasil y Argentina, México también es un importante productor de carne vacuna, con una producción de alrededor de 1.5 millones de toneladas anuales. La carne de res es un elemento esencial en la cocina mexicana, utilizada en una variedad de platillos.
+    \n\nCuriosidad: La carne argentina es tan reconocida que se ha convertido en un símbolo nacional, con la parrilla (asado) siendo una tradición que reúne a las familias y amigos. Brasil, por su parte, ha desarrollado un modelo de producción intensivo que ha permitido un aumento significativo en su capacidad de exportación, convirtiéndose en un líder mundial en el sector.";
+
+"info_xi_112" =
+    "● Brasil: Es el país con la mayor extensión de selva tropical del mundo, principalmente debido a la vasta Amazonía, que cubre aproximadamente el 60% del territorio brasileño. La selva amazónica en Brasil es conocida por su biodiversidad única y es un importante regulador climático global.
+    \n\n● Perú: Posee la segunda mayor extensión de selva tropical, con una parte significativa de la Amazonía que se encuentra dentro de sus fronteras. La región alberga una rica diversidad de flora y fauna y es un importante hábitat para muchas especies endémicas.
+    \n\n● Colombia: También cuenta con una porción considerable de selva tropical, siendo parte de la Amazonía. Aunque su extensión es menor en comparación con Brasil y Perú, la selva tropical en Colombia es esencial para la biodiversidad y contiene áreas protegidas importantes.
+    \n\nCuriosidad: La Amazonía es considerada el 'pulmón del planeta' debido a su capacidad para absorber dióxido de carbono y liberar oxígeno. Además, alberga alrededor del 10% de la biodiversidad del mundo, lo que la convierte en una de las áreas más críticas para la conservación global. La deforestación y el cambio climático son grandes amenazas para estas selvas tropicales, especialmente en Brasil, donde las tasas de deforestación han sido motivo de preocupación internacional.";
+
+"info_xi_113" =
+    "● Chile: Actualmente, Chile tiene uno de los salarios mínimos más altos de América Latina. Desde 2024, el salario mínimo en Chile es de aproximadamente $460.000 CLP (unos $580 USD), lo que refleja un esfuerzo continuo del gobierno por aumentar el poder adquisitivo de los trabajadores.
+    \n\n● Uruguay: En Uruguay, el salario mínimo también es alto en comparación con otros países de la región. A partir de 2024, el salario mínimo es de alrededor de $23.500 UYU (aproximadamente $590 USD). Uruguay ha mantenido un compromiso con la protección de los derechos laborales y la mejora de los salarios.
+    \n\n● Costa Rica: Aunque Costa Rica tiene un salario mínimo que ha aumentado en los últimos años, es generalmente más bajo que el de Chile y Uruguay. En 2024, el salario mínimo promedio en Costa Rica es de aproximadamente $336.000 CRC (cerca de $600 USD), aunque esto puede variar según la ocupación.
+    \n\nCuriosidad: La relación entre el salario mínimo y el costo de vida en estos países es un tema de debate. En Chile, a pesar de tener un salario mínimo alto, el costo de vida en ciudades como Santiago puede ser elevado, lo que lleva a discusiones sobre la necesidad de aumentos salariales adicionales. En contraste, Uruguay y Costa Rica suelen tener un enfoque más equilibrado en la regulación del salario mínimo y el bienestar social.";
+
+"info_xi_114" =
+    "● México: México es el líder en producción de energía geotérmica en América Latina. Tiene varias plantas geotérmicas, siendo la más notable la planta Cerro Prieto, que es una de las más grandes del mundo. La capacidad instalada de energía geotérmica en México es de aproximadamente 1,000 MW.
+    \n\n● El Salvador: El Salvador utiliza una alta proporción de energía geotérmica en su matriz energética, aproximadamente el 25% de su electricidad proviene de fuentes geotérmicas. La capacidad instalada es de alrededor de 204 MW, lo que lo convierte en uno de los países con mayor dependencia de esta fuente de energía en la región.
+    \n\n● Costa Rica: Costa Rica también ha hecho un gran uso de la energía geotérmica, aportando aproximadamente el 15% de su energía. La capacidad instalada es de unos 205 MW, lo que ha sido clave para su objetivo de ser un país carbono neutral.";
+
+"info_xi_115" =
+    "● Argentina: Argentina es el mayor productor de vino en Latinoamérica y el quinto a nivel mundial. La región de Mendoza es la más destacada, siendo famosa por su producción de Malbec. En 2022, Argentina produjo aproximadamente 9 millones de hectolitros de vino.
+    \n\n● Chile: Chile también es un importante productor de vino, conocido por su calidad y variedad. Las regiones de Valle de Maipo y Valle de Casablanca son reconocidas por sus excelentes Cabernet Sauvignon y Sauvignon Blanc. En 2022, Chile produjo alrededor de 12 millones de hectolitros de vino.
+    \n\n● Brasil: Aunque Brasil tiene una producción de vino menor en comparación con Argentina y Chile, está en crecimiento, especialmente en las regiones de Serra Gaúcha y Vale do São Francisco. En 2022, la producción de vino fue de aproximadamente 3 millones de hectolitros.";
+
+"info_xi_116" =
+    "● Brasil: Es el país con la mayor superficie de tierras agrícolas en América Latina, abarcando aproximadamente 85 millones de hectáreas. Brasil es uno de los principales productores agrícolas del mundo, destacándose en la producción de soja, maíz, caña de azúcar y café.
+    \n\n● Argentina: Ocupa el segundo lugar en superficie agrícola, con alrededor de 38 millones de hectáreas. El país es conocido por su producción de soja, maíz, trigo y carne vacuna, siendo un gran exportador de estos productos.
+    \n\n● México: Aunque tiene una superficie agrícola más pequeña, con aproximadamente 25 millones de hectáreas, es un importante productor de cultivos como maíz, aguacate, y frutas tropicales. La agricultura mexicana se caracteriza por su diversidad de climas y microclimas, lo que permite el cultivo de una amplia variedad de productos.
+    \n\nCuriosidad: Brasil, Argentina y México son parte de la región conocida como el 'Granero del Mundo'. La producción agrícola de estos países no solo alimenta a su población, sino que también juega un papel crucial en los mercados internacionales, especialmente en la producción de alimentos y biocombustibles.";
+
+"info_xi_117" =
+    "● Brasil: Es el país con la mayor diversidad de especies de aves en el mundo, con aproximadamente 1,800 especies registradas. Esta gran variedad se debe a su vasta gama de ecosistemas, que incluyen la selva amazónica, el cerrado, el pantanal y la costa atlántica, ofreciendo hábitats para muchas especies.
+    \n\n● Perú: Se sitúa en segundo lugar en términos de diversidad aviar, con alrededor de 1,800 especies también, aunque las cifras pueden variar ligeramente según las fuentes. Perú es famoso por su biodiversidad, especialmente en áreas como la Amazonía peruana y los Andes, donde se pueden encontrar aves únicas como el gallito de las rocas y el cóndor andino.
+    \n\n● Chile: Tiene una menor diversidad en comparación con Brasil y Perú, con aproximadamente 460 especies de aves. Sin embargo, Chile alberga varias especies endémicas, como el colibrí de corona de fuego y el flamenco chileno, lo que lo convierte en un destino interesante para los observadores de aves.
+    \n\nCuriosidad: La diversidad de aves en Brasil no solo es notable por la cantidad de especies, sino también por la presencia de aves icónicas como el tucán y el guacamayo. La conservación de sus hábitats es crucial, ya que muchas especies están amenazadas debido a la deforestación y la pérdida de ecosistemas naturales.";
+    
 
 /* Questions Level XII */
 "question_xii_121" = "¿Quién tiene la mayor producción de banano?";
@@ -241,6 +724,55 @@
 "question_xii_127" = "¿Quién tiene más selvas tropicales protegidas?";
 "question_xii_128" = "¿Qué países han tenido más equipos ganadores de la Copa Libertadores?";
 
+"info_xii_121" = 
+    "● Ecuador: Es el mayor productor y exportador de banano del mundo, con una producción que supera los 6 millones de toneladas anuales. El banano ecuatoriano es conocido por su alta calidad y sabor, lo que lo convierte en un favorito en los mercados internacionales.
+    \n\n● Costa Rica: Se posiciona como el segundo productor de banano en la región, con una producción cercana a los 2.5 millones de toneladas anuales. La industria del banano en Costa Rica es crucial para su economía, siendo uno de los principales productos de exportación del país.
+    \n\n● Guatemala: También es un importante productor de banano, con una producción que ronda los 2 millones de toneladas anuales. Guatemala ha aumentado su producción en los últimos años y se ha convertido en un competidor significativo en el mercado de bananos.
+    \n\nCuriosidad: Ecuador, al ser el mayor exportador de banano, representa alrededor del 25% de la producción mundial, y sus bananos se envían a más de 60 países. Esta industria no solo es vital para la economía ecuatoriana, sino que también proporciona empleo a miles de personas en zonas rurales.";
+
+"info_xii_122" =
+    "● Paraguay: Es uno de los líderes mundiales en la generación de electricidad renovable, gracias a la represa de Itaipú, que es una de las mayores del mundo. Aproximadamente el 99% de su electricidad proviene de fuentes hidroeléctricas, lo que convierte a Paraguay en un referente en el uso de energías renovables.
+    \n\n● Uruguay: Ha realizado importantes inversiones en energía renovable en los últimos años. Actualmente, cerca del 95% de su electricidad proviene de fuentes renovables, incluyendo energía eólica, solar e hidroeléctrica. Uruguay se destaca por su rápido avance en la transición hacia energías limpias.
+    \n\n● Costa Rica: Es conocido por su compromiso con la sostenibilidad y la energía renovable. En los últimos años, ha logrado generar más del 99% de su electricidad a partir de fuentes renovables, principalmente hidroeléctrica, eólica y solar. Costa Rica ha sido un ejemplo a seguir en el ámbito de energías limpias.
+    \n\nCuriosidad: Costa Rica se ha propuesto ser un país neutral en carbono para el año 2050, lo que implica continuar su esfuerzo por aumentar la generación de energía renovable y reducir las emisiones de gases de efecto invernadero. Esto ha llevado al país a destacarse a nivel internacional por su enfoque ambientalista.";
+
+"info_xii_123" =
+    "● Brasil: Es el mayor productor de productos lácteos en América Latina. La producción láctea en Brasil ha crecido significativamente en los últimos años, con una fuerte industria que incluye leche, queso, yogur y otros productos derivados. Las regiones del sur del país, como Santa Catarina y Rio Grande do Sul, son las más productivas.
+    \n\n● Argentina: También tiene una industria láctea considerable, aunque su producción es menor en comparación con Brasil. Argentina es conocida por su producción de quesos y leche fluida. Las provincias de Buenos Aires y Córdoba son las principales regiones productoras de leche.
+    \n\n● México: Es otro importante productor de lácteos en la región, con una producción que incluye leche, queso y crema. Las principales regiones productoras son Jalisco, Coahuila y Puebla. Aunque México produce una cantidad significativa de lácteos, su producción es menor que la de Brasil y Argentina.
+    \n\nCuriosidad: El queso es uno de los productos lácteos más populares en la región, y Argentina es famosa por su 'queso de pasta dura', mientras que México es conocido por su 'queso fresco', que se utiliza en una variedad de platos tradicionales.";
+
+"info_xii_124" =
+    "● México: Se destaca por su rica biodiversidad marina, especialmente en el Mar de Cortés, conocido como 'el acuario del mundo' por la gran cantidad de especies que alberga. México es hogar de numerosas especies de peces, mamíferos marinos, corales y tortugas, además de contar con los arrecifes de coral más grandes de América del Norte.
+    \n\n● Colombia: También posee una notable biodiversidad marina, especialmente en el Caribe colombiano y el océano Pacífico. Las áreas marinas protegidas, como el Parque Nacional Natural Tayrona y el Parque Nacional Natural Malpelo, son fundamentales para la conservación de especies marinas. Colombia es famosa por su diversidad de corales y especies de peces.
+    \n\n● Brasil: Tiene una vasta biodiversidad marina, especialmente en la región del océano Atlántico y en el archipiélago de Fernando de Noronha. Brasil es conocido por su variedad de ecosistemas marinos, incluidos arrecifes de coral y manglares, y alberga muchas especies endémicas.
+    \n\nCuriosidad: El sistema arrecifal de la Barrera Mesoamericana, que se extiende desde México hasta Honduras, es el segundo sistema de arrecifes de coral más grande del mundo y alberga una increíble diversidad de vida marina, lo que lo convierte en un importante hotspot de biodiversidad.";
+
+"info_xii_125" =
+    "● México: El Sistema de Transporte Colectivo (STC) de la Ciudad de México es uno de los más grandes y completos de América Latina, con 12 líneas que abarcan más de 200 kilómetros y cerca de 200 estaciones, convirtiéndolo en el metro más extenso de la región.
+    \n\n● Brasil: El sistema de metro más destacado es el de São Paulo, que cuenta con 6 líneas y una longitud total de aproximadamente 100 kilómetros. También hay otros sistemas en ciudades como Río de Janeiro, pero ninguno se acerca a la extensión del metro de la Ciudad de México.
+    \n\n● Chile: El Metro de Santiago es el más extenso de Chile, con 7 líneas y alrededor de 140 kilómetros de red. Es conocido por su eficiencia y modernidad, pero su longitud total es menor que la del metro de México y de São Paulo.
+    \n\nCuriosidad: El Metro de la Ciudad de México, inaugurado en 1969, es uno de los más antiguos de América Latina y tiene un promedio de más de 4 millones de usuarios diarios, lo que lo convierte en uno de los sistemas de transporte público más utilizados del mundo.";
+
+"info_xii_126" =
+    "● Brasil: Brasil cuenta con la mayor superficie de áreas protegidas en el mundo, abarcando aproximadamente 2.2 millones de kilómetros cuadrados. Esto incluye parques nacionales, reservas biológicas y otros tipos de áreas protegidas, como la famosa Amazonía, que alberga una gran diversidad de especies.
+    \n\n● Colombia: Colombia también tiene una gran cantidad de áreas protegidas, con cerca de 1.2 millones de kilómetros cuadrados dedicados a la conservación. El país es conocido por su biodiversidad y cuenta con 59 parques nacionales naturales.
+    \n\n● Venezuela: Venezuela tiene alrededor de 600,000 kilómetros cuadrados de áreas protegidas. Esto incluye parques nacionales y reservas, pero su superficie es significativamente menor en comparación con Brasil y Colombia.
+    \n\nCuriosidad: Brasil alberga el Sistema Nacional de Unidades de Conservación (SNUC), que fue creado en 2000 y busca proteger la diversidad biológica y los recursos naturales del país. Además, Brasil tiene la mayor parte de la selva amazónica, considerada uno de los pulmones del planeta debido a su capacidad para absorber dióxido de carbono.";
+
+"info_xii_127" =
+    "● Brasil: Brasil alberga la mayor parte de la selva amazónica, que es la selva tropical más grande y diversa del mundo. Aproximadamente el 44% de la Amazonía está protegida bajo diferentes categorías de conservación, incluyendo parques nacionales, reservas biológicas y tierras indígenas. Esto equivale a más de 1.1 millones de kilómetros cuadrados de áreas protegidas.
+    \n\n● Colombia: Colombia también posee una considerable cantidad de selvas tropicales protegidas, principalmente en sus parques nacionales. Aunque su superficie de selva tropical es menor que la de Brasil, tiene un buen número de áreas protegidas que resguardan la biodiversidad de su región amazónica y otras selvas, sumando alrededor de 300,000 kilómetros cuadrados.
+    \n\n● Venezuela: Venezuela cuenta con áreas de selva tropical en su región amazónica, pero la superficie protegida es significativamente menor que en Brasil y Colombia, con alrededor de 100,000 kilómetros cuadrados en parques nacionales y reservas.
+    \n\nCuriosidad: La Amazonía, que se extiende por Brasil, Perú, Colombia y otros países, es vital para la regulación del clima global y es conocida como el 'pulmón del planeta' por su capacidad para producir oxígeno y absorber dióxido de carbono. Además, se estima que alberga aproximadamente el 10% de las especies conocidas en el mundo.";
+
+"info_xii_128" =
+    "● Argentina: Argentina es el país con más títulos de la Copa Libertadores, con equipos como Boca Juniors, River Plate, Independiente, y otros, acumulando un total de 25 títulos en total.
+    \n\n● Brasil: Brasil sigue a Argentina, con una destacada cantidad de títulos. Equipos como São Paulo, Santos, y Flamengo han contribuido a un total de 21 títulos en la competición.
+    \n\n● Uruguay: Uruguay también ha tenido éxito en la Copa Libertadores, con equipos como Peñarol y Nacional, acumulando un total de 8 títulos.
+    \n\nCuriosidad: El club más exitoso de la historia de la Copa Libertadores es Independiente de Argentina, que ha ganado el torneo en 7 ocasiones, lo que le ha valido el apodo de 'Rey de Copas'.";
+    
+
 /* Questions Level XIII */
 "question_xiii_131" = "¿Quién tiene los puertos marítimos más grandes?";
 "question_xiii_132" = "¿Quién tiene la mayor cantidad de producción de camarones?";
@@ -250,3 +782,40 @@
 "question_xiii_136" = "Según Taste Atlas, quiénes tienen la PEOR gastronomía de la región?";
 "question_xiii_137" = "¿Quién tiene mayor producción de maíz?";
 "question_xiii_138" = "¿Qué países tienen más títulos de la Copa Sudamericana?";
+
+"info_xiii_131" = 
+    "● Brasil: Brasil cuenta con varios de los puertos más grandes de América Latina, siendo el Puerto de Santos el más importante, manejando una gran cantidad de carga y siendo un punto clave para la exportación de productos agrícolas y minerales.
+    \n\n● Panamá: Panamá es famoso por el Canal de Panamá, que conecta el océano Atlántico con el océano Pacífico. El Puerto de Balboa y el Puerto de Cristóbal son de gran relevancia, dado su papel estratégico en el comercio internacional.
+    \n\n● México: México también tiene puertos importantes, como el Puerto de Manzanillo y el Puerto de Veracruz, que son clave para el comercio y la exportación.
+    \n\nCuriosidad: El Puerto de Santos en Brasil es considerado el puerto más grande de América Latina y maneja más del 25% del comercio exterior de Brasil, lo que lo convierte en un punto crucial para la economía del país.";
+
+"info_xiii_132" =
+    "● Ecuador: Ecuador es el líder mundial en la producción y exportación de camarones, especialmente camarones de cultivo. La industria camaronera en Ecuador ha crecido significativamente, y el país es conocido por sus altos estándares de calidad.
+    \n\nCuriosidad: La producción de camarones en Ecuador no solo contribuye a la economía local, sino que también es una fuente importante de empleo en regiones costeras, siendo uno de los principales productos de exportación del país.";
+
+"info_xiii_133" =
+    "● Cuba: Cuenta con una tasa de alfabetización cercana al 100%. Desde la Revolución Cubana en 1959, el gobierno implementó políticas educativas que lograron eliminar el analfabetismo en gran medida.
+    \n\nCuriosidad: La alfabetización en Cuba es tan alta que se han enviado misiones educativas a otros países para ayudar en la alfabetización de sus poblaciones, lo que refleja el compromiso del país con la educación.";
+
+"info_xiii_134" =
+    "● Ecuador: Ecuador es reconocido mundialmente por la calidad de su cacao fino y de aroma. En los últimos años, ha mantenido su posición como uno de los principales productores de cacao a nivel global.
+    \n\nCuriosidad: Ecuador es considerado el 'corazón del cacao' y su variedad de cacao Arriba es altamente valorada por los chocolateros y chefs en todo el mundo.";
+
+"info_xiii_135" =
+    "● México: México es el principal productor de plata en el mundo, conocido por sus grandes minas y su tradición en la extracción de este metal precioso. La producción de plata en México supera significativamente la de otros países en la región.
+    \n\nCuriosidad: La ciudad de Taxco en México es famosa por su producción de plata y se considera un centro de artesanía de joyería de plata, atrayendo a turistas de todo el mundo.";
+
+"info_xiii_136" =
+    "● Honduras: En el ranking de Taste Atlas, Honduras ocupa un lugar bajo en términos de calidad y popularidad de su gastronomía en comparación con otros países de la región.
+    \n\n● Costa Rica y Guatemala también están en posiciones no tan altas, pero Honduras es generalmente visto como el menos destacado en la comparación.
+    \n\nCuriosidad: A pesar de las críticas, la gastronomía hondureña tiene platos tradicionales únicos como las baleadas, que son tortillas de harina rellenas de frijoles, queso y crema, y son muy apreciadas a nivel local.";
+
+"info_xiii_137" =
+    "● México: México es conocido como el lugar de origen del maíz y sigue siendo el mayor productor en América Latina. En 2022, la producción de maíz en México superó los 36 millones de toneladas.
+    \n\nCuriosidad: El maíz es un alimento fundamental en la dieta mexicana y se utiliza en muchos platillos tradicionales, como las tortillas, tamales y pozole, lo que refleja su importancia cultural y económica en el país.";
+
+"info_xiii_138" =
+    "● Argentina: (9 Títulos) Los equipos argentinos han tenido un gran desempeño en la Copa Sudamericana, con clubes como River Plate, Boca Juniors y Independiente destacándose en la competición.
+    \n\n● Brasil: (6 Títulos) Equipos brasileños como el Atlético Mineiro y el São Paulo han logrado el título en múltiples ocasiones, demostrando su fortaleza en el fútbol sudamericano.
+    \n\n● Ecuador: (2 Títulos) La Liga de Quito fue el primer equipo ecuatoriano en ganar la Copa Sudamericana en 2008, y también logró la Recopa Sudamericana en 2009.
+    \n\nCuriosidad: La Copa Sudamericana es considerada la segunda competición de clubes más importante de América del Sur, después de la Copa Libertadores, y ha crecido en popularidad desde su creación en 2002, brindando una plataforma para que equipos de países menos tradicionales en el fútbol, como Ecuador, tengan éxito en el escenario continental.";

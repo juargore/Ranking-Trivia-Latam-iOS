@@ -11,6 +11,8 @@
 "general_save" = "Save";
 "general_next" = "Next";
 "general_retry" = "Retry";
+"general_cancel" = "Cancel";
+"general_accept" = "Accept";
 
 "home_start" = "Start";
 "home_how_to_play" = "How to play?";
@@ -103,6 +105,7 @@
 /* Correct dialog */
 "correct_title" = "Correct!";
 "correct_description" = "Great job! You\'re doing really well!!\n\nLet\'s move on to something more challenging!";
+"interesting_fact" = "Fun fact";
 
 
 /* Incorrect dialog */
@@ -130,6 +133,12 @@
 "time_up_description" = "You need to hurry up to correctly arrange the flags in the right order.\n\nCome on! You can do it!!";
 
 
+/* Hint dialog */
+"hint_title" = "Hint!";
+"hint_description" = "Would you like to watch an ad from our sponsors to unlock the position of one of the flags in the list?";
+"hint_checkbox" = "Don’t show this message again";
+
+
 /* Questions Level I */
 "question_i_11" = "Which country has won the most WORLD CUPS in its history?";
 "question_i_12" = "Which country has the largest TERRITORY?";
@@ -138,6 +147,46 @@
 "question_i_15" = "Where are there more VENEZUELANS outside of VENEZUELA in Latin America?";
 "question_i_16" = "Which country has the most UNESCO WORLD HERITAGE SITES in Central America and the Caribbean?";
 "question_i_17" = "Where are the most Dragon Ball fans according to Bandai?";
+
+"info_i_11" =
+    "● Brazil: 5 World Cups (1958, 1962, 1970, 1994, 2002). The only country to participate in all World Cups and has won on four different continents.
+    \n\n● Argentina: 3 World Cups (1978, 1986, 2022). Remembered for Maradona's 'Goal of the Century' in 1986 and Messi's victory in 2022 in a historic final.
+    \n\n● Uruguay: 2 World Cups (1930, 1950). Won the first World Cup and starred in the famous 'Maracanazo' in 1950.
+    \n\nFun fact: Brazil is the only team to win World Cups on four continents.";
+
+"info_i_12" =
+    "● Brazil: Largest territorial extension with approximately 8.5 million km², being the fifth largest country in the world.
+    \n\n● Argentina: Second largest extension in South America, with about 2.8 million km².
+    \n\n● Mexico: Third on the list, with approximately 1.96 million km².
+    \n\nFun fact: Brazil is not only the largest country in Latin America but also larger than the entire European continent.";
+
+"info_i_13" =
+    "● Brazil: Largest population on the list, with approximately 213 million inhabitants.
+    \n\n● Mexico: Second with around 126 million people.
+    \n\n● Colombia: Third, with about 51 million inhabitants.
+    \n\nFun fact: Brazil and Mexico are, respectively, the first and second most populated countries in Latin America, and together they account for more than half of the region's population.";
+
+"info_i_14" =
+    "● Chile: Has the highest number of active volcanoes in Latin America, with over 2,000 volcanoes, of which at least 50 are considered active.
+    \n\n● Mexico: Has around 3,000 volcanoes, but only about 15 are currently considered active.
+    \n\n● Guatemala: Has active volcanoes, including the famous Volcán de Fuego, which has constant activity.
+    \n\nFun fact: Chile is located in the 'Pacific Ring of Fire,' one of the most volcanically active areas in the world, which contributes to its large number of volcanoes.";
+
+"info_i_15" =
+    "● Colombia: Hosts the largest number of Venezuelans abroad, with over 2 million Venezuelan migrants due to geographical proximity and cultural ties.
+    \n\n● Peru: Has around 1 million Venezuelans, making it the second country with the most Venezuelan migrants.
+    \n\n● Brazil: Has received nearly 500,000 Venezuelans, especially in the state of Roraima, which borders Venezuela.
+    \n\nFun fact: The crisis in Venezuela has caused one of the largest migration movements in the region's history, with an estimated 6 million Venezuelans having left the country since 2015.";
+
+"info_i_16" =
+    "● Cuba: Has 9 sites declared as World Heritage Sites by UNESCO, including Old Havana and the Alejandro de Humboldt National Park.
+    \n\n● Guatemala: Has 3 sites, the most notable being the ruins of Tikal, an important center of the Mayan civilization.
+    \n\n● Panama: Has 4 sites, including the Panama Canal and the Old Quarter of Panama City.
+    \n\nFun fact: Cuba is the country in Central America and the Caribbean with the most World Heritage Sites, reflecting its rich history and diverse culture.";
+
+"info_i_17" =
+    "● Fun fact: Dragon Ball is a cultural phenomenon in Latin America, its popularity has influenced television programming and the sale of related products, making it a reference for anime in the region.";
+
 
 /* Questions Level II */
 "question_ii_21" = "Which country has the largest area of AMAZONIAN RAINFOREST?";
@@ -148,6 +197,49 @@
 "question_ii_26" = "Which country has the most hectares for COFFEE cultivation in Central America?";
 "question_ii_27" = "Which country has the largest number of MAYAN archaeological sites?";
 
+"info_ii_21" =
+    "● Brazil: Has the largest area of Amazon rainforest, with approximately 60% of the Amazon, covering around 4.1 million km².
+    \n\n● Peru: Has the second-largest area of Amazon rainforest, with around 13% of the region, equivalent to approximately 850,000 km².
+    \n\n● Bolivia: Contains approximately 8% of the Amazon rainforest, which translates to about 500,000 km².
+    \n\nFun fact: The Amazon is the largest tropical rainforest in the world and plays a crucial role in regulating the global climate, in addition to being home to rich biodiversity and numerous indigenous communities.";
+
+"info_ii_22" =
+    "● Colombia: Historically has had high crime rates, although in recent years it has seen a decrease in certain types of crimes, drug-related violence remains an issue.
+    \n\n● Mexico: Has one of the highest homicide rates in the world, influenced by drug-related violence and clashes between cartels.
+    \n\n● Paraguay: Although its crime rate is lower compared to Colombia and Mexico, it has experienced an increase in drug-related crimes and organized crime in certain sectors.
+    \n\nFun fact: Despite the high crime rates in Colombia and Mexico, both countries have implemented various security strategies and crime prevention programs that have achieved positive results in certain areas.";
+
+"info_ii_23" =
+    "● Brazil: Has the longest rivers in Latin America, with the Amazon River being the longest at approximately 7,000 km. It also includes the Paraná River, which measures around 4,880 km.
+    \n\n● Venezuela: Has important rivers such as the Orinoco River, which measures about 2,140 km, but does not reach the length of Brazil's rivers.
+    \n\n● Bolivia: Has rivers like the Mamoré River and the Beni River, but these are considerably shorter compared to those in Brazil.
+    \n\nFun fact: The Amazon River is not only the longest river in Latin America but also the most voluminous in the world, carrying more water than the next seven largest rivers combined.";
+
+"info_ii_24" =
+    "● Mexico: Is the main producer of silver in the region, with an annual production exceeding 6,000 tons, making it one of the largest producers in the world.
+    \n\n● Peru: Ranks second in silver production in Latin America, with around 3,500 tons annually, standing out for its mines such as those in Pasco and Huancavelica.
+    \n\n● Bolivia: Although it has significant silver reserves, its production is lower, around 1,000 tons per year.
+    \n\nFun fact: Mexico has historically been known as 'the country of silver' since colonial times, when mines were established that produced large quantities of this metal, significantly contributing to the Spanish colonial economy.";
+
+"info_ii_25" =
+    "● Jamaica: Has the largest number of Olympic medals in athletics, particularly excelling in sprint events, with stars like Usain Bolt, who has won 8 gold medals.
+    \n\n● Cuba: Has obtained a significant number of medals in athletics, focusing on jumping and throwing events, accumulating a total of 30 medals in the Olympics.
+    \n\n● Puerto Rico: Although it has achieved recognition in some events, particularly in pole vaulting, its total Olympic medals in athletics is lower, with 9 medals.
+    \n\nFun fact: Jamaica is famous for its dominance in sprint events, especially in the Olympics, where its athletes have broken world records and left an indelible mark in the history of athletics.";
+
+"info_ii_26" =
+    "● Honduras: Has the largest area dedicated to coffee cultivation in Central America, with approximately 400,000 hectares cultivated, making it the main coffee producer in the region.
+    \n\n● Guatemala: Ranks second, with around 275,000 hectares dedicated to coffee cultivation, known for its high quality and variety.
+    \n\n● Nicaragua: Has nearly 200,000 hectares of coffee cultivated, although its production has faced challenges in recent years.
+    \n\nFun fact: Honduras has experienced significant growth in coffee production over the last decade, becoming the largest coffee exporter in the region, while Guatemalan coffee is highly valued in the international market for its distinctive flavor and quality.";
+
+"info_ii_27" =
+    "● Mexico: Has the largest number of Mayan archaeological sites, with important places like Chichén Itzá, Tulum, and Palenque, among others. It is estimated that there are over 1,000 sites in total.
+    \n\n● Guatemala: Has important Mayan archaeological sites such as Tikal and Quiriguá, with a total of around 500 registered sites.
+    \n\n● Belize: Has several notable archaeological sites, such as Caracol and Xunantunich, but its number is smaller, with approximately 200 sites.
+    \n\nFun fact: The Mayan civilization was one of the most advanced cultures in Mesoamerica, and its archaeological sites are significant not only for their history but also for their architecture, astronomy, and the development of a writing system.";
+
+
 /* Questions Level III */
 "question_iii_31" = "Which countries have searched for ANIME the most in recent years on the internet?";
 "question_iii_32" = "Which country produces the most RUM in the CARIBBEAN?";
@@ -157,6 +249,45 @@
 "question_iii_36" = "Which country has the greatest MARINE BIODIVERSITY in the Caribbean and Central America?";
 "question_iii_37" = "Which country has the most ISLANDS as part of its territory?";
 
+"info_iii_31" =
+    "● Perú: Lidera las búsquedas de anime en internet entre estos países, con una creciente comunidad de aficionados y eventos populares de anime y manga en ciudades como Lima.
+    \n\n● Bolivia: También muestra un alto interés por el anime, especialmente en ciudades como La Paz y Santa Cruz, aunque en menor medida que Perú.
+    \n\n● El Salvador: Tiene una audiencia dedicada al anime, aunque su volumen de búsqueda es menor en comparación con Perú y Bolivia.
+    \n\nDato curioso: Perú es uno de los países de América Latina donde el anime ha tenido una alta popularidad desde la década de 1990, con series como 'Dragon Ball', 'Naruto' y 'One Piece' que contribuyen a esta enorme afición.";
+
+"info_iii_32" =
+    "● Puerto Rico: Es el mayor productor de ron en el Caribe, con marcas reconocidas internacionalmente como 'Bacardi' y 'Don Q', exportando grandes volúmenes al mercado global.
+    \n\n● Cuba: Conocida por su ron de alta calidad, con marcas como 'Havana Club', aunque su volumen de producción es menor que el de Puerto Rico.
+    \n\n● República Dominicana: También tiene una notable producción de ron, con marcas populares como 'Brugal' y 'Barceló', destacándose en la región.
+    \n\nDato curioso: El ron caribeño es apreciado globalmente y forma una parte esencial de la cultura de cada país, cada uno con sus propias técnicas y tradiciones en la producción de ron.";
+
+"info_iii_33" =
+    "● Dato curioso: La densidad en estos pequeños territorios es significativa, especialmente en San Martín, donde el turismo y la infraestructura limitan aún más el espacio disponible.";
+
+"info_iii_34" =
+    "● Costa Rica: Aproximadamente el 26% de su superficie está bajo protección, destacándose por su enfoque en la conservación y el ecoturismo.
+    \n\n● Ecuador: Protege alrededor del 20% de su territorio, incluyendo las famosas Islas Galápagos y diversas reservas en la Amazonía.
+    \n\nDato curioso: Estos tres países son líderes en conservación en América Latina, pero Surinam destaca debido a su baja densidad poblacional, lo que ayuda a mantener grandes áreas de naturaleza intacta.";
+
+"info_iii_35" =
+    "● República Dominicana: Tiene el mayor turismo internacional en el Caribe, recibiendo más de 7 millones de turistas anualmente, especialmente en destinos como Punta Cana y Santo Domingo.
+    \n\n● Cuba: Recibe alrededor de 3 millones de turistas al año, siendo La Habana y Varadero las principales atracciones.
+    \n\n● Puerto Rico: Aproximadamente 4 millones de visitantes llegan cada año, aunque su turismo depende en gran medida del mercado estadounidense.
+    \n\nDato curioso: La República Dominicana ha liderado el turismo caribeño gracias a su infraestructura hotelera y clima de inversión, que han mantenido un flujo constante de turistas internacionales.";
+
+"info_iii_36" =
+    "● República Dominicana: Tiene la mayor biodiversidad marina entre estos países, con una amplia variedad de especies en áreas protegidas como el Parque Nacional del Este y los Arrecifes de Samaná.
+    \n\n● Surinam: Contribuye a la biodiversidad marina con su costa atlántica y estuarios fluviales, aunque su diversidad marina es menor en comparación con el Caribe insular.
+    \n\n● Martinica: Con sus arrecifes y áreas protegidas, tiene una rica vida marina, aunque su diversidad está limitada por su tamaño en comparación con la República Dominicana.
+    \n\nDato curioso: La República Dominicana alberga varias especies marinas endémicas y es uno de los pocos lugares en el Caribe donde se puede observar la desove de ballenas jorobadas, un espectáculo natural que atrae a investigadores y turistas.";
+
+"info_iii_37" =
+    "● Chile: Tiene el mayor número de islas, con más de 5,000 a lo largo de su costa y en el Archipiélago de Chiloé y Patagonia, incluyendo la famosa Isla de Pascua en el Pacífico.
+    \n\n● Venezuela: Tiene más de 300 islas y cayo, siendo Margarita la más conocida, junto con las islas Los Roques y La Tortuga.
+    \n\n● Cuba: Comprende la isla principal y alrededor de 4,000 cayos e islotes, con destinos famosos como Cayo Coco y Cayo Largo.
+    \n\nDato curioso: Aunque Chile tiene el mayor número de islas, muchas son remotas y de difícil acceso, mientras que las islas cubanas y venezolanas son populares por sus playas y atractivo turístico.";
+
+
 /* Questions Level IV */
 "question_iv_41" = "Where have most ECUADORIANS migrated to in Latin America since 2021?";
 "question_iv_42" = "Which countries have won the most GOYA Awards for Best Ibero-American Film?";
@@ -165,6 +296,49 @@
 "question_iv_45" = "Which countries have qualified the most times for the FIFA World Cup?";
 "question_iv_46" = "Which country EXPORTS the most tropical FRUITS?";
 "question_iv_47" = "Where are there more CHILEANS outside of CHILE in Latin America?";
+
+"info_iv_41" =
+    "● Colombia: It has been the main destination for Ecuadorians in Latin America since 2021, due to geographical proximity and migration facilitation between the two countries.
+    \n\n● Peru: It has also received a significant number of Ecuadorian migrants, especially in urban areas like Lima.
+    \n\n● Panama: Although it has received Ecuadorian migration, the flow is smaller compared to Colombia and Peru.
+    \n\nFun fact: Migration of Ecuadorians to Colombia and Peru has increased in recent years due to the search for job opportunities and the ease of cultural adaptation.";
+
+"info_iv_42" =
+    "● Argentina: It is the country with the most Goya Awards for Best Ibero-American Film, with 18 awards to date, featuring notable films like 'La historia oficial' and 'El secreto de sus ojos'.
+    \n\n● Chile: It has won 4 Goya Awards, with notable films like 'Una mujer fantástica' and 'La frontera'.
+    \n\n● Cuba: It has obtained 2 Goya Awards, standing out with films like 'Fresa y chocolate'.
+    \n\nFun fact: Argentina is one of the Latin American countries with the most successes at the Goya Awards, consolidating itself as a powerhouse in Ibero-American cinema.";
+
+"info_iv_43" =
+    "● Mexico: It leads in internationally awarded directors, with names like Alfonso Cuarón, Alejandro González Iñárritu, and Guillermo del Toro, who have won multiple Oscars and other awards at festivals like Cannes and Venice.
+    \n\n● Argentina: It has had several recognized directors in the international circuit, such as Juan José Campanella and Lucrecia Martel, whose works have won awards at prestigious festivals, including the Goya and the Oscar.
+    \n\n● Brazil: Directors like Walter Salles and Fernando Meirelles have achieved global recognition, especially with Oscar nominations and awards at festivals in Europe and the United States.
+    \n\nFun fact: The 'trilogy' of Mexican directors (Cuarón, Iñárritu, and Del Toro) has marked a golden era for Latin American cinema in Hollywood, known as the 'Three Amigos' and winning multiple international awards in the last decade.";
+
+"info_iv_44" =
+    "● Cuba: It has the largest coastline, with approximately 5,746 km of shore, surrounding the main island and its multiple cays and islets.
+    \n\n● Panama: It has about 2,857 km of coastline between the Pacific Ocean and the Caribbean Sea, being one of the few countries with coastlines on two oceans.
+    \n\n● Costa Rica: It has approximately 1,290 km of coastline, also on the Caribbean and Pacific, with beaches known for their biodiversity.
+    \n\nFun fact: Panama is unique in the region for its strategic position between two oceans, making it a key center for global maritime trade with the famous Panama Canal.";
+
+"info_iv_45" =
+    "● Brazil: It leads with 22 consecutive qualifications, being the only country to participate in all editions of the World Cup since its inception in 1930.
+    \n\n● Argentina: It has qualified 18 times, standing out with victories in 1978, 1986, and 2022, and being one of the most competitive teams in the tournament.
+    \n\n● Mexico: It has qualified 17 times, standing out as the country in the CONCACAF region with the most participations.
+    \n\nFun fact: Brazil, besides being the country with the most qualifications, is also the one that has won the World Cup the most times, with five titles in its history (1958, 1962, 1970, 1994, and 2002).";
+
+"info_iv_46" =
+    "● Ecuador: It is the leading exporter, especially of bananas and plantains, being one of the largest global suppliers.
+    \n\n● Costa Rica: It stands out for its export of pineapple and bananas, primarily supplying markets in the United States and Europe.
+    \n\n● Colombia: It is also a major exporter of bananas and avocados, although on a smaller scale compared to Ecuador and Costa Rica.
+    \n\nFun fact: Ecuador and Costa Rica lead the export of tropical fruits in Latin America, and Costa Rica is the largest exporter of pineapple worldwide.";
+
+"info_iv_47" =
+    "● Argentina: It is the country with the most Chileans outside of Chile, with a community of approximately 500,000 people, due to geographical proximity and ease of movement.
+    \n\n● Brazil: It also hosts a community of Chileans, although in smaller numbers than Argentina.
+    \n\n● Venezuela: While it has Chileans residing there, the community is significantly smaller compared to Argentina and Brazil.
+    \n\nFun fact: Argentina has been the preferred destination for Chilean emigrants for decades, thanks to historical and cultural ties, as well as flexible immigration policies between the two countries.";
+
 
 /* Questions Level V */
 "question_v_51" = "Which country has the largest ECONOMY based on its GDP?";
@@ -176,6 +350,55 @@
 "question_v_57" = "Who has the greatest INTERNET coverage?";
 "question_v_58" = "Which countries have won the COPA AMÉRICA the most times?";
 
+"info_v_51" =
+    "● Brazil: It has the largest economy in Latin America, with a GDP of approximately $2.0 trillion (2023), standing out in sectors such as agriculture, mining, and industry.
+    \n\n● Mexico: It ranks second, with a GDP of around $1.3 trillion, driven by manufacturing, trade, and tourism.
+    \n\n● Argentina: Although it is a significant economy, its GDP is approximately $640 billion, focusing on agriculture and livestock.
+    \n\nFun fact: Brazil and Mexico are considered the two economic giants of the region, and both countries are members of the G20, highlighting their importance in the global economy.";
+
+"info_v_52" =
+    "● Venezuela: It has the highest oil production in the region, with production capacity that has fluctuated but has historically exceeded 1.5 million barrels per day due to its vast reserves in the Orinoco Oil Belt.
+    \n\n● Brazil: It is a significant oil producer, especially offshore, with production around 3 million barrels per day in recent years, thanks to the exploitation of pre-salt fields.
+    \n\n● Mexico: It has had production of around 1.7 million barrels per day but has seen a decline in recent years due to the maturity of its oil fields.
+    \n\nFun fact: Venezuela has the largest oil reserves in the world, but its production has been affected by economic and political crises, reducing its export capacity.";
+
+"info_v_53" =
+    "● Argentina: It is the country with the most Paraguayans abroad, with a community of approximately 500,000 people, attracted by geographical proximity and job opportunities.
+    \n\n● Brazil: It also hosts a significant Paraguayan population, especially in the state of Paraná, where around 200,000 Paraguayans live.
+    \n\n● Chile: It has a smaller Paraguayan community, with around 100,000 Paraguayans who have emigrated in search of better opportunities.
+    \n\nFun fact: Paraguayan migration to Argentina has been historical, and many Paraguayans maintain strong cultural and familial ties with their home country, facilitating their integration into Argentine society.";
+
+"info_v_54" =
+    "● Brazil: It has had the highest number of COVID-19 cases in Latin America, with over 37 million reported cases since the beginning of the pandemic, making it one of the most affected countries in the world.
+    \n\n● Argentina: It has reported around 10 million cases, being one of the countries with the highest infection rates in the region at critical moments.
+    \n\n● Mexico: It has had approximately 7.5 million cases, facing high mortality and a significant burden on its healthcare system.
+    \n\nFun fact: Brazil has been the epicenter of the pandemic in Latin America, leading to intense debate about crisis management and the importance of vaccination, which has helped control the spread of the virus in the region.";
+
+"info_v_55" =
+    "● Mexico: It is the country where One Piece is most popular, with a large number of fans and events related to the anime, in addition to being broadcast on various television platforms.
+    \n\n● Brazil: It also has a wide community of One Piece fans, with numerous conventions and social media groups dedicated to the anime.
+    \n\n● Argentina: It has a significant fan base, although it is less prominent compared to Mexico and Brazil.
+    \n\nFun fact: Mexico is known for its great enthusiasm for anime in general, and events like Mexico Comic Con often include panels and activities dedicated to One Piece, reflecting the enthusiasm of local fans.";
+
+"info_v_56" =
+    "● Mexico: It has the most World Heritage Sites, with 35 sites recognized by UNESCO, including wonders such as Chichén Itzá, the Historic Center of Mexico City, and the area of monasteries along the Silver Route.
+    \n\n● Brazil: It has 23 World Heritage Sites, highlighting the Iguazu National Park and the Historic Center of Ouro Preto.
+    \n\n● Peru: It has 12 recognized sites, including Machu Picchu and the Historic Center of Cusco.
+    \n\nFun fact: Mexico not only leads in the number of World Heritage Sites but is also the first country in the world to receive this recognition for its rich cultural and historical heritage, making it a popular destination for tourists interested in history and architecture.";
+
+"info_v_57" =
+    "● Uruguay: It has the highest internet coverage in the region, with access exceeding 95% of the population, thanks to digital inclusion policies and a strong focus on telecommunications infrastructure.
+    \n\n● Chile: It offers high internet coverage, reaching around 92% of the population, driven by advanced infrastructure and strong competition in the telecommunications market.
+    \n\n● Argentina: The internet coverage is approximately 80%, although there are significant variations between urban and rural areas.
+    \n\nFun fact: Uruguay has been a pioneer in implementing internet access programs in schools and promoting connectivity, contributing to its high coverage rate and the development of a growing digital economy.";
+
+"info_v_58" =
+    "● Uruguay: It has won the Copa América 15 times, being the country with the most titles in the history of the tournament, with notable victories in years such as 1916, 1942, and 2011.
+    \n\n● Argentina: It has also been champion 15 times, with notable wins in 1987, 1993, and more recently in 2021.
+    \n\n● Brazil: It has won the tournament 9 times, with important titles in 1949, 1989, and 2019.
+    \n\nFun fact: The rivalry between Uruguay, Argentina, and Brazil in the Copa América is intense, and these three teams have dominated the tournament since its inception in 1916, being responsible for the majority of the titles won.";
+
+
 /* Questions Level VI */
 "question_vi_61" = "Who has the largest MILITARY FORCES based on the number of personnel?";
 "question_vi_62" = "Who has the longest COASTLINE in Latin America?";
@@ -184,6 +407,47 @@
 "question_vi_65" = "Who generates the most HYDROELECTRIC POWER?";
 "question_vi_66" = "Where are there more COLOMBIANS outside of COLOMBIA in Latin America?";
 "question_vi_67" = "Who PRODUCES the most FLOWERS in the region?";
+
+"info_vi_61" =
+    "● Brazil: It has the largest military forces in the region, with approximately 400,000 active military personnel, in addition to a significant number of reservists.
+    \n\n● Mexico: It has around 200,000 personnel in its armed forces, including the Army, Navy, and Air Force.
+    \n\n● Chile: It has the smallest military forces in this group, with approximately 100,000 personnel in total, including regular and reserve forces.
+    \n\nFun fact: Brazil not only leads in the number of personnel but also has the largest military training program in South America and is known for participating in UN peacekeeping missions worldwide.";
+
+"info_vi_62" =
+    "● Chile: It has the longest coastline in Latin America, with approximately 6,435 kilometers of shoreline, thanks to its geography that stretches along the Pacific Ocean.
+    \n\n● Brazil: It has an extensive coastline of around 7,491 kilometers, which is the longest in South America, featuring famous beaches and a diversity of marine ecosystems.
+    \n\n● Argentina: It has a coastline of approximately 4,989 kilometers, which includes the Atlantic coastline and access to Antarctica.
+    \n\nFun fact: Although Brazil has the longest coastline overall, Chile has the most coastline relative to its land size, providing it with a great diversity of marine resources and opportunities for fishing and coastal tourism.";
+
+"info_vi_63" =
+    "● Brazil: It is the largest producer of sugar in Latin America and worldwide, with a production exceeding 40 million tons annually, thanks to its vast sugarcane cultivation.
+    \n\n● Mexico: It ranks second in the region, producing around 6 million tons of sugar, with a sugar industry that has been an important part of its economy.
+    \n\n● Colombia: It produces approximately 2.5 million tons of sugar, being a smaller producer compared to Brazil and Mexico, but with sustained growth in its industry.
+    \n\nFun fact: Brazil not only leads in sugar production but is also the largest exporter, and its industry is crucial for the production of biofuels, especially ethanol, which is obtained from sugarcane.";
+
+"info_vi_64" =
+    "● Brazil: While it has a rich variety of regional dishes, such as feijoada and acarajé, it ranks lower compared to Peru and Mexico in terms of global recognition.
+    \n\nFun fact: Peruvian cuisine has gained international notoriety in the last decade, with several Peruvian restaurants ranked among the best in the world, reflecting its global influence and the quality of its food.";
+
+"info_vi_65" =
+    "● Brazil: It is the largest generator of hydropower in Latin America and one of the world leaders, producing around 65% of its electricity through hydroelectric plants, such as the famous Itaipu Dam.
+    \n\n● Venezuela: It relies heavily on hydropower, with a percentage similar to that of Paraguay, but its production has declined in recent years due to infrastructure and maintenance issues.
+    \n\n● Paraguay: It generates a significant amount of hydropower, also from the Itaipu Dam, shared with Brazil. Approximately 90% of its electricity comes from hydropower sources, making it an energy exporter.
+    \n\nFun fact: The Itaipu Dam, located on the border between Brazil and Paraguay, was for many years the largest hydroelectric plant in the world in terms of energy production, symbolizing the energy collaboration between the two countries.";
+
+"info_vi_66" =
+    "● Venezuela: It hosts the largest number of Colombians abroad, with approximately 1.5 million Colombian migrants, due to geographical proximity and historical ties.
+    \n\n● Chile: It has become an attractive destination for Colombians in recent years, with around 600,000 Colombians residing in the country, drawn by its economic stability and job opportunities.
+    \n\n● Ecuador: It has a considerable Colombian population, estimated at 300,000 people, with many Colombians migrating in search of better job opportunities and living conditions.
+    \n\nFun fact: Colombian migration to Venezuela has been historical and intensified during the economic and political crises in this country. However, in recent years, many Colombians have also begun to emigrate to countries like Chile and Ecuador in search of new opportunities.";
+
+"info_vi_67" =
+    "● Ecuador: It is the largest producer of flowers in the region, especially known for its rose production, with approximately 25,000 tons exported annually. The altitude and favorable climate of Ecuador contribute to the quality and variety of its flowers.
+    \n\n● Mexico: It also has a significant floral industry, producing various species of flowers, although its volume is lower compared to Ecuador. The annual production is around 10,000 tons.
+    \n\n● Chile: It produces a smaller amount of flowers compared to Ecuador and Mexico, although it has a diversity of species and a growing market.
+    \n\nFun fact: Ecuador is one of the leading flower exporters worldwide, especially to the United States and Europe, and 'Rose Day' is celebrated in February, highlighting the importance of this flower in its economy.";
+
 
 /* Questions Level VII */
 "question_vii_71" = "Which countries have won the Ariel Award for Best Ibero-American Film the most times?";
@@ -194,6 +458,49 @@
 "question_vii_76" = "Which countries have had the most films selected at the Berlin Film Festival?";
 "question_vii_77" = "According to Taste Atlas, how did it rank countries based on their MAIN DISH (not their overall gastronomy)?";
 
+"info_vii_71" =
+    "● Argentina: It is the country that has won the Ariel Award for Best Ibero-American Film the most times, with a total of 8 awards. Its cinematography has been recognized for its quality and diversity.
+    \n\n● Chile: It has won the award several times, standing out on the international scene with a total of 3 awards. Chilean films have resonated both regionally and globally.
+    \n\n● Brazil: It has also found success in the film industry, with 2 Ariel awards, although its focus has been more varied in terms of categories and international recognitions.
+    \n\nFun fact: The Ariel Award is one of the most important film awards in Mexico and Ibero-America, and its focus on Ibero-American films reflects the rich cultural and cinematographic diversity of the region.";
+
+"info_vii_72" =
+    "● Dominican Republic: It is the country that receives the most international tourists in Central America and the Caribbean, attracting around 7 million visitors a year, thanks to its beaches, resorts, and adventure tourism.
+    \n\n● Cuba: It is also a popular destination, receiving approximately 4 million tourists annually. Its rich history, culture, and beaches make it attractive to visitors from around the world.
+    \n\n● Puerto Rico: It receives around 3 million tourists a year, benefiting from its proximity to the United States and its cultural appeal, although its number is lower compared to the Dominican Republic and Cuba.
+    \n\nFun fact: The Dominican Republic has seen consistent growth in its tourism industry, partly due to investments in infrastructure and promotion, becoming the main tourist destination in the Caribbean.";
+
+"info_vii_73" =
+    "● Honduras: It is the largest coffee producer in Central America, with a production of approximately 7 million bags per year. Its coffee is recognized for its quality and diversity of flavors, and it has become an important global exporter.
+    \n\n● Guatemala: It ranks second in coffee production in the region, with around 3 million bags annually. Guatemalan coffee is famous for its distinctive flavor profile, especially from the regions of Antigua and Huehuetenango.
+    \n\n● Nicaragua: Although its production is smaller, with about 1.5 million bags a year, Nicaragua has begun to gain recognition for the quality of its coffee, especially in specialty markets.
+    \n\nFun fact: Coffee is one of the main export products in these countries, and production is based on sustainable and fair trade methods, helping to improve the living conditions of farmers in the region.";
+
+"info_vii_74" =
+    "● Guatemala: It has the largest population of Mexicans outside of Mexico in Latin America, with approximately 200,000 Mexicans living there. Geographical proximity and cultural ties facilitate migration between the two countries.
+    \n\n● Chile: It has a growing Mexican community, estimated at 120,000 people, attracted by job opportunities and the country's economic stability.
+    \n\n● Bolivia: Although it has a smaller Mexican population, it is estimated that around 20,000 Mexicans reside in the country.
+    \n\nFun fact: Mexican migration to Guatemala has a historical background, and the Mexican community in Guatemala contributes to local culture and trade relations between the two countries.";
+
+"info_vii_75" =
+    "● Mexico: It is the country that has produced the most successful comedy films in Latin America, with a rich tradition in the genre, including titles that have been major hits both at the box office and on television. Films like 'Nosotros los Nobles' and 'La Casa de las Flores' are notable examples.
+    \n\n● Argentina: It has also produced several successful comedies, standing out in both independent and commercial cinema, with films like 'El Hijo de la Novia' and 'Relatos Salvajes,' which have been acclaimed nationally and internationally.
+    \n\n● Brazil: Although it has had fewer comedy productions compared to Mexico and Argentina, it boasts notable successes like 'O Auto da Compadecida' and 'Minha Mãe é uma Peça.' Brazilian comedy has gained popularity in the region.
+    \n\nFun fact: Comedy in Latin American cinema often reflects the culture and social issues of each country, using humor as a tool to critique and analyze reality.";
+
+"info_vii_76" =
+    "● Argentina: It has had the most films selected at the Berlin Film Festival, with a notable presence over the years. Titles like 'El Secreto de Sus Ojos' and 'Nadie Nos Mira' have been acclaimed at this festival.
+    \n\n● Brazil: It also has strong representation, with numerous films selected. Productions like 'City of God' and 'Central Station' have stood out in Berlin, receiving international recognition.
+    \n\n● Chile: It has increased its presence in recent years, with several selections at the festival. Films like 'Una Mujer Fantástica' have received praise and awards in Berlin, helping to consolidate Chilean cinematography on the international stage.
+    \n\nFun fact: The Berlin Film Festival is one of the most prestigious in the world, and the participation of Latin American films reflects the growth and diversity of cinema in the region. Selection at this festival can boost the careers of filmmakers and open doors to new markets.";
+
+"info_vii_77" =
+    "● Argentina: According to Taste Atlas, the standout main dish of Argentina is asado, known for its quality and the way it is cooked, becoming a cultural tradition in the country.
+    \n\n● Brazil: The most recognized main dish is feijoada, a black bean stew with meat, which is a symbol of Brazilian cuisine and highly appreciated throughout the country.
+    \n\n● Colombia: Bandeja paisa is considered its most representative main dish, an abundant mix of rice, beans, meat, plantain, and egg, reflecting the country's regional diversity.
+    \n\nFun fact: Each of these main dishes is not only a reflection of local cuisine but also represents the culture and traditions of each country, often being the centerpiece of family gatherings and celebrations.";
+
+
 /* Questions Level VIII */
 "question_viii_81" = "Where are there more URUGUAYANS outside of URUGUAY in Latin America?";
 "question_viii_82" = "Which countries have had the most Oscar nominations in the Best International Feature Film category?";
@@ -202,6 +509,49 @@
 "question_viii_85" = "Which countries have won the most Platino Awards for Ibero-American Cinema?";
 "question_viii_86" = "Which countries have produced the most films with nominations at international festivals?";
 "question_viii_87" = "Which countries have had the most actors nominated for an Oscar?";
+
+"info_viii_81" =
+    "● Argentina: It is the country with the largest population of Uruguayans outside of Uruguay, with approximately 600,000 Uruguayans living there. The geographical proximity and historical ties between both countries facilitate this migration.
+    \n\n● Brazil: It has a significant Uruguayan community, estimated at 50,000 people, especially in states like Rio Grande do Sul, where there is a strong cultural exchange.
+    \n\n● Chile: It has a smaller Uruguayan population, with around 20,000 Uruguayans residing in the country, attracted by job opportunities and a similar environment.
+    \n\nFun fact: Uruguayan migration to Argentina has been historical, and the Uruguayan community in Argentina keeps many cultural traditions alive, such as mate and candombe music.";
+
+"info_viii_82" =
+    "● Argentina: It has had the most nominations in the Best International Feature Film category, with titles like 'The Official Story' and 'The Secret in Their Eyes,' which won the Oscar in this category. Argentina has been recognized in multiple editions.
+    \n\n● Mexico: It also has a significant number of nominations, with films like 'Roma' and 'Amores Perros' receiving international acclaim, highlighting the quality of Mexican cinema on the global stage.
+    \n\n● Brazil: Although it has had fewer nominations than Argentina and Mexico, its cinema has been recognized with films like 'Central Station' and 'City of God,' which have made an impact internationally.
+    \n\nFun fact: Nominations for the Oscar in this category reflect the talent and cultural diversity of each country, and many of these films address relevant social and political issues, resonating with audiences worldwide.";
+
+"info_viii_83" =
+    "● Argentina: It is home to several prominent international film festivals, such as the Buenos Aires International Festival of Independent Cinema (BAFICI) and the Mar del Plata International Film Festival, which attract filmmakers and cinema lovers from around the world.
+    \n\n● Brazil: It has a large number of recognized festivals, including the Rio de Janeiro International Film Festival and the São Paulo International Film Festival, which are important platforms for Latin American and global cinema.
+    \n\n● Mexico: It stands out for festivals such as the Morelia International Film Festival and the Guadalajara International Film Festival, which have gained international reputation and are crucial for promoting cinema in the region.
+    \n\nFun fact: Film festivals in these countries not only celebrate cinema but also serve as a space for cultural exchange and the promotion of new voices in the film industry, contributing to the growth of Latin American cinema on the global scene.";
+
+"info_viii_84" =
+    "● Dominican Republic: It has the largest economy in Central America and the Caribbean, with a GDP that has shown significant growth in recent years, driven by sectors such as tourism, agriculture, and free trade zones.
+    \n\n● Guatemala: It is the second-largest economy in the region, with a GDP mainly supported by agriculture, manufacturing, and trade. It is also a major exporter of products such as coffee and sugar.
+    \n\n● Costa Rica: Although it is smaller in terms of GDP compared to the Dominican Republic and Guatemala, its economy is robust, excelling in technology, tourism, and sustainable agriculture, making it a model of development in the region.
+    \n\nFun fact: The economy of the Dominican Republic has grown remarkably, becoming one of the most important tourist destinations in the Caribbean, while Guatemala and Costa Rica are focusing on diversifying their economies and improving the quality of life for their inhabitants.";
+
+"info_viii_85" =
+    "● Argentina: It has been the most prominent country in the Platino Awards, with multiple awards for films like 'The Secret in Their Eyes' and 'The Official Story.' Its film industry has gained recognition in various categories.
+    \n\n● Chile: Although it has had fewer awards compared to Argentina and Brazil, its cinema has been recognized on several occasions, highlighting works like 'A Fantastic Woman,' which won the Oscar and had a notable presence at the Platino Awards.
+    \n\n● Brazil: It has also performed well at the Platino Awards, with films like 'City of God' and 'Aquarius' receiving nominations and awards, reflecting the richness of its film production.
+    \n\nFun fact: The Platino Awards celebrate the best of Ibero-American cinema, and their growing popularity reflects international recognition of talent and creativity in the region, promoting a greater diffusion of Latin American cinema globally.";
+
+"info_viii_86" =
+    "● Argentina: It has produced a large number of films that have been nominated and awarded at international festivals, such as the Cannes Film Festival and the Berlin Film Festival. Films like 'The Secret in Their Eyes' and 'The Official Story' have been acclaimed worldwide.
+    \n\n● Brazil: It also has a notable number of films that have received nominations at international festivals, such as 'City of God' and 'Central Station.' Its cinema is recognized for addressing relevant social and cultural issues.
+    \n\n● Chile: Although it has had fewer films in international festivals than Argentina and Brazil, it has gained visibility with works like 'A Fantastic Woman' and 'The Club,' which have received nominations and awards in various competitions.
+    \n\nFun fact: The presence of films from these countries at international festivals highlights the diversity and cultural richness of Latin American cinematography, as well as opening doors to new talents and narratives in the global film industry.";
+
+"info_viii_87" =
+    "● Mexico: It has had a notable number of Oscar-nominated actors, including recognized figures like Salma Hayek, Gael García Bernal, and Alfonso Cuarón (as a director, also nominated as an actor). Mexico is one of the most represented Latin American countries in this category.
+    \n\n● Argentina: It has produced Oscar-nominated actors, such as Ricardo Darín and Javier Bardem (although he is Spanish, he has worked in Argentine productions). Furthermore, Argentina has had a strong presence in the foreign film category, contributing to the visibility of its actors.
+    \n\n● Brazil: It has also seen nominations for its actors, with examples like Fernanda Montenegro, who was nominated for her role in 'Central Station.' However, its number of nominations is lower compared to Mexico and Argentina.
+    \n\nFun fact: The presence of Latin American actors at the Oscars reflects the growing recognition and influence of Latin cinema in the global film industry, helping to pave the way for new narratives and emerging talents.";
+
 
 /* Questions Level IX */
 "question_ix_91" = "Which countries have the most internationally recognized animated productions?";
@@ -213,6 +563,55 @@
 "question_ix_97" = "Which countries have won the most awards at the Mar del Plata Film Festival?";
 "question_ix_98" = "Where have most BRAZILIANS emigrated since 2022 in Latin America?";
 
+"info_ix_91" =
+    "● Argentina: Has had a significant impact on the production of animated films, standing out with works like 'Futbolín' and 'La famosa invasión de los osos en Italia'. Argentina has won awards at international festivals, highlighting its quality in animation.
+    \n\n● Brazil: Has also produced recognized animated films, such as 'O Menino e o Mundo,' which was nominated for an Oscar. Brazilian animation often addresses social and cultural themes, capturing attention at international festivals.
+    \n\n● Chile: Although it has produced fewer animated films compared to Argentina and Brazil, it has stood out with works like 'Historia de un oso,' which won the Oscar for Best Animated Short Film. Its industry is growing and beginning to gain recognition in the international arena.
+    \n\nFun fact: Animation in these countries reflects not only creative talent but also a rich cultural diversity, increasingly becoming a platform for telling Latin American stories to a global audience.";
+
+"info_ix_92" =
+    "● Brazil: Has had a notable presence at the Cannes Film Festival, with films like 'Cidade de Deus' and 'Central Station.' Brazil has received several selections over the years, highlighting the quality and relevance of its cinema on the international stage.
+    \n\n● Argentina: Has also made a strong impact at Cannes, with films like 'La historia oficial' and 'El secreto de sus ojos,' which have not only been selected but have also won major awards. Argentina is known for its solid filmography and its ability to capture the attention of international critics.
+    \n\n● Mexico: Has seen an increase in the number of films selected at Cannes in recent years, with directors like Alfonso Cuarón and Guillermo del Toro bringing their cinema to competition. Although its historical number of selections is lower compared to Brazil and Argentina, Mexico is gaining visibility at international festivals.
+    \n\nFun fact: The participation of these countries at the Cannes Film Festival highlights not only their cinematic talent but also their cultural diversity, contributing to the representation of Latin America in the global film industry.";
+
+"info_ix_93" =
+    "● Argentina: Has stood out in the production of internationally acclaimed documentaries, with works like 'La historia oficial' and 'Nuestro matrimonio.' Argentina has won awards at major festivals such as the Cannes Film Festival and the International Documentary Film Festival Amsterdam (IDFA), establishing itself as a leader in this genre.
+    \n\n● Brazil: Has also made a significant impact in the documentary world, with recognized titles like 'O processo' and 'Democracia em vertigem.' Brazil has received awards at various festivals, including Cannes and Sundance, showcasing the strength of its documentary narrative.
+    \n\n● Chile: Has produced acclaimed documentaries like 'El mocito' and 'Nostalgia de la luz,' winning awards at international festivals. The documentary industry in Chile is growing and has begun to receive recognition on the global circuit.
+    \n\nFun fact: The production of documentaries in these countries not only reflects a rich cultural and social diversity but is also used as a tool to explore and document the history and contemporary realities of Latin America, attracting the attention of international audiences.";
+
+"info_ix_94" =
+    "● Argentina: Is known for its vibrant independent cinema, with films like 'El hijo de la novia' and 'La mujer sin cabeza' that have received international recognition. The diversity of narratives and styles in Argentine independent cinema has led to a strong presence at film festivals, such as the Cannes Film Festival and the Toronto International Film Festival.
+    \n\n● Brazil: Has seen remarkable growth in its independent cinema, standing out with films like 'Que Horas Ela Volta?' (The Second Mother) and 'Cidade de Deus' (City of God), which have gained worldwide awards and recognition. Brazilian independent cinema often addresses social and political themes, reflecting the reality of the country.
+    \n\n● Chile: Has also produced acclaimed independent films, with works like 'Una mujer fantástica' and 'Nostalgia de la luz,' which have been awarded at international festivals. Chilean cinema has gained visibility in the global circuit, and its independent production continues to grow.
+    \n\nFun fact: The production of independent cinema in Argentina, Brazil, and Chile has allowed for the exploration of a wide range of themes, from social issues to personal stories, contributing to the richness and diversity of Latin American cinema on the global stage. These countries are at the forefront of independent cinema in the region, attracting both critics and international audiences.";
+
+"info_ix_95" =
+    "● Colombia: Is the host country of the International Film Festival of Cartagena de Indias, held annually since 1960. This festival is one of the most important in Latin America and focuses on promoting Colombian and Latin American cinema, as well as serving as a platform for new filmmakers.
+    \n\n● Brazil: Although Brazil is not the host of the Cartagena Film Festival, it has been present at the festival with a strong representation of its films and filmmakers, participating in competitive sections and being recognized for its contribution to Latin American cinema.
+    \n\n● Argentina: Similar to Brazil, Argentina has not been the host of the Cartagena Film Festival but has had a significant presence at the festival, with numerous Argentine productions exhibited and awarded, reflecting the influence of Argentine cinema in the region.
+    \n\nFun fact: The Cartagena Film Festival not only celebrates films from Colombia and Latin America but also attracts filmmakers from around the world, becoming a meeting point for the film industry and promoting cultural cooperation between countries.";
+
+"info_ix_96" =
+    "● Argentina: Has produced several critically acclaimed historical films, such as 'El secreto de sus ojos' and 'La historia oficial,' which explore significant events in Argentine history, such as the military dictatorship and human rights. These films have received international recognition, including awards at festivals and Oscar nominations.
+    \n\n● Brazil: Is known for its historical productions, such as 'City of God' and 'O Que É Isso, Companheiro?' which address crucial moments in Brazilian history. These films have been well received at international festivals and have contributed to the narrative of Brazilian cinema on the global stage.
+    \n\n● Mexico: Has also been successful with films based on historical events, such as 'Roma' and 'La historia de los mexicanos,' reflecting significant cultural and social events. Mexican cinema has gained recognition at international film festivals, highlighting the richness of its history.
+    \n\nFun fact: Historical films from Argentina, Brazil, and Mexico not only provide entertainment but also serve as educational tools, helping audiences understand and reflect on their past and the events that have shaped their societies. These productions have been fundamental in giving voice to stories that have often been silenced or forgotten.";
+
+"info_ix_97" =
+    "● Argentina: As the host country of the International Film Festival of Mar del Plata, Argentina has received the most awards in various categories. Argentine films like 'La historia oficial' and 'El secreto de sus ojos' have been awarded, consolidating the festival's reputation as an important event for Argentine cinema.
+    \n\n● Brazil: Has also had a prominent presence at the festival, with several award-winning productions over the years. Films like 'Central do Brasil' and 'Cidade de Deus' have received recognition, reflecting the strength of Brazilian cinema on the international circuit.
+    \n\n● Mexico: Although Mexico is not the host country, it has successfully competed at the festival. Films like 'Amores perros' and 'Roma' have been awarded, highlighting the quality and diversity of Mexican cinema.
+    \n\nFun fact: The Mar del Plata Film Festival is the only A-class film festival in Latin America, according to the International Federation of Film Producers Associations (FIAPF). This attracts filmmakers from around the world and fosters significant cultural exchange, contributing to the visibility of Latin American cinema on the global stage.";
+
+"info_ix_98" =
+    "● Panama: Has become a popular destination for Brazilians in recent years, especially due to its growing economy and ease of doing business. The Brazilian community in Panama has grown significantly, attracted by job opportunities and quality of life.
+    \n\n● Argentina: Many Brazilians have emigrated to Argentina, driven by cultural proximity and access to education. Argentine cities, like Buenos Aires, are appealing to Brazilians seeking new opportunities and a multicultural environment.
+    \n\n● Bolivia: Although to a lesser extent than the previous two, Bolivia has also seen an increase in Brazilian immigration, especially in areas close to the border. Brazilians moving to Bolivia often seek work in agriculture and informal sectors.
+    \n\nFun fact: Brazilian migration has been driven by factors such as the search for employment, education, and business opportunities. Additionally, the cultural and linguistic proximity to countries like Argentina and Panama facilitates the integration of Brazilians into these societies.";
+
+
 /* Questions Level X */
 "question_x_101" = "Which countries have produced the most film noir movies?";
 "question_x_102" = "Which countries have had the most films presented at the San Sebastián Film Festival?";
@@ -222,6 +621,49 @@
 "question_x_106" = "Which countries have the most recognized children\'s animated films?";
 "question_x_107" = "Which countries produce the most sugarcane in Central America and the Caribbean?";
 
+"info_x_101" =
+    "● Mexico: It is known for its rich tradition in film noir, especially during the golden age of Mexican cinema (1940-1950). Films like 'Los olvidados' by Luis Buñuel and 'El ángel exterminador' are prominent examples that reflect the style and themes of film noir.
+    \n\n● Argentina: It has also significantly contributed to the genre with notable works like 'La noche de los lápices' and 'El secreto de sus ojos,' which, although not classic film noir, present dark elements and plots of mystery and crime that have resonated with audiences.
+    \n\n● Brazil: Although film noir is not as prominent as in Mexico or Argentina, it has had some interesting productions, such as 'O Invasor' and 'Cidade de Deus,' which incorporate thriller and violence elements, exploring corruption and criminality in urban contexts.
+    \n\nFun fact: Film noir in Latin America has evolved by incorporating unique cultural and social elements from each country, allowing them to adapt the genre to their context and offer narratives that resonate with local audiences while also attracting international attention.";
+
+"info_x_102" =
+    "● Argentina: It has had a strong presence at the San Sebastián Festival, with numerous films presented over the years. Movies like 'El secreto de sus ojos' and 'La historia oficial' have been recognized and awarded at this festival.
+    \n\n● Brazil: It has also been a prominent participant in the festival, showcasing a variety of films that address social and political themes. Titles like 'City of God' and 'Aquarius' have received international attention at this event.
+    \n\n● Chile: It has increased its presence at the San Sebastián Festival in recent years, presenting acclaimed films such as 'Una mujer fantástica' and 'El Club,' which have won awards and recognition for their innovation and narrative.
+    \n\nFun fact: The San Sebastián Festival is one of the most important film festivals in Europe and serves as a crucial platform for Ibero-American cinema, promoting the talent of emerging directors and works by established filmmakers, strengthening the cultural connection between these countries and the rest of the world.";
+
+"info_x_103" =
+    "● Cuba: It has the largest area of mangroves in the Caribbean, especially in the Zapata Peninsula and the Cays of the Isle of Youth. Cuban mangroves are vital for biodiversity and act as natural barriers against hurricanes.
+    \n\n● Nicaragua: It also has significant mangrove ecosystems, especially in the Caribbean coastal region, such as the Indio Maíz Biological Reserve. These mangroves are crucial for marine life and as a refuge for various bird species and wildlife.
+    \n\n● Honduras: It has significant mangroves on the Caribbean coast, particularly in the Tela Bay area and the Jeanette Kawas National Park. These ecosystems are essential for coastal protection and maintaining biodiversity.
+    \n\nFun fact: Mangroves in Central America and the Caribbean are not only important for local ecology but also provide economic benefits to communities, such as fishing and tourism, and play a crucial role in mitigating climate change by absorbing large amounts of carbon.";
+
+"info_x_104" =
+    "● Argentina: It is known for its strong tradition in cinema that addresses social conflicts, especially during and after the military dictatorship (1976-1983). Films like 'La historia oficial' and 'El secreto de sus ojos' have gained international recognition.
+    \n\n● Brazil: It has produced numerous films that explore themes of social inequality and conflict, such as 'Cidade de Deus' and 'Tropa de Elite,' which depict life in favelas and police violence.
+    \n\n● Chile: It has also contributed to cinema about social conflicts, particularly following the dictatorship of Augusto Pinochet (1973-1990). Works like 'No' and 'Machuca' deal with historical memory and the effects of repression.
+    \n\nFun fact: Latin American cinema about social conflicts not only entertains but also educates and inspires discussions about human rights, social justice, and historical memory, contributing to reflection and change in society.";
+
+"info_x_105" =
+    "● Chile: It is the country where the most Argentines have emigrated since 2021, due to geographical proximity, cultural similarities, and job opportunities. Santiago, the capital, hosts a large Argentine community.
+    \n\n● Paraguay: It has also received a growing number of Argentine emigrants, partly in search of better living and employment conditions. Proximity and shared culture facilitate integration.
+    \n\n● Bolivia: Although to a lesser extent than Chile and Paraguay, there is also a presence of Argentines seeking job and educational opportunities in Bolivia.
+    \n\nFun fact: Argentine emigration has increased significantly in recent years due to economic, social, and political factors, leading to an interest in settling in neighboring countries where they can find better opportunities.";
+
+"info_x_106" =
+    "● Argentina: It has produced successful children's animated films like 'Metegol' and 'Gaturro,' which have received recognition both nationally and internationally. The Argentine animation industry has grown in recent decades, known for its creativity and unique style.
+    \n\n● Brazil: Known for its vibrant and colorful animation, Brazil has created films like 'O Menino e o Mundo' (The Boy and the World), which received Oscar nominations. Its focus on cultural and social themes resonates with young audiences.
+    \n\n● Mexico: Mexican animation has gained strength with productions like 'El Libro de la Vida' and 'Coco,' which have been acclaimed for their artistic quality and narrative, achieving great box office success and awards.
+    \n\nFun fact: Animation in these countries not only entertains but also addresses educational and cultural themes, helping to preserve cultural identity and fostering learning among the youth.";
+
+"info_x_107" =
+    "● Guatemala: It is the leading producer of sugarcane in Central America, with a well-established sugar industry. In 2022, Guatemala exported over 2.2 million tons of sugar, making it one of the largest exporters in the region.
+    \n\n● Cuba: Historically, Cuba has been known for its sugarcane production, especially during the 20th century. Although production has decreased in recent decades, it remains a key crop in the Cuban economy, with plantations in various provinces.
+    \n\n● Dominican Republic: Sugarcane is an important crop in the Dominican Republic, contributing to its agricultural economy. Production is concentrated in the southern region of the country, and Dominican sugar is known for its quality.
+    \n\nFun fact: Sugarcane is crucial not only for sugar production but also for rum production, especially in countries like Cuba and the Dominican Republic, where rum is an important part of local culture and economy.";
+
+
 /* Questions Level XI */
 "question_xi_111" = "Who has the largest BEEF production?";
 "question_xi_112" = "Who has the largest extent of tropical RAINFOREST?";
@@ -230,6 +672,47 @@
 "question_xi_115" = "Who PRODUCES the most wine in Latin America?";
 "question_xi_116" = "Who has the largest area of agricultural land?";
 "question_xi_117" = "Who has the greatest variety of BIRD species?";
+
+"info_xi_111" =
+    "● Brazil: It is the largest producer of beef in the world, with production exceeding 9 million tons annually. Brazil is also one of the main exporters of beef, supplying markets in Asia, Europe, and North America.
+    \n\n● Argentina: Known for its high-quality meat, Argentina ranks second in beef production in Latin America, with around 3 million tons annually. Argentine beef is famous for its flavor and is a symbol of the country’s culinary culture.
+    \n\n● Mexico: Although it has lower production than Brazil and Argentina, Mexico is also a significant beef producer, with an output of around 1.5 million tons annually. Beef is an essential element in Mexican cuisine, used in a variety of dishes.
+    \n\nFun Fact: Argentine beef is so renowned that it has become a national symbol, with the grill (asado) being a tradition that brings families and friends together. Brazil, on the other hand, has developed an intensive production model that has significantly increased its export capacity, becoming a global leader in the sector.";
+
+"info_xi_112" =
+    "● Brazil: It is the country with the largest area of tropical rainforest in the world, mainly due to the vast Amazon, which covers approximately 60% of Brazilian territory. The Amazon rainforest in Brazil is known for its unique biodiversity and is an important global climate regulator.
+    \n\n● Peru: It has the second-largest area of tropical rainforest, with a significant portion of the Amazon located within its borders. The region is home to a rich diversity of flora and fauna and is an important habitat for many endemic species.
+    \n\n● Colombia: It also has a considerable portion of tropical rainforest, being part of the Amazon. Although its area is smaller compared to Brazil and Peru, the rainforest in Colombia is essential for biodiversity and contains important protected areas.
+    \n\nFun Fact: The Amazon is considered the 'lungs of the planet' due to its ability to absorb carbon dioxide and release oxygen. Additionally, it houses about 10% of the world's biodiversity, making it one of the most critical areas for global conservation. Deforestation and climate change are major threats to these rainforests, especially in Brazil, where deforestation rates have raised international concern.";
+
+"info_xi_113" =
+    "● Chile: Currently, Chile has one of the highest minimum wages in Latin America. As of 2024, the minimum wage in Chile is approximately $460,000 CLP (about $580 USD), reflecting a continuous government effort to increase workers' purchasing power.
+    \n\n● Uruguay: In Uruguay, the minimum wage is also high compared to other countries in the region. As of 2024, the minimum wage is around $23,500 UYU (approximately $590 USD). Uruguay has maintained a commitment to protecting labor rights and improving wages.
+    \n\n● Costa Rica: Although Costa Rica has a minimum wage that has increased in recent years, it is generally lower than that of Chile and Uruguay. In 2024, the average minimum wage in Costa Rica is approximately $336,000 CRC (around $600 USD), although this may vary by occupation.
+    \n\nFun Fact: The relationship between minimum wage and cost of living in these countries is a topic of debate. In Chile, despite having a high minimum wage, the cost of living in cities like Santiago can be high, leading to discussions about the need for additional wage increases. In contrast, Uruguay and Costa Rica tend to have a more balanced approach to regulating minimum wage and social welfare.";
+
+"info_xi_114" =
+    "● Mexico: Mexico is the leader in geothermal energy production in Latin America. It has several geothermal plants, with Cerro Prieto being the most notable, as it is one of the largest in the world. The installed capacity of geothermal energy in Mexico is approximately 1,000 MW.
+    \n\n● El Salvador: El Salvador uses a high proportion of geothermal energy in its energy matrix, with about 25% of its electricity coming from geothermal sources. The installed capacity is around 204 MW, making it one of the countries with the highest dependence on this energy source in the region.
+    \n\n● Costa Rica: Costa Rica has also made significant use of geothermal energy, contributing approximately 15% of its energy. The installed capacity is about 205 MW, which has been key to its goal of becoming a carbon-neutral country.";
+
+"info_xi_115" =
+    "● Argentina: Argentina is the largest wine producer in Latin America and the fifth largest in the world. The Mendoza region is the most prominent, famous for its Malbec production. In 2022, Argentina produced approximately 9 million hectoliters of wine.
+    \n\n● Chile: Chile is also an important wine producer, known for its quality and variety. The Maipo Valley and Casablanca Valley regions are recognized for their excellent Cabernet Sauvignon and Sauvignon Blanc. In 2022, Chile produced around 12 million hectoliters of wine.
+    \n\n● Brazil: Although Brazil has a lower wine production compared to Argentina and Chile, it is growing, especially in the Serra Gaúcha and Vale do São Francisco regions. In 2022, wine production was approximately 3 million hectoliters.";
+
+"info_xi_116" =
+    "● Brazil: It is the country with the largest agricultural land area in Latin America, covering approximately 85 million hectares. Brazil is one of the world's leading agricultural producers, particularly in soybeans, corn, sugarcane, and coffee.
+    \n\n● Argentina: It ranks second in agricultural land area, with around 38 million hectares. The country is known for its soybean, corn, wheat, and beef production, being a major exporter of these products.
+    \n\n● Mexico: Although it has a smaller agricultural area, with approximately 25 million hectares, it is a significant producer of crops like corn, avocados, and tropical fruits. Mexican agriculture is characterized by its diverse climates and microclimates, allowing for a wide variety of products to be grown.
+    \n\nFun Fact: Brazil, Argentina, and Mexico are part of the region known as the 'Granary of the World.' The agricultural production of these countries not only feeds their populations but also plays a crucial role in international markets, especially in food and biofuel production.";
+
+"info_xi_117" =
+    "● Brazil: It is the country with the greatest diversity of bird species in the world, with approximately 1,800 registered species. This vast variety is due to its wide range of ecosystems, which include the Amazon rainforest, cerrado, pantanal, and Atlantic coast, providing habitats for many species.
+    \n\n● Peru: It ranks second in terms of avian diversity, with around 1,800 species as well, although the numbers may vary slightly depending on the sources. Peru is famous for its biodiversity, especially in areas such as the Peruvian Amazon and the Andes, where unique birds like the cock-of-the-rock and the Andean condor can be found.
+    \n\n● Chile: It has less diversity compared to Brazil and Peru, with approximately 460 bird species. However, Chile is home to several endemic species, such as the fire-crowned hummingbird and the Chilean flamingo, making it an interesting destination for birdwatchers.
+    \n\nFun Fact: The diversity of birds in Brazil is not only remarkable for the number of species but also for the presence of iconic birds like the toucan and the macaw. The conservation of their habitats is crucial, as many species are threatened due to deforestation and loss of natural ecosystems.";
+
 
 /* Questions Level XII */
 "question_xii_121" = "Who has the largest BANANA production?";
@@ -241,6 +724,55 @@
 "question_xii_127" = "Who has the most protected tropical rainforests?";
 "question_xii_128" = "Which countries have had the most teams win the Copa Libertadores?";
 
+"info_xii_121" =
+    "● Ecuador: It is the largest producer and exporter of bananas in the world, with a production exceeding 6 million tons annually. Ecuadorian bananas are known for their high quality and flavor, making them a favorite in international markets.
+    \n\n● Costa Rica: It ranks as the second largest banana producer in the region, with production close to 2.5 million tons annually. The banana industry in Costa Rica is crucial for its economy, being one of the main export products of the country.
+    \n\n● Guatemala: It is also an important banana producer, with production around 2 million tons annually. Guatemala has increased its production in recent years and has become a significant competitor in the banana market.
+    \n\nFun fact: Ecuador, being the largest banana exporter, represents about 25% of global production, and its bananas are shipped to over 60 countries. This industry is not only vital for the Ecuadorian economy but also provides employment to thousands of people in rural areas.";
+
+"info_xii_122" =
+    "● Paraguay: It is one of the world leaders in renewable electricity generation, thanks to the Itaipu dam, which is one of the largest in the world. Approximately 99% of its electricity comes from hydroelectric sources, making Paraguay a benchmark in the use of renewable energy.
+    \n\n● Uruguay: It has made significant investments in renewable energy in recent years. Currently, about 95% of its electricity comes from renewable sources, including wind, solar, and hydroelectric energy. Uruguay stands out for its rapid progress in transitioning to clean energy.
+    \n\n● Costa Rica: It is known for its commitment to sustainability and renewable energy. In recent years, it has generated over 99% of its electricity from renewable sources, primarily hydroelectric, wind, and solar. Costa Rica has been a model to follow in the field of clean energy.
+    \n\nFun fact: Costa Rica aims to be a carbon-neutral country by 2050, which involves continuing its efforts to increase renewable energy generation and reduce greenhouse gas emissions. This has led the country to stand out internationally for its environmental approach.";
+
+"info_xii_123" =
+    "● Brazil: It is the largest producer of dairy products in Latin America. Dairy production in Brazil has grown significantly in recent years, with a strong industry that includes milk, cheese, yogurt, and other derivative products. The southern regions of the country, such as Santa Catarina and Rio Grande do Sul, are the most productive.
+    \n\n● Argentina: It also has a considerable dairy industry, although its production is lower compared to Brazil. Argentina is known for its cheese and fluid milk production. The provinces of Buenos Aires and Córdoba are the main milk-producing regions.
+    \n\n● Mexico: It is another important dairy producer in the region, with production including milk, cheese, and cream. The main producing regions are Jalisco, Coahuila, and Puebla. Although Mexico produces a significant amount of dairy, its production is lower than that of Brazil and Argentina.
+    \n\nFun fact: Cheese is one of the most popular dairy products in the region, and Argentina is famous for its 'hard cheese,' while Mexico is known for its 'fresh cheese,' which is used in a variety of traditional dishes.";
+
+"info_xii_124" =
+    "● Mexico: It stands out for its rich marine biodiversity, especially in the Sea of Cortés, known as 'the aquarium of the world' due to the large number of species it hosts. Mexico is home to numerous species of fish, marine mammals, corals, and turtles, and has the largest coral reefs in North America.
+    \n\n● Colombia: It also has notable marine biodiversity, especially in the Colombian Caribbean and the Pacific Ocean. Protected marine areas, such as the Tayrona National Natural Park and Malpelo National Natural Park, are essential for the conservation of marine species. Colombia is famous for its diversity of corals and fish species.
+    \n\n● Brazil: It has vast marine biodiversity, especially in the Atlantic Ocean region and the Fernando de Noronha archipelago. Brazil is known for its variety of marine ecosystems, including coral reefs and mangroves, and is home to many endemic species.
+    \n\nFun fact: The Mesoamerican Barrier Reef system, which extends from Mexico to Honduras, is the second largest coral reef system in the world and hosts an incredible diversity of marine life, making it an important biodiversity hotspot.";
+
+"info_xii_125" =
+    "● Mexico: The Collective Transport System (STC) of Mexico City is one of the largest and most comprehensive in Latin America, with 12 lines covering over 200 kilometers and nearly 200 stations, making it the most extensive metro in the region.
+    \n\n● Brazil: The most notable metro system is in São Paulo, which has 6 lines and a total length of approximately 100 kilometers. There are also other systems in cities like Rio de Janeiro, but none come close to the length of the Mexico City metro.
+    \n\n● Chile: The Santiago Metro is the largest in Chile, with 7 lines and about 140 kilometers of network. It is known for its efficiency and modernity, but its total length is shorter than that of the metros in Mexico and São Paulo.
+    \n\nFun fact: The Mexico City Metro, inaugurated in 1969, is one of the oldest in Latin America and has an average of over 4 million daily users, making it one of the most used public transport systems in the world.";
+
+"info_xii_126" =
+    "● Brazil: Brazil has the largest area of protected areas in the world, covering approximately 2.2 million square kilometers. This includes national parks, biological reserves, and other types of protected areas, such as the famous Amazon rainforest, which hosts a great diversity of species.
+    \n\n● Colombia: Colombia also has a large number of protected areas, with about 1.2 million square kilometers dedicated to conservation. The country is known for its biodiversity and has 59 national natural parks.
+    \n\n● Venezuela: Venezuela has around 600,000 square kilometers of protected areas. This includes national parks and reserves, but its area is significantly smaller compared to Brazil and Colombia.
+    \n\nFun fact: Brazil hosts the National System of Conservation Units (SNUC), which was created in 2000 and aims to protect the biological diversity and natural resources of the country. Additionally, Brazil has most of the Amazon rainforest, considered one of the lungs of the planet due to its ability to absorb carbon dioxide.";
+
+"info_xii_127" =
+    "● Brazil: Brazil is home to the majority of the Amazon rainforest, which is the largest and most diverse tropical rainforest in the world. Approximately 44% of the Amazon is protected under different conservation categories, including national parks, biological reserves, and indigenous lands. This amounts to more than 1.1 million square kilometers of protected areas.
+    \n\n● Colombia: Colombia also has a considerable amount of protected tropical rainforest, mainly in its national parks. Although its tropical rainforest area is smaller than that of Brazil, it has a good number of protected areas that safeguard the biodiversity of its Amazon region and other forests, totaling around 300,000 square kilometers.
+    \n\n● Venezuela: Venezuela has areas of tropical rainforest in its Amazon region, but the protected area is significantly smaller than in Brazil and Colombia, with about 100,000 square kilometers in national parks and reserves.
+    \n\nFun fact: The Amazon, which extends across Brazil, Peru, Colombia, and other countries, is vital for global climate regulation and is known as the 'lungs of the planet' for its ability to produce oxygen and absorb carbon dioxide. Additionally, it is estimated to host about 10% of the known species in the world.";
+
+"info_xii_128" =
+    "● Argentina: Argentina is the country with the most Copa Libertadores titles, with teams like Boca Juniors, River Plate, Independiente, and others, accumulating a total of 25 titles in total.
+    \n\n● Brazil: Brazil follows Argentina, with a significant number of titles. Teams like São Paulo, Santos, and Flamengo have contributed to a total of 21 titles in the competition.
+    \n\n● Uruguay: Uruguay has also been successful in the Copa Libertadores, with teams like Peñarol and Nacional, accumulating a total of 8 titles.
+    \n\nFun fact: The most successful club in the history of the Copa Libertadores is Independiente from Argentina, which has won the tournament 7 times, earning it the nickname 'King of Cups.'";
+
+
 /* Questions Level XIII */
 "question_xiii_131" = "Who has the largest seaports?";
 "question_xiii_132" = "Who has the largest SHRIMP production?";
@@ -250,3 +782,40 @@
 "question_xiii_136" = "According to Taste Atlas, who has the WORST gastronomy in the region?";
 "question_xiii_137" = "Who has the largest CORN production?";
 "question_xiii_138" = "Which countries have the most Copa Sudamericana titles?";
+
+"info_xiii_131" =
+    "● Brazil: Brazil has several of the largest ports in Latin America, with the Port of Santos being the most important, handling a large volume of cargo and serving as a key point for the export of agricultural products and minerals.
+    \n\n● Panama: Panama is famous for the Panama Canal, which connects the Atlantic Ocean to the Pacific Ocean. The Port of Balboa and the Port of Cristóbal are highly relevant due to their strategic role in international trade.
+    \n\n● Mexico: Mexico also has important ports, such as the Port of Manzanillo and the Port of Veracruz, which are key for trade and export.
+    \n\nFun Fact: The Port of Santos in Brazil is considered the largest port in Latin America and handles over 25% of Brazil's foreign trade, making it a crucial point for the country's economy;";
+
+"info_xiii_132" =
+    "● Ecuador: Ecuador is the world leader in shrimp production and export, especially farmed shrimp. The shrimp industry in Ecuador has grown significantly, and the country is known for its high quality standards.
+    \n\nFun Fact: Shrimp production in Ecuador not only contributes to the local economy but also provides significant employment in coastal regions, making it one of the country's main export products;";
+
+"info_xiii_133" =
+    "● Cuba: Cuba has a literacy rate close to 100%. Since the Cuban Revolution in 1959, the government has implemented educational policies that have largely eliminated illiteracy.
+    \n\nFun Fact: Literacy in Cuba is so high that educational missions have been sent to other countries to help with the literacy of their populations, reflecting the country's commitment to education;";
+
+"info_xiii_134" =
+    "● Ecuador: Ecuador is globally recognized for the quality of its fine and aromatic cocoa. In recent years, it has maintained its position as one of the world's leading cocoa producers.
+    \n\nFun Fact: Ecuador is considered the 'heart of cocoa,' and its Arriba cocoa variety is highly valued by chocolatiers and chefs around the world;";
+
+"info_xiii_135" =
+    "● Mexico: Mexico is the world's leading producer of silver, known for its large mines and tradition in extracting this precious metal. Silver production in Mexico significantly exceeds that of other countries in the region.
+    \n\nFun Fact: The city of Taxco in Mexico is famous for its silver production and is considered a center for silver jewelry craftsmanship, attracting tourists from all over the world;";
+
+"info_xiii_136" =
+    "● Honduras: In the Taste Atlas ranking, Honduras ranks low in terms of the quality and popularity of its cuisine compared to other countries in the region.
+    \n\n● Costa Rica and Guatemala also rank not so high, but Honduras is generally seen as the least prominent in comparison.
+    \n\nFun Fact: Despite the criticism, Honduran cuisine has unique traditional dishes like baleadas, which are flour tortillas filled with beans, cheese, and cream, and are highly appreciated locally;";
+
+"info_xiii_137" =
+    "● Mexico: Mexico is known as the birthplace of corn and remains the largest producer in Latin America. In 2022, corn production in Mexico exceeded 36 million tons.
+    \n\nFun Fact: Corn is a staple food in the Mexican diet and is used in many traditional dishes, such as tortillas, tamales, and pozole, reflecting its cultural and economic importance in the country;";
+
+"info_xiii_138" =
+    "● Argentina: (9 Titles) Argentine teams have performed well in the Copa Sudamericana, with clubs like River Plate, Boca Juniors, and Independiente standing out in the competition.
+    \n\n● Brazil: (6 Titles) Brazilian teams like Atlético Mineiro and São Paulo have won the title multiple times, demonstrating their strength in South American football.
+    \n\n● Ecuador: (2 Titles) Liga de Quito was the first Ecuadorian team to win the Copa Sudamericana in 2008 and also won the Recopa Sudamericana in 2009.
+    \n\nFun Fact: The Copa Sudamericana is considered the second most important club competition in South America, after the Copa Libertadores, and has grown in popularity since its inception in 2002, providing a platform for teams from less traditional football countries like Ecuador to succeed on the continental stage;";

@@ -13,6 +13,7 @@ struct CardFlag: View {
     let flag: TriviaFlag
     var duration: Double = 0.5
     var pulseFraction: CGFloat = 1.1
+    
     @State private var scale: CGFloat = 1.0
     
     var body: some View {
@@ -44,6 +45,29 @@ struct CardFlag: View {
                         .foregroundColor(.white)
                         .lineLimit(1)
                         .padding(.top, 2)
+                    
+                }
+            }
+            .overlay {
+                HStack {
+                    Spacer()
+                    VStack {
+                        if flag.showPosition && !flag.alreadyPlayed && flag.position != 0 {
+                            RoundedRectangle(cornerRadius: 35)
+                                .fill(Color.AppYellow)
+                                .frame(width: 21, height: 21)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 35)
+                                        .stroke(Color.black, lineWidth: 2)
+                                )
+                                .overlay {
+                                    Text("\(flag.position)°")
+                                        .font(.custom("FredokaCondensed-Semibold", size: 12))
+                                        .foregroundColor(.black)
+                                }
+                            Spacer()
+                        }
+                    }
                     
                 }
             }
@@ -156,10 +180,23 @@ struct CardEmptySpace: View {
 }
 
 
-#Preview {
+/*#Preview {
     CardEmptySpace(
         index: 0,
         emptySpace: EmptySpace(id: 0, flag: nil),
         viewModel: PlayViewModel()
+    )
+}*/
+
+#Preview {
+    CardFlag(
+        flag: TriviaFlag(
+            id: .AR,
+            name: NSLocalizedString("country_name_argentina", comment: ""),
+            image: "flag_argentina",
+            alreadyPlayed: false,
+            position: 4,
+            showPosition: true
+        )
     )
 }

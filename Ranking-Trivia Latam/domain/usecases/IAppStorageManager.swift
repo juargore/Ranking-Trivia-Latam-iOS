@@ -36,4 +36,9 @@ protocol IAppStorageManager {
     func getUserCompletedGame() -> Bool
 
     func resetAllData()
+    
+    func saveShowHintDialog(show: Bool)
+
+    func getShowHintDialog() -> Bool
+    
 }

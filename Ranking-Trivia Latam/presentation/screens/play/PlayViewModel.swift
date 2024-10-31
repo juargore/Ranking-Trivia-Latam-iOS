@@ -92,7 +92,6 @@ final class PlayViewModel: ObservableObject {
         }
         flags = mQuestions
         getTimePerLevel(question)
-        //print("AQUI: TotalFlags: \(flags.count)")
     }
     
     private func getTimePerLevel(_ question: Question) {
@@ -116,7 +115,14 @@ final class PlayViewModel: ObservableObject {
     func removeFlagFromList(flag: TriviaFlag) {
         flags = flags.map { f in
             if f == flag {
-                return TriviaFlag(id: flag.id, name: flag.name, image: flag.image, alreadyPlayed: true)
+                return TriviaFlag(
+                    id: flag.id,
+                    name: flag.name,
+                    image: flag.image,
+                    alreadyPlayed: true,
+                    position: flag.position,
+                    showPosition: flag.showPosition
+                )
             } else {
                 return f
             }
@@ -126,7 +132,14 @@ final class PlayViewModel: ObservableObject {
     func addFlagToList(flag: TriviaFlag) {
         flags = flags.map { f in
             if f.id == flag.id {
-                return TriviaFlag(id: flag.id, name: flag.name, image: flag.image, alreadyPlayed: false)
+                return TriviaFlag(
+                    id: flag.id,
+                    name: flag.name,
+                    image: flag.image,
+                    alreadyPlayed: false,
+                    position: flag.position,
+                    showPosition: flag.showPosition
+                )
             } else {
                 return f
             }
@@ -166,6 +179,48 @@ final class PlayViewModel: ObservableObject {
     
     func resetErrors() {
         appStorageUseCase.resetErrors()
+    }
+    
+    func shouldShowHintDialog() -> Bool {
+        let showDialog = appStorageUseCase.getShowHintDialog()
+        //print("AQUI: shouldShowHintDialog = \(showDialog)")
+        return showDialog
+    }
+    
+    func saveShouldShowHintDialog(_ show: Bool) {
+        appStorageUseCase.saveShowHintDialog(show: show)
+    }
+    
+    func discoverPositionOnFlag() {
+        var updated = false
+        flags = flags.map { it in
+            if !updated && !it.alreadyPlayed && !it.showPosition {
+                updated = true
+                return TriviaFlag(
+                    id: it.id,
+                    name: it.name,
+                    image: it.image,
+                    alreadyPlayed: it.alreadyPlayed,
+                    isClicked: it.isClicked,
+                    isEnable: it.isEnable,
+                    position: getFlagPosition(it),
+                    showPosition: true
+                )
+            } else {
+                return it
+            }
+        }
+    }
+    
+    private func getFlagPosition(_ flag: TriviaFlag) -> Int {
+        if let answerFlags = question?.answerFlags {
+            for (index, flagId) in answerFlags.enumerated() {
+                if flag.id == flagId {
+                    return index + 1
+                }
+            }
+        }
+        return 0
     }
     
     func getTimeAccordingLevel(level: QuestionLevel) -> Double {

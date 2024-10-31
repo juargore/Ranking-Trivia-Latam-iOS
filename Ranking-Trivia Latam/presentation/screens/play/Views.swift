@@ -13,6 +13,8 @@ struct PlayScreenHeader: View {
     var viewModel: PlayViewModel
     var level: QuestionLevel
     var question: String
+    var isHintEnabled: Bool
+    var onHintClicked: () -> Void
     var onBack: () -> Void
 
     var body: some View {
@@ -22,7 +24,7 @@ struct PlayScreenHeader: View {
                 HStack {
                     Button(action: {
                         if viewModel.shouldPlaySound() {
-                            
+                            Ranking_Trivia_Latam.playSound("sound_click")
                         }
                         onBack()
                     }) {
@@ -73,19 +75,46 @@ struct PlayScreenHeader: View {
             
             VStack {
                 Spacer()
-                HStack {
-                    Spacer()
-                    ButtonExitOrRetry(
-                        onClick: {},
-                        content: {
-                            Text(String(format: NSLocalizedString("game_level", comment: ""), level.rawValue))
-                                .font(.custom("FredokaCondensed-Semibold", size: 16))
-                                .foregroundColor(.black)
-                                .padding(.vertical, 6)
-                                .padding(.horizontal, 20)
+                ZStack {
+                    HStack {
+                        Spacer()
+                        ButtonExitOrRetry(
+                            onClick: {},
+                            content: {
+                                Text(String(format: NSLocalizedString("game_level", comment: ""), level.rawValue))
+                                    .font(.custom("FredokaCondensed-Semibold", size: 16))
+                                    .foregroundColor(.black)
+                                    .padding(.vertical, 6)
+                                    .padding(.horizontal, 20)
+                            }
+                        )
+                        Spacer()
+                    }
+                    if isHintEnabled {
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                if viewModel.shouldPlaySound() {
+                                    Ranking_Trivia_Latam.playSound("sound_click")
+                                }
+                                onHintClicked()
+                            }) {
+                                ZStack {
+                                    Circle()
+                                        .fill(Color.white)
+                                        .frame(width: 32, height: 32)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: 2)
+                                        )
+                                    Image("ic_bulb")
+                                        .resizable()
+                                        .frame(width: 25, height: 25)
+                                }
+                            }
+                            .padding(.trailing, 15)
                         }
-                    )
-                    Spacer()
+                    }
                 }
             }
             .frame(height: 158)

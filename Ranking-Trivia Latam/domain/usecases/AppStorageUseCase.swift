@@ -62,4 +62,12 @@ class AppStorageUseCase {
     func resetAllData() {
         appStorageManager.resetAllData()
     }
+    
+    func saveShowHintDialog(show: Bool) {
+        appStorageManager.saveShowHintDialog(show: show)
+    }
+
+    func getShowHintDialog() -> Bool {
+        return appStorageManager.getShowHintDialog()
+    }
 }

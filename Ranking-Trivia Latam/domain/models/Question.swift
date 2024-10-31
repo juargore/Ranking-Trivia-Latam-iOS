@@ -12,5 +12,6 @@ struct Question: Codable, Hashable {
     let level: QuestionLevel  // indicates the level where this question should be placed on game
     let description: String   // question to show at the top header
     let answerFlags: [FlagId] // correct answers ordered by position
+    var info: String // more info given after a correct answer
     var gameFlags: [FlagId]?  // correct answers ordered by position + random flags according to level
 }

@@ -14,6 +14,7 @@ public enum StorageKeys: String {
     case totalErrors = "total_errors"
     case totalScore = "total_score"
     case gameCompleted = "game_completed"
+    case showHintDialog = "show_hint_dialog"
 }
 
 public protocol AppStorageManagerProtocol: AnyObject {
@@ -114,10 +115,18 @@ final public class AppStorageManager: AppStorageManagerProtocol, IAppStorageMana
     }
     
     public func resetAllData() {
-        let keys: [StorageKeys] = [.listOfIdsAlreadyPlayed, .lastQuestionPlayed, .totalErrors, .totalScore, .gameCompleted]
+        let keys: [StorageKeys] = [.listOfIdsAlreadyPlayed, .lastQuestionPlayed, .totalErrors, .totalScore, .gameCompleted, .showHintDialog]
         for key in keys {
             UserDefaults.standard.removeObject(forKey: key.rawValue)
         }
+    }
+    
+    func saveShowHintDialog(show: Bool) {
+        storeValue(show, for: .showHintDialog)
+    }
+    
+    func getShowHintDialog() -> Bool {
+        return getValue(model: Bool.self, for: .showHintDialog) ?? true
     }
     
     public func storeValue<T>(_ value: T, for key: StorageKeys) where T : Encodable {
@@ -145,4 +154,5 @@ final public class AppStorageManager: AppStorageManagerProtocol, IAppStorageMana
 
         return nil
     }
+    
 }

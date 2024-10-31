@@ -22,6 +22,7 @@ struct PlayScreen: View {
     @State private var showTimeUpDialog = false
     @State private var showIncorrectDialog = false
     @State private var showCorrectDialog = false
+    @State private var showHintDescriptionDialog = false
     @State private var animateScore: AnimatedScoreData? = nil
     
     @State private var showToast = false
@@ -47,6 +48,17 @@ struct PlayScreen: View {
                             viewModel: viewModel,
                             level: viewModel.question!.level,
                             question: viewModel.question!.description,
+                            isHintEnabled: viewModel.flags.contains { !$0.showPosition },
+                            onHintClicked: {
+                                if viewModel.shouldShowHintDialog() {
+                                    showHintDescriptionDialog = true
+                                } else {
+                                    interstitialAdManager.displayInterstitialAd()
+                                    interstitialAdManager.onAdClosed = {
+                                        viewModel.discoverPositionOnFlag()
+                                    }
+                                }
+                            },
                             onBack: {
                                 viewModel.resetScreenData(getNewQuestion: false)
                                 presentationMode.wrappedValue.dismiss()
@@ -93,7 +105,6 @@ struct PlayScreen: View {
                                         CardFlag(flag: item)
                                             .onTapGesture {
                                                 if item.isEnable {
-                                                    
                                                     var newFlags: [TriviaFlag] = []
                                                     for f in viewModel.flags {
                                                         let nFlag = TriviaFlag(
@@ -101,7 +112,10 @@ struct PlayScreen: View {
                                                             name: f.name,
                                                             image: f.image,
                                                             alreadyPlayed: f.alreadyPlayed,
-                                                            isClicked: false
+                                                            isClicked: false,
+                                                            isEnable: f.isEnable,
+                                                            position: f.position,
+                                                            showPosition: f.showPosition
                                                         )
                                                         newFlags.append(nFlag)
                                                     }
@@ -112,7 +126,9 @@ struct PlayScreen: View {
                                                         id: mFlag.id,
                                                         name: mFlag.name,
                                                         image: mFlag.image,
-                                                        isClicked: true
+                                                        isClicked: true,
+                                                        position: mFlag.position,
+                                                        showPosition: mFlag.showPosition
                                                     )
                                                     selectedFlag = item
                                                 }
@@ -215,7 +231,6 @@ struct PlayScreen: View {
         .onAppear{
             interstitialAdManager.loadInterstitialAd()
         }
-        //.disabled(!interstitialAdManager.interstitialAdLoaded)
         .toast(message: messageToast, isShowing: $showToast, duration: Toast.short)
         .popUpDialog(isShowing: $showTimeUpDialog, dialogContent: {
             TimeUpDialog(isVisible: showTimeUpDialog) {
@@ -266,6 +281,23 @@ struct PlayScreen: View {
                 },
                 onDismiss: {
                     viewModel.gameCompleted = false
+                }
+            )
+        })
+        .popUpDialog(isShowing: $showHintDescriptionDialog, dialogContent: {
+            HintDescriptionDialog(
+                onAcceptClicked: { checked in
+                    showHintDescriptionDialog = false
+                    interstitialAdManager.displayInterstitialAd()
+                    interstitialAdManager.onAdClosed = {
+                        if checked {
+                            viewModel.saveShouldShowHintDialog(false)
+                        }
+                        viewModel.discoverPositionOnFlag()
+                    }
+                },
+                onCancelClicked: {
+                    showHintDescriptionDialog = false
                 }
             )
         })
